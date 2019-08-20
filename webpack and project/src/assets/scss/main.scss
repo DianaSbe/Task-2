@@ -1,0 +1,22 @@
+@import "../../blocks/ColorsAndType/color.scss";
+@import "/utils/fonts.scss";
+@import "../../blocks/Sheet/sheet.scss";
+
+$FontSize: 19px;
+
+h2 {
+  font-family: 'Conv_Quicksand-Medium';
+  font-weight: bold;
+  font-size: $FontSize;
+  //border: 1px solid black;
+  margin-bottom: -1px;
+}
+
+.wrapper{
+  position: absolute;
+  margin: 42px 120px 0px 120px;
+  border: 1px solid black;
+
+  width: 269.26px;
+  height: 610px;
+}

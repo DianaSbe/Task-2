@@ -1,0 +1,23 @@
+include ../../blocks/ColorsAndType/color
+
+doctype html
+html(lang="en")
+  head
+    meta(chaset="UTF-8")
+    title Colors and Type
+    link(href="../../assets/scss/color.scss")
+
+  body
+    include ../../blocks/Sheet/sheet.pug
+      .wrapper
+        +color("Dark Shade 100%", "#1F2041", 'dark100')
+        +color("Dark Shade 75%", "#1F2041", 'dark75')
+        +color("Dark Shade 50%", "#1F2041", 'dark50')
+        +color("Dark Shade 25%", "#1F2041", 'dark25')
+        +color("Dark Shade 5%", "#1F2041", 'dark5')
+        +color("Purple", "#BC9CFF", 'purple')
+        +color("Green", "#6FCF97", 'green')
+        //.class(cell-green)
+
+
+      

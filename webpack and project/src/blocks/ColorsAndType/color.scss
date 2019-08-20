@@ -1,0 +1,59 @@
+$dark: #1F2041;
+$FontSize: 19px;
+$FontColor: $dark;
+
+.color__cell{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.dark100{
+    background: $dark;
+}
+
+.dark75{
+    background: rgba($dark, 0.75);
+}
+
+.dark50{
+    background: rgba($dark, 0.5);
+}
+
+.dark25{
+    background: rgba($dark, 0.25);
+}
+
+.dark5{
+    background: rgba($dark, 0.05);
+}
+
+.purple{
+    background: #BC9CFF;
+}
+
+.green{
+    background: #6FCF97;
+}
+
+.wrapper__color{
+    margin-top: 21px;
+}
+
+.color__cell__inner{
+    margin-left: 110px;
+
+    width: 159px;
+    height: 57px;
+    line-height: 29px;
+    
+    display: inline-block;
+    //margin-top: -8px;
+
+    font-family: 'Conv_Quicksand-Regular';
+    font-size: $FontSize;
+    color: $FontColor;
+}
+
+
