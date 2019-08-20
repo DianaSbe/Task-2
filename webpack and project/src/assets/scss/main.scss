@@ -8,14 +8,13 @@ h2 {
   font-family: 'Conv_Quicksand-Medium';
   font-weight: bold;
   font-size: $FontSize;
-  //border: 1px solid black;
+  letter-spacing: 0.3px;
   margin-bottom: -1px;
 }
 
 .wrapper{
   position: absolute;
-  margin: 42px 120px 0px 120px;
-  border: 1px solid black;
+  margin: 34px 120px 0px 120px;
 
   width: 269.26px;
   height: 610px;

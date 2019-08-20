@@ -38,7 +38,7 @@ $FontColor: $dark;
 }
 
 .wrapper__color{
-    margin-top: 21px;
+    margin-top: 29px;
 }
 
 .color__cell__inner{
@@ -49,11 +49,12 @@ $FontColor: $dark;
     line-height: 29px;
     
     display: inline-block;
-    //margin-top: -8px;
+    margin-top: -8px;
 
     font-family: 'Conv_Quicksand-Regular';
     font-size: $FontSize;
     color: $FontColor;
 }
+
 
 
