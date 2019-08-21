@@ -1,6 +1,4 @@
 $dark: #1F2041;
-$FontSize: 19px;
-$FontColor: $dark;
 
 .color__cell{
     position: absolute;
@@ -38,23 +36,22 @@ $FontColor: $dark;
 }
 
 .wrapper__color{
-    margin-top: 29px;
+    margin-bottom: 26px;
 }
 
 .color__cell__inner{
     margin-left: 110px;
-
     width: 159px;
     height: 57px;
     line-height: 29px;
-    
+
     display: inline-block;
-    margin-top: -8px;
-
+    margin-top: 7px; //влияет на маргины wrapper__color
+    
+    color: $dark;
     font-family: 'Conv_Quicksand-Regular';
-    font-size: $FontSize;
-    color: $FontColor;
+    font-size: 19px;
+    letter-spacing: 0px;
 }
-
 
 

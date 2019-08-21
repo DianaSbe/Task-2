@@ -1,21 +1,57 @@
 @import "../../blocks/ColorsAndType/color.scss";
 @import "/utils/fonts.scss";
 @import "../../blocks/Sheet/sheet.scss";
+@import "../../blocks/ColorsAndType/font.scss";
 
-$FontSize: 19px;
-
-h2 {
-  font-family: 'Conv_Quicksand-Medium';
+%heads_bold-margin { //h1,h2,h3
   font-weight: bold;
-  font-size: $FontSize;
-  letter-spacing: 0.3px;
-  margin-bottom: -1px;
+  margin: 0px 0px;
 }
 
-.wrapper{
-  position: absolute;
-  margin: 34px 120px 0px 120px;
+%heads_font-spacing { //h1,h2
+  font-family: 'Conv_Quicksand-Medium';
+  letter-spacing: 0.3px;
+}
 
+h1 {
+  @extend %heads_bold-margin;
+  @extend %heads_font-spacing;
+  font-size: 24px;
+}
+
+h2 {
+  @extend %heads_bold-margin;
+  @extend %heads_font-spacing;
+  font-size: 19px;
+}
+
+h3 {
+  @extend %heads_bold-margin;
+  font-size: 12px;
+  font-family: 'Conv_Montserrat-Medium';
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: 'Conv_Montserrat-Light';
+  font-size: 14px;
+  letter-spacing: 0.1px;
+}
+
+.colors-wrapper, .fonts-wrapper {
+  position: absolute;
+  top: 115px;
+}
+
+.colors-wrapper {
+  left: 120px;
   width: 269.26px;
   height: 610px;
+}
+
+.fonts-wrapper {
+  left: 816px;
+  width: 403px;
+  height: 321px;
 }
