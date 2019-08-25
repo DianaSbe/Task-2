@@ -1,4 +1,35 @@
-Sheet/sheet.pug
-div.sheet
-  div.sheet__inner
-    include logo.svg
+mixin sheet(name)
+  if name=="ColorsAndTypes"
+    div(class=`sheet ${name}`)
+      div.sheet__inner
+        include logo.svg
+      div.colors-wrapper
+        +color("Dark Shade 100%", "#1F2041", 'dark100')
+        +color("Dark Shade 75%", "#1F2041", 'dark75')
+        +color("Dark Shade 50%", "#1F2041", 'dark50')
+        +color("Dark Shade 25%", "#1F2041", 'dark25')
+        +color("Dark Shade 5%", "#1F2041", 'dark5')
+        +color("Purple", "#BC9CFF", 'purple')
+        +color("Green", "#6FCF97", 'green')
+
+      div.fonts-wrapper
+        +font("H1", "This one is the sub-section or widget title")
+        +font("H2", "Next one is the item title inside widgets")
+        +font("H3", "This is a label or cta text")
+        +font("Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+
+  if name=="Cards"
+    div(class=`sheet ${name}`)
+      div.sheet__inner
+        include logo.svg
+
+  if name=="HeadersAndFooters"
+    div(class=`sheet ${name}`)
+      div.sheet__inner
+        include logo.svg
+
+  if name=="FormElements"
+    div(class=`sheet ${name}`)
+      div.sheet__inner
+        include logo.svg
+

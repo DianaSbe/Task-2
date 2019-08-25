@@ -3,6 +3,11 @@
 @import "../../blocks/Sheet/sheet.scss";
 @import "../../blocks/ColorsAndType/font.scss";
 
+html{
+  width:4405px;
+ // height: 2750px;
+}
+
 %heads_bold-margin { //h1,h2,h3
   font-weight: bold;
   margin: 0px 0px;
@@ -37,21 +42,4 @@ body {
   font-family: 'Conv_Montserrat-Light';
   font-size: 14px;
   letter-spacing: 0.1px;
-}
-
-.colors-wrapper, .fonts-wrapper {
-  position: absolute;
-  top: 115px;
-}
-
-.colors-wrapper {
-  left: 120px;
-  width: 269.26px;
-  height: 610px;
-}
-
-.fonts-wrapper {
-  left: 816px;
-  width: 403px;
-  height: 321px;
 }

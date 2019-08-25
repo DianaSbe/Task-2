@@ -1,12 +1,52 @@
-.sheet{
+.sheet {
     position: relative;
     width: 1440px;
-    height: 900px;
     border: 1px solid black;
     background: #FFFFFF;
+    margin: 10px 10px;
 }
 
-.sheet__inner{
+.sheet__inner {
     position:absolute;
     margin: 30px;
 }
+
+%floats{
+    display: block;
+    float: left;
+}
+
+.ColorsAndTypes {
+    height: 900px;
+    @extend %floats;
+}
+
+.Cards, .HeadersAndFooters{
+    @extend %floats;
+    float:right;
+    height: 1350px;
+    background: #F4F4F6;
+}
+
+.FormElements {
+    height: 1853px;
+    @extend %floats;
+    //clear:both;
+}
+
+.colors-wrapper, .fonts-wrapper {
+    position: absolute;
+    top: 145px; //+30
+  }
+  
+  .colors-wrapper {
+    left: 150px; //+30
+    width: 269.26px;
+    height: 610px;
+  }
+  
+  .fonts-wrapper {
+    left: 846px; //+30
+    width: 403px;
+    height: 321px;
+  }
