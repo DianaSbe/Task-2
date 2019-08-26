@@ -1,3 +1,7 @@
+include ../../blocks/ColorsAndType/color
+include ../../blocks/ColorsAndType/font
+include ../../blocks/FontElements/textfield
+
 mixin sheet(name)
   if name=="ColorsAndTypes"
     div(class=`sheet ${name}`)
@@ -32,4 +36,6 @@ mixin sheet(name)
     div(class=`sheet ${name}`)
       div.sheet__inner
         include logo.svg
-
+      div.textfields-wrapper
+        +textfield("Text Field", "", "Email", 'Default')
+        +textfield("Text Field", "This is pretty awesome", "", 'Hover / Focus')

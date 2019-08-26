@@ -1,0 +1,8 @@
+mixin textfield(name, value, hint, status)
+  div.textfield.wrapper__textfield
+    h3.textfield__name=name
+    h3.textfield__status=status
+    if status=="Hover / Focus"
+      input(class="textfield__input input_hover" name="email" value=`${value}` placeholder=`${hint}`)
+    else
+      input(class="textfield__input" name="email" value=`${value}` placeholder=`${hint}`)
