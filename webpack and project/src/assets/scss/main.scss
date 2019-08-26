@@ -17,7 +17,6 @@ html{
 
 %heads_font-spacing { //h1,h2
   font-family: 'Conv_Quicksand-Medium';
-  letter-spacing: 0.3px;
 }
 
 h1 {
@@ -36,7 +35,6 @@ h3 {
   @extend %heads_bold-margin;
   font-size: 12px;
   font-family: 'Conv_Montserrat-Medium';
-  letter-spacing: 0.2px;
   text-transform: uppercase;
 }
 
@@ -44,7 +42,6 @@ body {
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Conv_Montserrat-Light';
   font-size: 14px;
-  letter-spacing: 0.1px;
 }
 
 ::placeholder {

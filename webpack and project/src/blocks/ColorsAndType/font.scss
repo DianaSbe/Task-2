@@ -1,10 +1,12 @@
 .font__title {
+    position: absolute;
+    width: 37px;
+    text-align: right;
+    
+    //шрифт
     font-family: 'Conv_Montserrat-Regular';
     color: rgba(31, 32, 65, 0.25);
     font-weight: normal;
-    position: absolute;
-    text-align: right;
-    width: 37px;
 }
 
 .wrapper__font {
@@ -18,7 +20,9 @@
 
 .text_body {
     display: inline-block;
-    width: 315px;
-    line-height: 24px;
+    width: 310px;
     margin-top:-3px;
+    
+    //шрифт (хранить именно тут, т.к. если в main-body - влияет на заголовки)
+    line-height: 24px;
 }
