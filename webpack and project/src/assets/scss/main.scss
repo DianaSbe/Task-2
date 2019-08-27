@@ -1,8 +1,11 @@
-@import "/utils/fonts.scss";
+@import "/utils/fonts.scss"; //общий
 @import "../../blocks/Sheet/sheet.scss";
 @import "../../blocks/ColorsAndType/color.scss";
 @import "../../blocks/ColorsAndType/font.scss";
 @import "../../blocks/FontElements/textfield";
+@import "../../blocks/FontElements/dropdown";
+@import "../../blocks/FontElements/rectang"; //общий
+@import "../../blocks/FontElements/materials-icons"; //общий
 
 html{
   width:4405px;

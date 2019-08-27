@@ -1,41 +1,8 @@
-.textfield__name { //заголовок инпута
-    display: block;
-    float: left;
-    margin-top: 3px;
-}
-
-.textfield__status { //статус
-    display: block;
-    float: right;
-    
-    width: 110px;
-    text-align: right;
-
-    font-family: 'Conv_Montserrat-Regular';
-    font-weight: normal;
-    color: rgba(31, 32, 65, 0.5);
-}
-
 .textfield__input {
     width: 320px;
-    height: 44px;
-
-    margin: 5px 0px;
-    padding: 0px 13px;
-
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    
-    //шрифт набираемого текста в инпуте
-    color: rgba(31, 32, 65, 0.75);
-    font-family: 'Conv_Montserrat-Light';
-    font-weight: bold;
-    font-size: 14px;
-    //line-height: 24px;
 }
 
-.textfield__input:hover, .input_hover{
+.textfield__input:hover, .textfield__input:focus, .textfield .input_hover{
     border: 1px solid rgba(31, 32, 65, 0.5);
 }
 

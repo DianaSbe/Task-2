@@ -1,8 +1,10 @@
 mixin textfield(name, value, hint, status)
   div.textfield.wrapper__textfield
-    h3.textfield__name=name
-    h3.textfield__status=status
+    h3.rectang-name= name
+    h3.rectang-status= status
     if status=="Hover / Focus"
-      input(class="textfield__input input_hover" name="email" value=`${value}` placeholder=`${hint}`)
+      input(class="rectang textfield__input input_hover" type="text" value=`${value}` placeholder=`${hint}`)
+    else if name=="Masked Text Field"
+      input(class="rectang textfield__input js-date" maxlength="10" type="text" name="data" value=`${value}` placeholder=`${hint}`)
     else
-      input(class="textfield__input" name="email" value=`${value}` placeholder=`${hint}`)
+      input(class="rectang textfield__input" name="email" value=`${value}` placeholder=`${hint}`)

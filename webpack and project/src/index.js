@@ -1,5 +1,6 @@
 //// JS
 //import './js/'
+import './blocks/FontElements/textfield-data.js'
 
 // SCSS
 import './assets/scss/main.scss'

@@ -1,0 +1,15 @@
+mixin dropdown(name, hint, status)
+  div.dropdown
+    h3.rectang-name= name
+    h3.rectang-status= status
+    
+    div.wrapper__select
+      select(class="rectang dropdown__select")
+        option(disabled selected hidden)= hint
+        option text
+      i.material-icons.dropdown__arrow keyboard_arrow_down
+
+    //button(type="submit" name="submit")
+      i.material-icons star_rate
+
+    

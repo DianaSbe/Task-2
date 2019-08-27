@@ -1,6 +1,7 @@
 include ../../blocks/ColorsAndType/color
 include ../../blocks/ColorsAndType/font
 include ../../blocks/FontElements/textfield
+include ../../blocks/FontElements/dropdown
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -39,3 +40,7 @@ mixin sheet(name)
       div.textfields-wrapper
         +textfield("Text Field", "", "Email", 'Default')
         +textfield("Text Field", "This is pretty awesome", "", 'Hover / Focus')
+      div.dropdowns-wrapper
+        +dropdown("Dropdown", "Сколько гостей", 'Default')
+      div.textfields-data-wrapper  
+        +textfield("Masked Text Field", "", "ДД.ММ.ГГГГ", 'Default')

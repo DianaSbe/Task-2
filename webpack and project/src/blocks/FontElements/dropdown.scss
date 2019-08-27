@@ -1,0 +1,14 @@
+.dropdown .dropdown__select {
+    width: 320px;
+    //padding: 10px; //у select есть паддинги по умолчанию в отличие от input
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+     appearance: none;
+}
+
+.dropdown__arrow{
+    position:absolute;
+    right:10px;
+    top:33px;
+    color: rgba(31, 32, 65, 0.5);
+} 
