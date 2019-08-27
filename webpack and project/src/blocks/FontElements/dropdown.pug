@@ -1,13 +1,19 @@
-mixin dropdown(name, hint, status)
-  div.dropdown
-    h3.rectang-name= name
-    h3.rectang-status= status
+mixin dropdown(name, value, hint, status, type)
+  div(class=`dropdown ${type}`)
+    h3(class=`rectang-name`)= name
+    h3(class=`rectang-status`)= status
     
-    div.wrapper__select
-      select(class="rectang dropdown__select")
-        option(disabled selected hidden)= hint
-        option text
-      i.material-icons.dropdown__arrow keyboard_arrow_down
+    if name=="Date Dropdown"
+      div.wrapper__input-date
+        input(class="rectang textfield__input js-date" maxlength="10" type="text" name="data" value=`${value}` placeholder=`${hint}`)
+        i.material-icons.dropdown__arrow keyboard_arrow_down
+  
+    else    
+      div.wrapper__select
+        select(class="rectang custom_arrow")
+          option(disabled selected hidden)= hint
+          option text
+        i.material-icons.dropdown__arrow keyboard_arrow_down
 
     //button(type="submit" name="submit")
       i.material-icons star_rate

@@ -41,6 +41,9 @@ mixin sheet(name)
         +textfield("Text Field", "", "Email", 'Default')
         +textfield("Text Field", "This is pretty awesome", "", 'Hover / Focus')
       div.dropdowns-wrapper
-        +dropdown("Dropdown", "Сколько гостей", 'Default')
+        +dropdown("Dropdown", "", "Сколько гостей", 'Default')
       div.textfields-data-wrapper  
-        +textfield("Masked Text Field", "", "ДД.ММ.ГГГГ", 'Default')
+        +textfield("Masked Text Field", "", "ДД.ММ.ГГГГ", 'Default') 
+      div.dropdowns-data-wrapper
+        +dropdown("Date Dropdown", "", "ДД.ММ.ГГГГ", '', 'dropdown_date')
+        +dropdown("Date Dropdown", "", "ДД.ММ.ГГГГ", '', 'dropdown_date')
