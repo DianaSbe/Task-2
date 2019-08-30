@@ -1,11 +1,21 @@
+//jQuery(document).ready(function($) {
+//    $('body').css('background-color', 'orange');
+//});
+
 //// JS
-//import './js/'
 import './blocks/FontElements/textfield-data.js'
+
+//import 'inputmask.dependencyLib'
+//import 'inputmask'
+import 'jquery.inputmask'
+//import 'inputmask.numeric.extensions'
+//import 'inputmask.date.extensions';
+import '../node_modules/inputmask/lib/extensions/inputmask.date.extensions.js'
 
 // SCSS
 import './assets/scss/main.scss'
 
-// CSS (example)
+// CSS
 // import './assets/css/main.css'
 
 ////Vue.js
