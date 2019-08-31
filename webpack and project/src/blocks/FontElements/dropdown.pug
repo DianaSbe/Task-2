@@ -5,9 +5,9 @@ mixin dropdown(name, value, hint, status, type)
     
     if name=="Date Dropdown"
       div.wrapper__input-date
-        input(class="rectang textfield__input" maxlength="10" type="text" name="data" value=`${value}` placeholder=`${hint}`)
+        input(class="rectang textfield__input date_mask" type="text" name="data" value=`${value}` placeholder=`${hint}`)
         i.material-icons.dropdown__arrow keyboard_arrow_down
-  
+        
     else    
       div.wrapper__select
         select(class="rectang custom_arrow")
@@ -17,5 +17,3 @@ mixin dropdown(name, value, hint, status, type)
 
     //button(type="submit" name="submit")
       i.material-icons star_rate
-
-    

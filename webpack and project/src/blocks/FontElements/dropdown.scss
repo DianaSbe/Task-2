@@ -1,22 +1,26 @@
-.custom_arrow {
+.custom_arrow { //убираем кастомную иконку
     -webkit-appearance: none; 
     -moz-appearance: none;
      appearance: none;
 }
 
-.dropdown__arrow{
-    position:absolute;
-    right:10px;
-    top:33px;
+.dropdown__arrow { //новая иконка
+    position: absolute;
+    right: 10px;
+    top: 33px;
     color: rgba(31, 32, 65, 0.5);
 } 
 
-.dropdown_date{
+.wrapper__input-date { //контейнер для инпута и иконки
+    position: relative;
+}
+
+.dropdown_date { //флоат заголовков с инпутами
     width: 150px;
     float: left;
     margin-right: 20px;
 }
 
-.wrapper__input-date input{
+.wrapper__input-date input { //переопределение ширины инпута
     width: 150px;
 }

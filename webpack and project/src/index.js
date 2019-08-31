@@ -1,16 +1,12 @@
-//jQuery(document).ready(function($) {
-//    $('body').css('background-color', 'orange');
-//});
-
 //// JS
 import './blocks/FontElements/textfield-data.js'
+import './blocks/FontElements/inputmask.js'
 
-//import 'inputmask.dependencyLib'
-//import 'inputmask'
+import 'inputmask.dependencyLib'
+import 'inputmask'
 import 'jquery.inputmask'
-//import 'inputmask.numeric.extensions'
-//import 'inputmask.date.extensions';
-import '../node_modules/inputmask/lib/extensions/inputmask.date.extensions.js'
+import 'inputmask.numeric.extensions'
+import 'inputmask.date.extensions';
 
 // SCSS
 import './assets/scss/main.scss'
@@ -28,3 +24,8 @@ import './assets/scss/main.scss'
 //const app = new Vue({
 // el: '#app'
 //})
+
+//Проверка работы JQUERY
+//jQuery(document).ready(function($) {
+//    $('body').css('background-color', 'orange');
+//});
