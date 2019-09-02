@@ -47,8 +47,6 @@ body {
   font-size: 14px;
 }
 
-::placeholder {
+.textfield ::placeholder {
   color: rgba(31, 32, 65, 0.25);
-  font-family: 'Conv_Montserrat-Regular';
-  font-size: 14px;
 }

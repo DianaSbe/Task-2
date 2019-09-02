@@ -11,20 +11,87 @@
     color: rgba(31, 32, 65, 0.5);
 } 
 
-.wrapper__date-dropdown, .wrapper__filter-date-dropdown, .wrapper__dropdown { //контейнер для инпута и иконки
-    position: relative;
-}
-
 .dropdown-date { //флоат заголовков с инпутами (класс, полученный с аргумента type)
     width: 150px;
     float: left;
     margin-right: 20px;
 }
 
-.wrapper__date-dropdown input { //переопределение ширины инпута
+.dropdown .dropdown-guests input{ //ширина инпута с гостями
+    width: 320px;
+}
+
+.wrapper__date-dropdown, .wrapper__dropdown { //контейнер для инпута и иконки
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.wrapper__date-dropdown input { //переопределение ширины инпута с датой
     width: 150px;
 }
 
-.wrapper__filter-date-dropdown input { //переопределение ширины инпута
+.wrapper__dropdown input { //переопределение ширины инпута
     width: 266px;
+}
+
+////////////////ВЫПАДАЮЩИЙ СПИСОК
+
+.dropdown .dropdown__ul { //выпадающий список
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: none;
+
+    width: 266px;
+    height: 119px;
+    top: 150px;
+}
+
+.dropdown .ul_expanded { //внешний вид списка при выпадении
+    display: block;
+    border-radius: 0px 0px 4px 4px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.dropdown .input_expanded { //внешний вид инпута при выпадении списка
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.dropdown__li { //элементы списка
+    padding: 12px 0px 10px 13px;
+    position: relative;
+}
+
+.dropdown__button { //кнопки
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background: white;
+    color: rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    border-radius: 22px;
+
+    top: 6px;
+}
+
+.inactive { //неактивная кнопка
+    opacity: 0.38;
+}
+
+.button-minus { //кнопка "-"
+    left: 165px;
+}
+
+.button-plus { //кнопка "+"
+    left: 227px;
+}
+
+.dropdown__number{ //счетчик
+    position: absolute;
+    top: 12px;
+    left: 207px;
 }
