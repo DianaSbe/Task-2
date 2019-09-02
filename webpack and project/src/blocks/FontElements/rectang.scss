@@ -35,3 +35,7 @@
     font-size: 14px;
     //line-height: 24px;
 }
+
+.rectang:hover, .rectang:focus, .textfield ._hover{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}

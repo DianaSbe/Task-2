@@ -1,7 +1,20 @@
-.textfield__input:hover, .textfield__input:focus, .textfield .input_hover{
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
 .wrapper__textfield {
     margin-bottom: 13px;
 }
+
+.wrapper__subscription-textfield input {
+    width: 266px;
+}
+
+.wrapper__subscription-textfield { //контейнер для инпута и иконки
+    position: relative;
+}
+
+.subscription__arrow { //новая иконка
+    position: absolute;
+    right: 10px;
+    top: 33px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text; //обрезаем фон по границе текста
+    -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
+} 
