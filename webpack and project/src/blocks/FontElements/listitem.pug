@@ -1,0 +1,6 @@
+mixin listitem(text, counter, status)
+  li(class=`listitem ${type}`)
+    h3=text
+    h3.listitem__counter=counter
+    button(class=`listitem__button button-minus ${status}`) -
+    button.listitem__button.button-plus +

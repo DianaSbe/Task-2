@@ -1,3 +1,5 @@
+include listitem
+
 mixin dropdown(name, value, hint, status, type)
   div(class=`dropdown ${type}`)
     h3(class=`rectang-name`)= name
@@ -14,38 +16,14 @@ mixin dropdown(name, value, hint, status, type)
         i.material-icons.dropdown__arrow keyboard_arrow_down
       if type=="dropdown-guests"
         ul.rectang.dropdown__ul
-          li.dropdown__li 
-            h3 Взрослые
-            h3 0
-            button.dropdown__button.button-minus -
-            button.dropdown__button.button-plus +
-          li.dropdown__li 
-            h3 Дети
-            h3 0
-            button.dropdown__button.button-minus -
-            button.dropdown__button.button-plus +
-          li.dropdown__li 
-            h3 Младенцы
-            h3 0
-            button.dropdown__button.button-minus -
-            button.dropdown__button.button-plus +
+          +listitem("Взрослые", "0", 'inactive')
+          +listitem("Дети", "0", 'inactive')
+          +listitem("Младенцы", "0", 'inactive')
       if type=="dropdown-rooms"
         ul(class=`rectang dropdown__ul ul_${status}`)
-          li.dropdown__li 
-            h3 Спальни
-            h3.dropdown__number 2
-            button.dropdown__button.button-minus -
-            button.dropdown__button.button-plus +
-          li.dropdown__li 
-            h3 Кровати
-            h3.dropdown__number 2
-            button.dropdown__button.button-minus -
-            button.dropdown__button.button-plus +
-          li.dropdown__li 
-            h3 Ванные комнаты
-            h3.dropdown__number 0
-            button.dropdown__button.button-minus.inactive -
-            button.dropdown__button.button-plus +
+          +listitem("Спальни", "2")
+          +listitem("Кровати", "2")
+          +listitem("Ванные комнаты", "0", 'inactive')
 
     //button(type="submit" name="submit")
       i.material-icons star_rate

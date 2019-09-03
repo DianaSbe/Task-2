@@ -1,0 +1,36 @@
+.listitem { //элементы списка
+    padding: 12px 0px 10px 13px;
+    position: relative;
+}
+
+.listitem__button { //кнопки
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background: white;
+    color: rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    border-radius: 22px;
+
+    top: 6px;
+}
+
+.inactive { //неактивная кнопка
+    opacity: 0.38;
+}
+
+.button-minus { //кнопка "-"
+    left: 165px;
+}
+
+.button-plus { //кнопка "+"
+    left: 227px;
+}
+
+.listitem__counter{ //счетчик
+    position: absolute;
+    top: 12px;
+    left: 207px;
+}
