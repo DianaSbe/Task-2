@@ -1,0 +1,18 @@
+mixin checkbox-list(name, status)
+  div(class=`checkbox-list wrapper__checkbox-list ${name}`)
+    h3(class=`rectang-name`)= name
+    if status=="expanded"
+      i.material-icons.checkbox-list__arrow keyboard_arrow_up
+      br
+      div.checkbox
+        input.checkbox-list__input(type="checkbox" id="cb")
+        label.checkbox-list__label(for="cb") Завтрак
+      br
+      div.checkbox
+        input.checkbox-list__input(type="checkbox" id="cb2" checked)
+        label.checkbox-list__label(for="cb2") Завтрак
+          div.checkmark
+
+    else
+      i.material-icons.checkbox-list__arrow keyboard_arrow_down
+    

@@ -9,7 +9,7 @@
     right: 10px;
     top: 34px;
     color: rgba(31, 32, 65, 0.5);
-} 
+}
 
 .dropdown-date { //флоат заголовков с инпутами (класс, полученный с аргумента type)
     width: 150px;
@@ -57,4 +57,8 @@
 .dropdown .input_expanded { //внешний вид инпута при выпадении списка
     border-radius: 4px 4px 0px 0px;
     border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.dropdown .arrow_expanded {
+    color: rgba(31, 32, 65, 0.75);
 }

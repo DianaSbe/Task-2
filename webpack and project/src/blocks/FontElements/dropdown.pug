@@ -13,7 +13,7 @@ mixin dropdown(name, value, hint, status, type)
     else
       div(class=`wrapper__dropdown ${type}`)
         input(class=`rectang input_${status}` type="text" name="data" value=`${value}` placeholder=`${hint}`)
-        i.material-icons.dropdown__arrow keyboard_arrow_down
+        i(class=`material-icons dropdown__arrow arrow_${status}`) keyboard_arrow_down
       if type=="dropdown-guests"
         ul.rectang.dropdown__ul
           +listitem("Взрослые", "0", 'inactive')
