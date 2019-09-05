@@ -1,17 +1,19 @@
+include checkbox
+
 mixin checkbox-list(name, status)
   div(class=`checkbox-list wrapper__checkbox-list ${name}`)
     h3(class=`rectang-name`)= name
     if status=="expanded"
       i.material-icons.checkbox-list__arrow keyboard_arrow_up
-      br
-      div.checkbox
-        input.checkbox-list__input(type="checkbox" id="cb")
-        label.checkbox-list__label(for="cb") Завтрак
-      br
-      div.checkbox
-        input.checkbox-list__input(type="checkbox" id="cb2" checked)
-        label.checkbox-list__label(for="cb2") Завтрак
-          div.checkmark
+      div.checkbox__wrapper
+        +checkbox("Завтрак", '', '01')
+        +checkbox("Письменный стол", 'checked', '02')
+        +checkbox("Стул для кормления", 'checked', '03')
+        +checkbox("Кроватка", 'checked', '04')
+        +checkbox("Телевизор", '', '05')
+        +checkbox("Шампунь", '', '06')
+        +checkbox("Телевизор", '', '07')
+        +checkbox("Шампунь", '', '08')
 
     else
       i.material-icons.checkbox-list__arrow keyboard_arrow_down

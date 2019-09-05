@@ -1,0 +1,31 @@
+.checkbox {
+    margin-top: 12px;
+}
+
+.checkbox__input { //скрываем кастомный чекбокс
+    display: none;
+}
+
+.checkbox__input + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 29px;
+}
+
+.checkbox__input + label:before {
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    content: '';
+	position: absolute;
+	left: -1px;
+}
+
+.checkbox__input:checked + label:before { // если галочка стоит
+    border: 1px solid #BC9CFF;
+    background: url('/Vector.svg') no-repeat center 40%;
+}

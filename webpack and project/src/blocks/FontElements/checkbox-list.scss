@@ -9,43 +9,7 @@
     color: rgba(31, 32, 65, 0.5);
 } 
 
-.checkbox-list__input {
-    display: none;
-}
-
-.checkbox-list__input + label{
+.checkbox__wrapper {
     position: relative;
-    cursor: pointer;
-    padding-left: 29px;
-}
-
-.checkbox-list__input + label:before {
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-
-    content: '';
-	position: absolute;
-	left: -1px;
-    transition: .2s;
-}
-
-.checkbox-list__input:checked + label:before {
-    border: 1px solid #BC9CFF;
-    content: url('../../blocks/FontElements/Vector.svg');
-}
-
-.checkmark{
-    border: 1px solid black;
-    width: 100px;
-    height: 110px;
-
-    background-image: url('../../blocks/FontElements/Vector.svg');
-    
-    background-position:0 0;
-    background-repeat: no-repeat;
-    content: "";
+    top: 17px;
 }

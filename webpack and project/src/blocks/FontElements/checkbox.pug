@@ -1,0 +1,7 @@
+mixin checkbox(text, status, id)
+  div.checkbox
+    if status=="checked"
+      input.checkbox__input(type="checkbox" id=`cb${id}` checked)
+    else
+      input.checkbox__input(type="checkbox" id=`cb${id}`)
+    label(for=`cb${id}`)=text
