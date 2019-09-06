@@ -2,13 +2,13 @@
 @import "../../blocks/Sheet/sheet.scss";
 @import "../../blocks/ColorsAndType/color.scss";
 @import "../../blocks/ColorsAndType/font.scss";
-@import "../../blocks/FontElements/textfield";
-@import "../../blocks/FontElements/dropdown";
-@import "../../blocks/FontElements/rectang"; //общий
-@import "../../blocks/FontElements/materials-icons"; //общий
-@import "../../blocks/FontElements/listitem";
-@import "../../blocks/FontElements/checkbox-list";
-@import "../../blocks/FontElements/checkbox";
+@import "../../blocks/FormElements/textfield";
+@import "../../blocks/FormElements/dropdown";
+@import "../../blocks/FormElements/rectang"; //общий
+@import "../../blocks/FormElements/materials-icons"; //общий
+@import "../../blocks/FormElements/listitem";
+@import "../../blocks/FormElements/checkbox-list";
+@import "../../blocks/FormElements/checkbox";
 
 html{
   width:4405px;
@@ -48,6 +48,10 @@ body {
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Conv_Montserrat-Light';
   font-size: 14px;
+}
+
+span, label {
+  display: inline-block;
 }
 
 .textfield ::placeholder {

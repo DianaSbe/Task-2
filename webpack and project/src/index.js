@@ -1,6 +1,6 @@
 //// JS
-import './blocks/FontElements/textfield-data.js'
-import './blocks/FontElements/inputmask.js'
+import './blocks/FormElements/textfield-data.js'
+import './blocks/FormElements/inputmask.js'
 
 import 'inputmask.dependencyLib'
 import 'inputmask'

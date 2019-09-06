@@ -4,6 +4,7 @@
 
 .checkbox__input { //скрываем кастомный чекбокс
     display: none;
+    position:absolute;
 }
 
 .checkbox__input + label {

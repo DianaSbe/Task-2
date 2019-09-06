@@ -1,8 +1,8 @@
 include ../../blocks/ColorsAndType/color
 include ../../blocks/ColorsAndType/font
-include ../../blocks/FontElements/textfield
-include ../../blocks/FontElements/dropdown
-include ../../blocks/FontElements/checkbox-list
+include ../../blocks/FormElements/textfield
+include ../../blocks/FormElements/dropdown
+include ../../blocks/FormElements/checkbox-list
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -49,7 +49,7 @@ mixin sheet(name)
         +dropdown("Date Dropdown", "", "ДД.ММ.ГГГГ", '', 'dropdown-date')
         +dropdown("Date Dropdown", "19.08.2019", "ДД.ММ.ГГГГ", '', 'dropdown-date')
       div.dropdowns-filter-data-wrapper
-        +dropdown("Filter Date Dropdown", "", "19 авг - 23 авг")
+        +dropdown("Filter Date Dropdown", "19 авг - 23 авг", "")
       div.textfields-subscription-wrapper  
         +textfield("Subscription Text Field", "", "Email")
       div.dropdowns-expanded-wrapper
@@ -58,3 +58,5 @@ mixin sheet(name)
       div.checkbox-list-wrapper
         +checkbox-list("Expandable Checkbox List")
         +checkbox-list("Expandable Checkbox List", 'expanded')
+      div.checkbox-buttons-wrapper
+        +checkbox-list("Checkbox Buttons")
