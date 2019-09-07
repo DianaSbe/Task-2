@@ -2,7 +2,7 @@ include ../../blocks/ColorsAndType/color
 include ../../blocks/ColorsAndType/font
 include ../../blocks/FormElements/textfield
 include ../../blocks/FormElements/dropdown
-include ../../blocks/FormElements/checkbox-list
+include ../../blocks/FormElements/checkbox
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -55,8 +55,10 @@ mixin sheet(name)
       div.dropdowns-expanded-wrapper
         +dropdown("Dropdown", "", "2 спальни, 2 кровати...", 'Default', 'dropdown-rooms')
         +dropdown("Dropdown", "", "2 спальни, 2 кровати...", 'expanded', 'dropdown-rooms')
-      div.checkbox-list-wrapper
-        +checkbox-list("Expandable Checkbox List")
-        +checkbox-list("Expandable Checkbox List", 'expanded')
+      div.expandable-checkbox-list-wrapper
+        +checkbox("Expandable Checkbox List")
+        +checkbox("Expandable Checkbox List", 'expanded')
       div.checkbox-buttons-wrapper
-        +checkbox-list("Checkbox Buttons")
+        +checkbox("Checkbox Buttons")
+      div.rich-checkbox-buttons-wrapper
+        +checkbox("Rich Checkbox Buttons")

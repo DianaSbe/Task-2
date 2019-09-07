@@ -1,7 +1,30 @@
-mixin checkbox(text, status, id)
-  div.checkbox
-    if status=="checked"
-      input.checkbox__input(type="checkbox" id=`cb${id}` checked)
-    else
-      input.checkbox__input(type="checkbox" id=`cb${id}`)
-    label(for=`cb${id}`)=text
+include checkitem
+
+mixin checkbox(name, status)
+  div(class=`checkbox`)
+    h3(class=`rectang-name`)= name
+    if name=="Expandable Checkbox List"
+      if status=="expanded"
+        i.material-icons.checkbox__arrow keyboard_arrow_up
+        div.checkitem__wrapper
+          +checkitem("Завтрак", '', '01')
+          +checkitem("Письменный стол", 'checked', '02')
+          +checkitem("Стул для кормления", 'checked', '03')
+          +checkitem("Кроватка", 'checked', '04')
+          +checkitem("Телевизор", '', '05')
+          +checkitem("Шампунь", '', '06')
+          +checkitem("Телевизор", '', '07')
+          +checkitem("Шампунь", '', '08')
+      else
+        i.material-icons.checkbox__arrow keyboard_arrow_down
+
+    else if name=="Checkbox Buttons"
+      div.checkitem__wrapper
+        +checkitem("Можно курить", '', '09')
+        +checkitem("Можно с питомцами", 'checked', '10')
+        +checkitem("Можно пригласить гостей (до 10 человек)", 'checked', '11')
+
+    else if name=="Rich Checkbox Buttons"
+      div.checkitem__wrapper
+        +checkitem("Широкий коридор", '', '12', 'Ширина коридоров в номере не менее 91 см.')
+        +checkitem("Помощник для инвалидов", '', '13', 'На 1 этаже вас встретит специалист и проводит до номера')

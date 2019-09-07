@@ -111,16 +111,16 @@ div.dropdowns-filter-data-wrapper {
     left: 141px;
 
     width: 266px;
-    height: 65px;
+    height: 266px;
 }
 
-.checkbox-list-wrapper {
+.expandable-checkbox-list-wrapper {
     position: absolute;
     top: 1193px; 
     left: 141px;
 
     width: 266px;
-    height: 277px;
+    height: 341px;
 }
 
 .checkbox-buttons-wrapper {
@@ -128,6 +128,15 @@ div.dropdowns-filter-data-wrapper {
     top: 140px; 
     left: 587px;
 
-    width: 240px;
-    height: 277px;
+    width: 222px;
+    height: 130px;
+}
+
+.rich-checkbox-buttons-wrapper {
+    position: absolute;
+    top: 1193px; 
+    left: 587px;
+
+    width: 266px;
+    height: 145px;
 }
