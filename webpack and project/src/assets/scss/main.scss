@@ -9,6 +9,7 @@
 @import "../../blocks/FormElements/listitem";
 @import "../../blocks/FormElements/checkbox";
 @import "../../blocks/FormElements/checkitem";
+@import "../../blocks/FormElements/advantage";
 
 html{
   width:4405px;
@@ -50,10 +51,19 @@ body {
   font-size: 14px;
 }
 
-span, label {
+span {
   display: inline-block;
+}
+
+label {
+  display: block;
 }
 
 .textfield ::placeholder {
   color: rgba(31, 32, 65, 0.25);
+}
+
+.subtitle {
+  font-family: 'Conv_Montserrat-Bold';
+  color: rgba(31, 32, 65, 0.75);
 }

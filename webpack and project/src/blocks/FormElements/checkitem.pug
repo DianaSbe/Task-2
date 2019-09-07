@@ -7,5 +7,5 @@ mixin checkitem(text, status, id, comment)
     if comment==null
       label(for=`cb${id}`)=text
     else
-      label.checkitem__rich-text(for=`cb${id}`)=text
+      label.subtitle(for=`cb${id}`)=text
       label.checkitem__rich-comment(for=`cb${id}`)=comment

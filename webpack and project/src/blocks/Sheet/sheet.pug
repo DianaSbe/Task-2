@@ -3,6 +3,7 @@ include ../../blocks/ColorsAndType/font
 include ../../blocks/FormElements/textfield
 include ../../blocks/FormElements/dropdown
 include ../../blocks/FormElements/checkbox
+include ../../blocks/FormElements/advantage
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -58,6 +59,9 @@ mixin sheet(name)
       div.expandable-checkbox-list-wrapper
         +checkbox("Expandable Checkbox List")
         +checkbox("Expandable Checkbox List", 'expanded')
+      div.advantages-wrapper
+        +advantage('mood', "Комфорт", "Шумопоглощающие стены")
+        +advantage('location_city', "Удобство", "Окно в каждой из спален")
       div.checkbox-buttons-wrapper
         +checkbox("Checkbox Buttons")
       div.rich-checkbox-buttons-wrapper

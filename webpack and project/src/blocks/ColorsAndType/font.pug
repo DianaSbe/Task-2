@@ -2,13 +2,13 @@ mixin font(title, description)
   div.font.wrapper__font
     if title=="H1"
       h1.font__title= title
-      h1.font__description.description__inner= description
+      h1.font__description= description
     else if title=="H2"
       h2.font__title= title
-      h2.font__description.description__inner= description
+      h2.font__description= description
     else if title=="H3"
       h3.font__title= title
-      h3.font__description.description__inner= description
+      h3.font__description= description
     else if title=="Body"
       span.font__title= title
-      span.font__description.description__inner.text_body= description
+      span.font__description.text_body= description
