@@ -7,13 +7,15 @@
 @import "../../blocks/FormElements/rectang"; //общий
 @import "../../blocks/FormElements/materials-icons"; //общий
 @import "../../blocks/FormElements/listitem";
+@import "../../blocks/FormElements/switchitem";
 @import "../../blocks/FormElements/checkbox";
-@import "../../blocks/FormElements/checkitem";
 @import "../../blocks/FormElements/advantage";
+@import "../../blocks/FormElements/radiobutton";
+@import "../../blocks/FormElements/toggle";
 
-html{
-  width:4405px;
- // height: 2750px;
+html {
+  width: 4405px;
+  //height: 2750px;
 }
 
 %heads_bold-margin { //h1,h2,h3

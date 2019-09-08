@@ -2,8 +2,11 @@ include ../../blocks/ColorsAndType/color
 include ../../blocks/ColorsAndType/font
 include ../../blocks/FormElements/textfield
 include ../../blocks/FormElements/dropdown
+include ../../blocks/FormElements/switchitem
 include ../../blocks/FormElements/checkbox
 include ../../blocks/FormElements/advantage
+include ../../blocks/FormElements/radiobutton
+include ../../blocks/FormElements/toggle
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -64,5 +67,9 @@ mixin sheet(name)
         +advantage('location_city', "Удобство", "Окно в каждой из спален")
       div.checkbox-buttons-wrapper
         +checkbox("Checkbox Buttons")
+      div.radiobuttons-wrapper
+        +radiobutton("Radio Buttons")
+      div.toggle-wrapper
+        +toggle("Toggle")
       div.rich-checkbox-buttons-wrapper
         +checkbox("Rich Checkbox Buttons")

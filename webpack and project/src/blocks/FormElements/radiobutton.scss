@@ -1,0 +1,25 @@
+.wrapper__rb-man, .wrapper__rb-woman {
+    float: left;
+}
+
+.wrapper__rb-man {
+    margin-right: 20px;
+}
+
+//Внешний вид рэдиобаттона (основной класс - switchitem.scss)
+
+.radio-input + label {
+    @extend %switchitem;
+    padding-left: 29px;
+}
+
+.radio-input + label:before {
+    @extend %switchitem-before;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.radio-input:checked + label:before {
+    @extend %switchitem-checked;
+    background: url('/circlemark-active.svg') no-repeat center 50%;
+}

@@ -1,0 +1,17 @@
+mixin switchitem(text, comment, status, id, name, type, subtype)
+  div.switchitem
+    if status=="checked"
+      if subtype=="toggle"
+        input(class=`switchitem__input ${subtype}-input` type=`${type}` name=`${name}` id=`${id}` checked)
+      else
+        input(class=`switchitem__input ${type}-input` type=`${type}` name=`${name}` id=`${id}` checked)
+    else
+      if subtype=="toggle"
+        input(class=`switchitem__input ${subtype}-input` type=`${type}` name=`${name}` id=`${id}`)
+      else
+        input(class=`switchitem__input ${type}-input` type=`${type}` name=`${name}` id=`${id}`)
+    if comment==""
+      label(for=`${id}`)=text
+    else
+      label.subtitle(for=`${id}`)=text
+      label.checkbox__rich-comment(for=`${id}`)=comment

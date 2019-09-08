@@ -1,30 +1,28 @@
-include checkitem
-
 mixin checkbox(name, status)
-  div(class=`checkbox`)
-    h3(class=`rectang-name`)= name
+  div.checkbox
+    h3.rectang-name= name
     if name=="Expandable Checkbox List"
       if status=="expanded"
         i.material-icons.checkbox__arrow keyboard_arrow_up
-        div.checkitem__wrapper
-          +checkitem("Завтрак", '', '01')
-          +checkitem("Письменный стол", 'checked', '02')
-          +checkitem("Стул для кормления", 'checked', '03')
-          +checkitem("Кроватка", 'checked', '04')
-          +checkitem("Телевизор", '', '05')
-          +checkitem("Шампунь", '', '06')
-          +checkitem("Телевизор", '', '07')
-          +checkitem("Шампунь", '', '08')
+        div.switchitem__wrapper
+          +switchitem("Завтрак", "", '', 'cb01', '', 'checkbox')
+          +switchitem("Письменный стол", "", 'checked', 'cb02', '', 'checkbox')
+          +switchitem("Стул для кормления", "", 'checked', 'cb03', '', 'checkbox')
+          +switchitem("Кроватка", "", 'checked', 'cb04', '', 'checkbox')
+          +switchitem("Телевизор", "", '', 'cb05', '', 'checkbox')
+          +switchitem("Шампунь", "", '', 'cb06', '', 'checkbox')
+          +switchitem("Телевизор", "", '', 'cb07', '', 'checkbox')
+          +switchitem("Шампунь", "", '', 'cb08', '', 'checkbox')
       else
         i.material-icons.checkbox__arrow keyboard_arrow_down
 
     else if name=="Checkbox Buttons"
-      div.checkitem__wrapper
-        +checkitem("Можно курить", '', '09')
-        +checkitem("Можно с питомцами", 'checked', '10')
-        +checkitem("Можно пригласить гостей (до 10 человек)", 'checked', '11')
+      div.switchitem__wrapper
+        +switchitem("Можно курить", "", '', 'cb09', '', 'checkbox')
+        +switchitem("Можно с питомцами", "", 'checked', 'cb10', '', 'checkbox')
+        +switchitem("Можно пригласить гостей (до 10 человек)", "", 'checked', 'cb11', '', 'checkbox')
 
     else if name=="Rich Checkbox Buttons"
-      div.checkitem__wrapper
-        +checkitem("Широкий коридор", '', '12', 'Ширина коридоров в номере не менее 91 см.')
-        +checkitem("Помощник для инвалидов", '', '13', 'На 1 этаже вас встретит специалист и проводит до номера')
+      div.switchitem__wrapper
+        +switchitem("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", '', 'cb12', '', 'checkbox')
+        +switchitem("Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера", '', 'cb13', '', 'checkbox')

@@ -1,0 +1,8 @@
+mixin radiobutton(name)
+  div.radiobutton
+    h3.rectang-name= name
+    div.switchitem__wrapper
+      div.wrapper__rb-man
+        +switchitem("Мужчина", "", 'checked', 'rd01', 'gender', 'radio')
+      div.wrapper__rb-woman
+        +switchitem("Женщина", "", '', 'rd02', 'gender', 'radio')

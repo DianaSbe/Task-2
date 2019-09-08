@@ -1,0 +1,51 @@
+.switchitem__wrapper { //контейнер, чтобы отодвинуть элементы от заголовка
+    position: absolute;
+    top: 23px;
+}
+
+.switchitem { // отодвигаем элементы друг от друга
+    margin-top: 12px;
+}
+
+.switchitem__input { //скрываем кастомный чекбокс
+    display: none;
+    position: absolute;
+}
+
+%switchitem { //input + label
+    position: relative;
+    cursor: pointer;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+%switchitem-before { // input + label:before
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+
+    content: '';
+	position: absolute;
+	left: -1px;
+}
+
+%switchitem-checked { // input:cheked + label:before
+    border: 1px solid #BC9CFF;
+}
+
+.switchitem__input:checked + label { //меняем цвет текста при checked
+    color: rgba(31, 32, 65, 0.75);
+}
+
+//Дополнительные параметры для Rich Checkbox Buttons (текст)
+.checkbox__rich-comment {
+    font-size: 12px;
+    padding-left: 29px;
+    position:relative; //нужно, чтобы опустить текст без влияния на нижнего соседа
+    top:5px;
+}
+
+.switchitem .subtitle { //переопределение тут обязательно
+    font-family: 'Conv_Montserrat-Bold';
+    color: rgba(31, 32, 65, 0.75);
+}

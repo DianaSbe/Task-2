@@ -1,0 +1,20 @@
+//Внешний вид тоггла (основной класс - switchitem.scss)
+
+.toggle-input + label {
+    @extend %switchitem;
+    padding-left: 49px;
+}
+
+.toggle-input + label:before {
+    @extend %switchitem-before;
+    width: 40px;
+    background: url('/circlemark-unactive.svg') no-repeat 10% 50%;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.toggle-input:checked + label:before {
+    @extend %switchitem-checked;
+    background: url('/circlemark-active.svg') no-repeat 90% 50%;
+    transition: .2s;
+}

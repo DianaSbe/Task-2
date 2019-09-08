@@ -87,7 +87,7 @@
     height: 65px;
 }
 
-div.dropdowns-filter-data-wrapper {
+.dropdowns-filter-data-wrapper {
     position: absolute;
     top: 604px; 
     left: 141px;
@@ -139,6 +139,24 @@ div.dropdowns-filter-data-wrapper {
 
     width: 222px;
     height: 130px;
+}
+
+.radiobuttons-wrapper {
+    position: absolute;
+    top: 309px; 
+    left: 587px;
+
+    width: 222px;
+    height: 55px;
+}
+
+.toggle-wrapper {
+    position: absolute;
+    top: 400px; 
+    left: 587px;
+
+    width: 260px;
+    height: 89px;
 }
 
 .rich-checkbox-buttons-wrapper {
