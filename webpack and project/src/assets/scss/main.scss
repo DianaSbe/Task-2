@@ -1,17 +1,20 @@
-@import "/utils/fonts.scss"; //общий
+@import "/utils/fonts.scss"; //общий стиль
 @import "../../blocks/Sheet/sheet.scss";
+
 @import "../../blocks/ColorsAndType/color.scss";
 @import "../../blocks/ColorsAndType/font.scss";
-@import "../../blocks/FormElements/textfield";
-@import "../../blocks/FormElements/dropdown";
-@import "../../blocks/FormElements/rectang"; //общий
-@import "../../blocks/FormElements/materials-icons"; //общий
-@import "../../blocks/FormElements/listitem";
-@import "../../blocks/FormElements/switchitem";
-@import "../../blocks/FormElements/checkbox";
-@import "../../blocks/FormElements/advantage";
-@import "../../blocks/FormElements/radiobutton";
-@import "../../blocks/FormElements/toggle";
+
+@import "../../blocks/FormElements/rectang"; //общий стиль
+@import "../../blocks/FormElements/materials-icons"; //общий стиль
+
+@import "../../blocks/FormElements/textfield/textfield"; //компонент
+@import "../../blocks/FormElements/dropdown/dropdown"; //компонент
+@import "../../blocks/FormElements/listitem/listitem"; //компонент
+@import "../../blocks/FormElements/switchitem/switchitem"; //общий компонент для checkbox, radiobutton и toggle
+@import "../../blocks/FormElements/checkbox/checkbox"; //компонент
+@import "../../blocks/FormElements/radiobutton/radiobutton"; //компонент
+@import "../../blocks/FormElements/toggle/toggle"; //компонент
+@import "../../blocks/FormElements/advantage/advantage"; //компонент
 
 html {
   width: 4405px;

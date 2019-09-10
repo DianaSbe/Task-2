@@ -1,6 +1,6 @@
-//// JS
-import './blocks/FormElements/textfield-data.js'
-import './blocks/FormElements/inputmask.js'
+// JS
+import './blocks/FormElements/textfield/textfield-data.js'
+import './blocks/FormElements/dropdown/inputmask.js'
 
 import 'inputmask.dependencyLib'
 import 'inputmask'
@@ -13,17 +13,6 @@ import './assets/scss/main.scss'
 
 // CSS
 // import './assets/css/main.css'
-
-////Vue.js
-//window.Vue = require('vue')
-
-//// Vue components (for use in html)
-//Vue.component('example-component', require('./components/Example.vue').default)
-
-//// Vue init
-//const app = new Vue({
-// el: '#app'
-//})
 
 //Проверка работы JQUERY
 //jQuery(document).ready(function($) {
