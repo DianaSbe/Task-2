@@ -11,6 +11,7 @@ include ../../blocks/FormElements/switchitem/switchitem
 include ../../blocks/FormElements/checkbox/checkbox
 include ../../blocks/FormElements/radiobutton/radiobutton
 include ../../blocks/FormElements/toggle/toggle
+include ../../blocks/FormElements/likebutton/likebutton
 
 include ../../blocks/FormElements/advantage/advantage
 
@@ -77,5 +78,7 @@ mixin sheet(name)
         +radiobutton("Radio Buttons")
       div.toggle-wrapper
         +toggle("Toggle")
+      div.likebutton-wrapper
+        +likebutton("Like Button")
       div.rich-checkbox-buttons-wrapper
         +checkbox("Rich Checkbox Buttons")

@@ -26,3 +26,11 @@
     @extend %switchitem-checked;
     background: url('/boxmark.svg') no-repeat center 40%;
 }
+
+//Дополнительные параметры для Rich Checkbox Buttons (текст)
+.checkbox__rich-comment {
+    font-size: 12px;
+    padding-left: 29px;
+    position: relative; //нужно, чтобы опустить текст без влияния на нижнего соседа
+    top: 5px;
+}

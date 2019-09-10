@@ -7,6 +7,10 @@
     margin-top: 12px;
 }
 
+.wrapper__switchitem-left, .wrapper__switchitem-right { //если элементы будут в одной строке
+    float: left;
+}
+
 .switchitem__input { //скрываем кастомный чекбокс
     display: none;
     position: absolute;
@@ -38,13 +42,6 @@
 }
 
 //Дополнительные параметры для Rich Checkbox Buttons (текст)
-.checkbox__rich-comment {
-    font-size: 12px;
-    padding-left: 29px;
-    position:relative; //нужно, чтобы опустить текст без влияния на нижнего соседа
-    top:5px;
-}
-
 .switchitem .subtitle { //переопределение тут обязательно
     font-family: 'Conv_Montserrat-Bold';
     color: rgba(31, 32, 65, 0.75);

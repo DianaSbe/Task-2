@@ -1,49 +1,55 @@
+////////////////////Стиль для каждого раздела////////////////////
+
 .sheet {
     position: relative;
     width: 1440px;
     border: 1px solid black;
-    background: #FFFFFF;
     margin: 10px 10px;
 }
 
 .sheet__inner {
-    position:absolute;
+    position: absolute;
     margin: 30px;
 }
 
-%floats{
+///////////////Расположение и размер каждого раздела///////////////
+
+%floats {
     display: block;
     float: left;
 }
 
 .ColorsAndTypes {
+    background: #FFFFFF;
     height: 900px;
     @extend %floats;
 }
 
 .Cards, .HeadersAndFooters{
-    @extend %floats;
-    float:right;
-    height: 1350px;
+    float: right;
     background: #F4F4F6;
+    height: 1350px;
+    @extend %floats;
 }
 
 .FormElements {
+    background: #FFFFFF;
     height: 1853px;
     @extend %floats;
-    //clear:both;
 }
+
+//////////ColorsAndTypes//////////
 
 .colors-wrapper, .fonts-wrapper {
     position: absolute;
     top: 145px;
-  }
+}
   
 .colors-wrapper {
     left: 150px;
     width: 269.26px;
     height: 610px;
-  }
+}
   
 .fonts-wrapper {
     left: 846px;
@@ -51,118 +57,125 @@
     height: 321px;
 }
 
-.textfields-wrapper {
-    position: absolute;
-    top: 140px; 
+//////////FormElements//////////
+
+%first-column {
+    position: absolute; 
     left: 141px;
+}
+
+%second-column {
+    position: absolute; 
+    left: 587px;
+}
+
+.textfields-wrapper {
+    @extend %first-column;
+    top: 140px; 
 
     width: 320px;
     height: 150px;
 }
 
-.dropdowns-wrapper{
-    position: absolute;
+.dropdowns-wrapper {
+    @extend %first-column;
     top: 309px; 
-    left: 141px;
 
     width: 320px;
     height: 65px;
 }
 
-.textfields-data-wrapper{
-    position: absolute;
+.textfields-data-wrapper {
+    @extend %first-column;
     top: 395px; 
-    left: 141px;
 
     width: 320px;
     height: 65px;
 }  
 
-.dropdowns-data-wrapper{
-    position: absolute;
+.dropdowns-data-wrapper {
+    @extend %first-column;
     top: 500px; 
-    left: 141px;
 
     width: 340px;
     height: 65px;
 }
 
 .dropdowns-filter-data-wrapper {
-    position: absolute;
+    @extend %first-column;
     top: 604px; 
-    left: 141px;
 
     width: 266px;
     height: 65px;
 }
 
 .textfields-subscription-wrapper {
-    position: absolute;
+    @extend %first-column;
     top: 709px; 
-    left: 141px;
 
     width: 266px;
     height: 65px;
 }
 
 .dropdowns-expanded-wrapper {
-    position: absolute;
+    @extend %first-column;
     top: 873px; 
-    left: 141px;
 
     width: 266px;
     height: 266px;
 }
 
 .expandable-checkbox-list-wrapper {
-    position: absolute;
+    @extend %first-column;
     top: 1193px; 
-    left: 141px;
 
     width: 266px;
     height: 341px;
 }
 
 .advantages-wrapper {
-    position: absolute;
+    @extend %first-column;
     top: 1563px; 
-    left: 141px;
 
     width: 291px;
     height: 150px;
 }
 
 .checkbox-buttons-wrapper {
-    position: absolute;
+    @extend %second-column;
     top: 140px; 
-    left: 587px;
 
     width: 222px;
     height: 130px;
 }
 
 .radiobuttons-wrapper {
-    position: absolute;
+    @extend %second-column;
     top: 309px; 
-    left: 587px;
 
     width: 222px;
     height: 55px;
 }
 
 .toggle-wrapper {
-    position: absolute;
+    @extend %second-column;
     top: 400px; 
-    left: 587px;
 
     width: 260px;
     height: 89px;
 }
 
+.likebutton-wrapper {
+    @extend %second-column;
+    top: 530px; 
+
+    width: 90px;
+    height: 51px;
+}
+
 .rich-checkbox-buttons-wrapper {
-    position: absolute;
+    @extend %second-column;
     top: 1193px; 
-    left: 587px;
 
     width: 266px;
     height: 145px;

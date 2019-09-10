@@ -5,24 +5,24 @@ mixin checkbox(name, status)
       if status=="expanded"
         i.material-icons.checkbox__arrow keyboard_arrow_up
         div.switchitem__wrapper
-          +switchitem("Завтрак", "", '', 'cb01', '', 'checkbox')
-          +switchitem("Письменный стол", "", 'checked', 'cb02', '', 'checkbox')
-          +switchitem("Стул для кормления", "", 'checked', 'cb03', '', 'checkbox')
-          +switchitem("Кроватка", "", 'checked', 'cb04', '', 'checkbox')
-          +switchitem("Телевизор", "", '', 'cb05', '', 'checkbox')
-          +switchitem("Шампунь", "", '', 'cb06', '', 'checkbox')
-          +switchitem("Телевизор", "", '', 'cb07', '', 'checkbox')
-          +switchitem("Шампунь", "", '', 'cb08', '', 'checkbox')
+          +switchitem("Завтрак", "", '', 'cb01', '', 'checkbox', 'checkbox')
+          +switchitem("Письменный стол", "", 'checked', 'cb02', '', 'checkbox', 'checkbox')
+          +switchitem("Стул для кормления", "", 'checked', 'cb03', '', 'checkbox', 'checkbox')
+          +switchitem("Кроватка", "", 'checked', 'cb04', '', 'checkbox', 'checkbox')
+          +switchitem("Телевизор", "", '', 'cb05', '', 'checkbox', 'checkbox')
+          +switchitem("Шампунь", "", '', 'cb06', '', 'checkbox', 'checkbox')
+          +switchitem("Телевизор", "", '', 'cb07', '', 'checkbox', 'checkbox')
+          +switchitem("Шампунь", "", '', 'cb08', '', 'checkbox', 'checkbox')
       else
         i.material-icons.checkbox__arrow keyboard_arrow_down
 
     else if name=="Checkbox Buttons"
       div.switchitem__wrapper
-        +switchitem("Можно курить", "", '', 'cb09', '', 'checkbox')
-        +switchitem("Можно с питомцами", "", 'checked', 'cb10', '', 'checkbox')
-        +switchitem("Можно пригласить гостей (до 10 человек)", "", 'checked', 'cb11', '', 'checkbox')
+        +switchitem("Можно курить", "", '', 'cb09', '', 'checkbox', 'checkbox')
+        +switchitem("Можно с питомцами", "", 'checked', 'cb10', '', 'checkbox', 'checkbox')
+        +switchitem("Можно пригласить гостей (до 10 человек)", "", 'checked', 'cb11', '', 'checkbox', 'checkbox')
 
     else if name=="Rich Checkbox Buttons"
       div.switchitem__wrapper
-        +switchitem("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", '', 'cb12', '', 'checkbox')
-        +switchitem("Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера", '', 'cb13', '', 'checkbox')
+        +switchitem("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", '', 'cb12', '', 'checkbox', 'checkbox')
+        +switchitem("Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера", '', 'cb13', '', 'checkbox', 'checkbox')

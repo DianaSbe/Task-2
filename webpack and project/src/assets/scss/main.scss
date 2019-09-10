@@ -10,10 +10,11 @@
 @import "../../blocks/FormElements/textfield/textfield"; //компонент
 @import "../../blocks/FormElements/dropdown/dropdown"; //компонент
 @import "../../blocks/FormElements/listitem/listitem"; //компонент
-@import "../../blocks/FormElements/switchitem/switchitem"; //общий компонент для checkbox, radiobutton и toggle
+@import "../../blocks/FormElements/switchitem/switchitem"; //общий компонент для checkbox, radiobutton, toggle и likebutton
 @import "../../blocks/FormElements/checkbox/checkbox"; //компонент
 @import "../../blocks/FormElements/radiobutton/radiobutton"; //компонент
 @import "../../blocks/FormElements/toggle/toggle"; //компонент
+@import "../../blocks/FormElements/likebutton/likebutton"; //компонент
 @import "../../blocks/FormElements/advantage/advantage"; //компонент
 
 html {
