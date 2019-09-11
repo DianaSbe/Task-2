@@ -14,6 +14,7 @@ include ../../blocks/FormElements/toggle/toggle
 include ../../blocks/FormElements/likebutton/likebutton
 
 include ../../blocks/FormElements/advantage/advantage
+include ../../blocks/FormElements/ratebutton/ratebutton
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -80,5 +81,8 @@ mixin sheet(name)
         +toggle("Toggle")
       div.likebutton-wrapper
         +likebutton("Like Button")
+      div.ratebutton-wrapper
+        +ratebutton("Rate Button", '4', '1')
+        +ratebutton("", '5', '2')
       div.rich-checkbox-buttons-wrapper
         +checkbox("Rich Checkbox Buttons")

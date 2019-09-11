@@ -6,7 +6,7 @@ import 'inputmask.dependencyLib'
 import 'inputmask'
 import 'jquery.inputmask'
 import 'inputmask.numeric.extensions'
-import 'inputmask.date.extensions';
+import 'inputmask.date.extensions'
 
 // SCSS
 import './assets/scss/main.scss'

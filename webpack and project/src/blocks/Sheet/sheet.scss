@@ -173,6 +173,14 @@
     height: 51px;
 }
 
+.ratebutton-wrapper {
+    @extend %second-column;
+    top: 622px; 
+
+    width: 260px;
+    height: 55px;
+}
+
 .rich-checkbox-buttons-wrapper {
     @extend %second-column;
     top: 1193px; 
