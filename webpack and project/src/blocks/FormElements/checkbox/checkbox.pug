@@ -1,20 +1,20 @@
-mixin checkbox(name, status)
+mixin checkbox(name, status, num)
   div.checkbox
     h3.rectang-name= name
     if name=="Expandable Checkbox List"
       if status=="expanded"
         i.material-icons.checkbox__arrow keyboard_arrow_up
-        div.switchitem__wrapper
-          +switchitem("Завтрак", "", '', 'cb01', '', 'checkbox', 'checkbox')
-          +switchitem("Письменный стол", "", 'checked', 'cb02', '', 'checkbox', 'checkbox')
-          +switchitem("Стул для кормления", "", 'checked', 'cb03', '', 'checkbox', 'checkbox')
-          +switchitem("Кроватка", "", 'checked', 'cb04', '', 'checkbox', 'checkbox')
-          +switchitem("Телевизор", "", '', 'cb05', '', 'checkbox', 'checkbox')
-          +switchitem("Шампунь", "", '', 'cb06', '', 'checkbox', 'checkbox')
-          +switchitem("Телевизор", "", '', 'cb07', '', 'checkbox', 'checkbox')
-          +switchitem("Шампунь", "", '', 'cb08', '', 'checkbox', 'checkbox')
       else
         i.material-icons.checkbox__arrow keyboard_arrow_down
+      div(class=`switchitem__wrapper checkbox__wrapper_${status}`)
+        +switchitem("Завтрак", "", '', num+'cb01', '', 'checkbox', 'checkbox')
+        +switchitem("Письменный стол", "", 'checked', num+'cb02', '', 'checkbox', 'checkbox')
+        +switchitem("Стул для кормления", "", 'checked', num+'cb03', '', 'checkbox', 'checkbox')
+        +switchitem("Кроватка", "", 'checked', num+'cb04', '', 'checkbox', 'checkbox')
+        +switchitem("Телевизор", "", '', num+'cb05', '', 'checkbox', 'checkbox')
+        +switchitem("Шампунь", "", '', num+'cb06', '', 'checkbox', 'checkbox')
+        +switchitem("Телевизор", "", '', num+'cb07', '', 'checkbox', 'checkbox')
+        +switchitem("Шампунь", "", '', num+'cb08', '', 'checkbox', 'checkbox')
 
     else if name=="Checkbox Buttons"
       div.switchitem__wrapper

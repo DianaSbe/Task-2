@@ -1,4 +1,4 @@
-mixin dropdown(name, value, hint, status, type)
+mixin dropdown(name, value, hint, status, state, type)
   div(class=`dropdown ${type}`)
     h3(class=`rectang-name`)= name
     h3(class=`rectang-status`)= status
@@ -10,18 +10,16 @@ mixin dropdown(name, value, hint, status, type)
     
     else
       div(class=`wrapper__dropdown ${type}`)
-        input(class=`rectang input_${status}` type="text" name="data" value=`${value}` placeholder=`${hint}`)
-        i(class=`material-icons dropdown__arrow arrow_${status}`) keyboard_arrow_down
+        input(class=`rectang input_${state}` type="text" name="data" value=`${value}` placeholder=`${hint}`)
+        i(class=`material-icons dropdown__arrow arrow_${state}`) keyboard_arrow_down
       if type=="dropdown-guests"
-        ul.rectang.dropdown__ul
+        ul(class=`rectang dropdown__ul ${type}-ul ul_${state}`)
           +listitem("Взрослые", "0", 'inactive')
           +listitem("Дети", "0", 'inactive')
           +listitem("Младенцы", "0", 'inactive')
+          h3.dropdown__button-apply Применить
       if type=="dropdown-rooms"
-        ul(class=`rectang dropdown__ul ul_${status}`)
+        ul(class=`rectang dropdown__ul ${type}-ul ul_${state}`)
           +listitem("Спальни", "2")
           +listitem("Кровати", "2")
           +listitem("Ванные комнаты", "0", 'inactive')
-
-    //button(type="submit" name="submit")
-      i.material-icons star_rate

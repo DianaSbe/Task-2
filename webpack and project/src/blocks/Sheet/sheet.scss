@@ -62,11 +62,13 @@
 %first-column {
     position: absolute; 
     left: 141px;
+    //border: 1px solid black;
 }
 
 %second-column {
     position: absolute; 
     left: 587px;
+    //border: 1px solid black;
 }
 
 .textfields-wrapper {
@@ -74,15 +76,23 @@
     top: 140px; 
 
     width: 320px;
-    height: 150px;
+    height: 67px;
 }
 
-.dropdowns-wrapper {
+.textfields-hover-wrapper {
+    @extend %first-column;
+    top: 225px; 
+
+    width: 320px;
+    height: 67px;
+}
+
+.dropdowns-guests-wrapper {
     @extend %first-column;
     top: 309px; 
 
     width: 320px;
-    height: 65px;
+    height: 67px;
 }
 
 .textfields-data-wrapper {
@@ -90,7 +100,7 @@
     top: 395px; 
 
     width: 320px;
-    height: 65px;
+    height: 67px;
 }  
 
 .dropdowns-data-wrapper {
@@ -98,7 +108,7 @@
     top: 500px; 
 
     width: 340px;
-    height: 65px;
+    height: 67px;
 }
 
 .dropdowns-filter-data-wrapper {
@@ -106,7 +116,7 @@
     top: 604px; 
 
     width: 266px;
-    height: 65px;
+    height: 67px;
 }
 
 .textfields-subscription-wrapper {
@@ -114,15 +124,23 @@
     top: 709px; 
 
     width: 266px;
-    height: 65px;
+    height: 67px;
 }
 
-.dropdowns-expanded-wrapper {
+.dropdowns-rooms-wrapper {
     @extend %first-column;
     top: 873px; 
 
     width: 266px;
-    height: 266px;
+    height: 67px;
+}
+
+.dropdowns-roomsExp-wrapper {
+    @extend %first-column;
+    top: 957px; 
+
+    width: 266px;
+    height: 185px;
 }
 
 .expandable-checkbox-list-wrapper {
@@ -130,7 +148,7 @@
     top: 1193px; 
 
     width: 266px;
-    height: 341px;
+    height: 330px;
 }
 
 .advantages-wrapper {
@@ -138,7 +156,7 @@
     top: 1563px; 
 
     width: 291px;
-    height: 150px;
+    height: 160px;
 }
 
 .checkbox-buttons-wrapper {
@@ -154,7 +172,7 @@
     top: 309px; 
 
     width: 222px;
-    height: 55px;
+    height: 57px;
 }
 
 .toggle-wrapper {
@@ -162,7 +180,7 @@
     top: 400px; 
 
     width: 260px;
-    height: 89px;
+    height: 86px;
 }
 
 .likebutton-wrapper {
@@ -170,7 +188,7 @@
     top: 530px; 
 
     width: 90px;
-    height: 51px;
+    height: 57px;
 }
 
 .ratebutton-wrapper {
@@ -181,10 +199,18 @@
     height: 55px;
 }
 
+.dropdowns-guestsExpE-wrapper {
+    @extend %second-column;
+    top: 873px; 
+
+    width: 320px;
+    height: 225px;
+}
+
 .rich-checkbox-buttons-wrapper {
     @extend %second-column;
     top: 1193px; 
 
     width: 266px;
-    height: 145px;
+    height: 148px;
 }

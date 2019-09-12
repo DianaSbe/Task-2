@@ -1,10 +1,19 @@
 .listitem { //элементы списка
-    padding: 12px 0px 10px 13px;
     position: relative;
+    height: 37px;
+}
+
+.listitem__h3 { //наименования
+    float: left;
+    padding: 12px 0px 0px 13px;
+}
+
+.wrapper__listitem { //контейнер с кнопками и счетчиком
+    float: right;
+    margin: 6px 7px 0px 0px;
 }
 
 .listitem__button { //кнопки
-    position: absolute;
     width: 30px;
     height: 30px;
 
@@ -13,8 +22,6 @@
     color: rgba(31, 32, 65, 0.5);
     box-sizing: border-box;
     border-radius: 22px;
-
-    top: 6px;
 }
 
 .inactive { //неактивная кнопка
@@ -22,15 +29,10 @@
 }
 
 .button-minus { //кнопка "-"
-    left: 165px;
+    float: left;
 }
 
-.button-plus { //кнопка "+"
-    left: 227px;
-}
-
-.listitem__counter{ //счетчик
-    position: absolute;
-    top: 12px;
-    left: 207px;
+.listitem__counter { //счетчик
+    padding: 5px 12px 0px 12px;
+    float: left;
 }

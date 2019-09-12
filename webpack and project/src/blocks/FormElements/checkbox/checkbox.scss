@@ -9,6 +9,14 @@
     color: rgba(31, 32, 65, 0.5);
 }
 
+.checkbox__wrapper_{
+    display: none; //по умолчанию скрыт
+}
+
+.checkbox__wrapper_expanded { //развернут при указанном параметре expanded
+    display: block;
+}
+
 //Внешний вид чекбокса (основной класс - switchitem.scss)
 
 .checkbox-input + label {
