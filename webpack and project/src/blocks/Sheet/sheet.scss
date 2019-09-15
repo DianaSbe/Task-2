@@ -71,6 +71,12 @@
     //border: 1px solid black;
 }
 
+%third-column {
+    position: absolute; 
+    left: 979px;
+    //border: 1px solid black;
+}
+
 .textfields-wrapper {
     @extend %first-column;
     top: 140px; 
@@ -213,4 +219,12 @@
 
     width: 266px;
     height: 148px;
+}
+
+.rangeslider-wrapper {
+    @extend %third-column;
+    top: 140px; 
+
+    width: 266px;
+    height: 52px;
 }

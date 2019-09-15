@@ -113,7 +113,9 @@ module.exports = {
       'inputmask': path.resolve(__dirname, '../node_modules/inputmask/dist/inputmask.js'),
       'jquery.inputmask': path.resolve(__dirname, '../node_modules/inputmask/dist/jquery.inputmask.js'),
       'inputmask.numeric.extensions': path.resolve(__dirname, '../node_modules/inputmask/lib/extensions/inputmask.numeric.extensions.js'),
-      'inputmask.date.extensions': path.resolve(__dirname, '../node_modules/inputmask/lib/extensions/inputmask.date.extensions.js')
+      'inputmask.date.extensions': path.resolve(__dirname, '../node_modules/inputmask/lib/extensions/inputmask.date.extensions.js'),
+
+      'jquery-ui': path.resolve(__dirname, '../node_modules/jquery-ui-dist/jquery-ui.js')
     }
   },
   plugins: [

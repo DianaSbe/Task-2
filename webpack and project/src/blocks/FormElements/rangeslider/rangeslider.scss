@@ -1,0 +1,86 @@
+.rangeslider__input {
+	display: block;
+	float: right;
+	text-align: right;
+	margin-top: 2px;
+	color: rgba(31, 32, 65, 0.5);
+	border: 0px;
+	font-size: 12px;
+	font-family: 'Conv_Montserrat-Regular';
+}
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+	top: 41px;
+}
+
+.ui-slider .ui-slider-handle { //переключатели
+	position: absolute;
+	z-index: 2;
+	width: 12px;
+	height: 12px;
+	cursor: default;
+	-ms-touch-action: none;
+    touch-action: none;
+    
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	display: block;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.4em;
+	margin-left: -.6em;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    height: 100%;
+    
+    top: -1px;
+    height: 6px;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget-content {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #ffffff;
+    height: 6px;
+}
+
+.ui-widget-header {
+    border-radius: 3px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}

@@ -15,6 +15,7 @@ include ../../blocks/FormElements/likebutton/likebutton
 
 include ../../blocks/FormElements/advantage/advantage
 include ../../blocks/FormElements/ratebutton/ratebutton
+include ../../blocks/FormElements/rangeslider/rangeslider
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -90,3 +91,5 @@ mixin sheet(name)
         +dropdown("Dropdown", "", "Сколько гостей", '', 'expanded', 'dropdown-guests')
       div.rich-checkbox-buttons-wrapper
         +checkbox("Rich Checkbox Buttons")
+      div.rangeslider-wrapper
+        +rangeslider("Range Slider")

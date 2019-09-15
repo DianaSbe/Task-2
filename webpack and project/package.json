@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "inputmask": "^5.0.0-beta.235",
+    "jquery-ui-dist": "^1.12.1",
     "vue": "^2.6.10"
   }
 }
