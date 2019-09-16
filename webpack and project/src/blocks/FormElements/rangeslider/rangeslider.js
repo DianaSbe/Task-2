@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    $('.rangerslider__range-slider').slider({
+    $('.slider-range').slider({
       range: true,
       min: 0,
       max: 15700,
