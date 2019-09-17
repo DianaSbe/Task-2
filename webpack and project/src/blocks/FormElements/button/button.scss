@@ -1,0 +1,42 @@
+.button__rectangle {
+    width: 99px;
+    height: 44px;
+
+    border-radius: 22px;
+    border: 0px;
+
+    margin-top: 16px;
+}
+
+.default-v, .hover-v {
+    padding: 0px 0px 5px 19px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.default-w, .hover-w {
+    //position: absolute;
+    width: 95px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-bottom: 4px;
+    transform-style: preserve-3d;
+    
+    &:before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    transform: translateZ(-1px);
+    }
+}
+
+.default-v:hover, .hover-v, .default-w:hover:before, .hover-w:before {
+    opacity: 0.5;
+}

@@ -16,6 +16,8 @@ include ../../blocks/FormElements/likebutton/likebutton
 include ../../blocks/FormElements/advantage/advantage
 include ../../blocks/FormElements/ratebutton/ratebutton
 include ../../blocks/FormElements/rangeslider/rangeslider
+include ../../blocks/FormElements/button/button
+include ../../blocks/FormElements/textbutton/textbutton
 
 mixin sheet(name)
   if name=="ColorsAndTypes"
@@ -93,3 +95,15 @@ mixin sheet(name)
         +checkbox("Rich Checkbox Buttons")
       div.rangeslider-wrapper
         +rangeslider("Range Slider")
+      div.button-default-v-wrapper
+        +button("Buttons", 'default-v')
+      div.button-hover-v-wrapper
+        +button("", 'hover-v')
+      div.button-default-w-wrapper
+        +button("", 'default-w')
+      div.button-hover-w-wrapper
+        +button("", 'hover-w')
+      div.textbutton-v-wrapper
+        +textbutton("Click Me", 'v')
+      div.textbutton-g-wrapper
+        +textbutton("Click Me", 'g')

@@ -1,0 +1,8 @@
+mixin button(name, style)
+  div.button
+    h3.rectang-name= name
+    button(class=`button__rectangle ${style}`)
+      if style == "default-v" || style == "hover-v"
+        +textbutton("Click Me", 'w')
+      else if style == "default-w" || style == "hover-w"
+        +textbutton("Click Me", 'v')

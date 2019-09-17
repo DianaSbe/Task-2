@@ -77,6 +77,12 @@
     //border: 1px solid black;
 }
 
+%fourth-column {
+    position: absolute; 
+    left: 1098px;
+    //border: 1px solid black;
+}
+
 .textfields-wrapper {
     @extend %first-column;
     top: 140px; 
@@ -227,4 +233,52 @@
 
     width: 266px;
     height: 52px;
+}
+
+.button-default-v-wrapper {
+    @extend %third-column;
+    top: 228px; 
+
+    width: 99px;
+    height: 78px;
+}
+
+.button-hover-v-wrapper {
+    @extend %fourth-column;
+    top: 246px; 
+
+    width: 99px;
+    height: 78px;
+}
+
+.button-default-w-wrapper {
+    @extend %third-column;
+    top: 322px; 
+
+    width: 99px;
+    height: 75px;
+}
+
+.button-hover-w-wrapper {
+    @extend %fourth-column;
+    top: 322px; 
+
+    width: 99px;
+    height: 75px;
+}
+
+.textbutton-v-wrapper {
+    @extend %third-column;
+    top: 408px; 
+
+    width: 61px;
+    height: 16px;
+}
+
+.textbutton-g-wrapper {
+    @extend %fourth-column;
+    top: 408px; 
+
+    width: 61px;
+    height: 16px;
 }
