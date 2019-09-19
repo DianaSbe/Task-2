@@ -7,7 +7,8 @@
 
 .toggle-input + label:before {
     @extend %switchitem-before;
-    width: 40px;
+    width: 100%;
+    max-width: 40px;
     background: url('/circlemark-unactive.svg') no-repeat 10% 50%;
     border-radius: 10px;
     transition: .2s;

@@ -1,10 +1,10 @@
 mixin switchitem(text, comment, status, id, name, type, subtype)
   div.switchitem
-    if status=="checked"
+    if status=='checked'
       input(class=`switchitem__input ${subtype}-input` type=`${type}` name=`${name}` id=`${id}` checked)
     else
       input(class=`switchitem__input ${subtype}-input` type=`${type}` name=`${name}` id=`${id}`)
-    if comment==""
+    if comment==''
       label(for=`${id}`)=text
     else
       label.subtitle(for=`${id}`)=text

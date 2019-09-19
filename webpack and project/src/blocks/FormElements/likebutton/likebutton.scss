@@ -1,7 +1,3 @@
-.likebutton .wrapper__switchitem-left {
-    margin-right: 45px;
-}
-
 .like-input + label {
     @extend %switchitem;
 }
@@ -14,7 +10,7 @@
     font-size          :  10px;
     content            : 'favorite_border';
     color: rgba(31, 32, 65, 0.25);
-    padding-left: 5px;
+    padding-left: 4px;
     padding-top: 4px;
 }
 
@@ -25,10 +21,11 @@
 }
 
 .like__rich-comment { //засовываем comment в likebutton
-    position: relative; 
+    position: absolute; 
     font-size: 10px;
-    left: 21px;
-    top: 3px;
+    z-index: 2;
+    margin-top: 3px;
+    margin-left: 20px;
 }
 
 .like-input ~ .like-label label { //меняем цвет текста при checked

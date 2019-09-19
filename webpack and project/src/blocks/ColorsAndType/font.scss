@@ -1,6 +1,7 @@
 .font__title {
     position: absolute;
-    width: 37px;
+    width: 100%;
+    max-width: 37px;
     text-align: right;
     
     //шрифт
@@ -18,7 +19,7 @@
 }
 
 .text_body {
-    margin-top:-3px;
+    transform: translateY(-3px);
     
     //шрифт (хранить именно тут, т.к. если в main-body - влияет на заголовки)
     line-height: 24px;

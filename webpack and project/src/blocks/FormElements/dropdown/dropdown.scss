@@ -12,13 +12,15 @@
 }
 
 .dropdown-date { //флоат заголовков с инпутами (класс, полученный с аргумента type)
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     float: left;
     margin-right: 20px;
 }
 
 .dropdown .dropdown-guests input { //ширина инпута с гостями
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
 }
 
 .wrapper__date-dropdown, .wrapper__dropdown { //контейнер для инпута и иконки
@@ -26,11 +28,13 @@
 }
 
 .wrapper__date-dropdown input { //переопределение ширины инпута с датой
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
 }
 
 .wrapper__dropdown input { //переопределение ширины инпута
-    width: 266px;
+    width: 100%;
+    max-width: 266px;
 }
 
 ////////////////ВЫПАДАЮЩИЙ СПИСОК
@@ -39,9 +43,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    position: absolute;
     display: none;
-    margin-top: -1px;
+    transform: translateY(-1px);
 }
 
 .dropdown .ul_expanded { //внешний вид списка при выпадении
@@ -61,12 +64,14 @@
 
 .dropdown-guests-ul {
     height: 159px;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
 }
 
 .dropdown-rooms-ul { //ширина инпута с гостями
     height: 119px;
-    width: 266px;
+    width: 100%;
+    max-width: 266px;
 }
 
 .dropdown__button-apply { //кнопка "применить"

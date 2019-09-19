@@ -11,7 +11,8 @@
 
 .radio-input + label:before {
     @extend %switchitem-before;
-    width: 20px;
+    width: 100%;
+    max-width: 20px;
     border-radius: 10px;
 }
 

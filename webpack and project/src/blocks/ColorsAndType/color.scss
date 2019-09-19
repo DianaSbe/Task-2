@@ -1,47 +1,49 @@
 $dark: #1F2041;
 
-.color__cell{
+.color__cell {
     position: absolute;
-    width: 70px;
+    width: 100%;
+    max-width: 70px;
     height: 70px;
     border-radius: 6px;
 }
 
-.dark100{
+.dark100 {
     background: $dark;
 }
 
-.dark75{
+.dark75 {
     background: rgba($dark, 0.75);
 }
 
-.dark50{
+.dark50 {
     background: rgba($dark, 0.5);
 }
 
-.dark25{
+.dark25 {
     background: rgba($dark, 0.25);
 }
 
-.dark5{
+.dark5 {
     background: rgba($dark, 0.05);
 }
 
-.purple{
+.purple {
     background: #BC9CFF;
 }
 
-.green{
+.green {
     background: #6FCF97;
 }
 
-.wrapper__color{
+.wrapper__color {
     margin-bottom: 26px;
 }
 
-.color__cell__inner{
+.color__cell__inner {
     margin-left: 110px;
-    width: 159px;
+    width: 100%;
+    max-width: 159px;
     height: 57px;
 
     display: inline-block;

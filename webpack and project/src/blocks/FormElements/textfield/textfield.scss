@@ -1,5 +1,6 @@
 .wrapper__subscription-textfield input {
-    width: 266px;
+    width: 100%;
+    max-width: 266px;
 }
 
 .wrapper__subscription-textfield { //контейнер для инпута и иконки

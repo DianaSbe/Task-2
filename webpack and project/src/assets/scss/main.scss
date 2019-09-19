@@ -21,9 +21,10 @@
 @import "../../blocks/FormElements/button/button"; //компонент
 @import "../../blocks/FormElements/textbutton/textbutton"; //компонент для button
 
-html {
-  width: 4405px;
-  //height: 2750px;
+.ui-kit {
+  width: 330%;
+  max-width: 4405px;
+  min-height: 2796px;
 }
 
 %heads_bold-margin { //h1,h2,h3

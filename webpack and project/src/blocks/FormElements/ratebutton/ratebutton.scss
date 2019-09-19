@@ -1,11 +1,6 @@
 .ratebutton__wrapper { //отодвигаем от заголовка
-    width: 120px;
-    position: absolute;
-    top: 33px;
-}
-
-.__wrapper-2 {
-    left:140px;
+    display: inline-block;
+    margin-top: 16px;
 }
 
 .ratebutton__input { //скрываем кастомный чекбокс
@@ -15,14 +10,14 @@
 
 .ratebutton__input + .ratebutton__label {
     position: relative;
-    cursor: pointer;
     display: block;
     float: right;
 }
 
 .ratebutton__input + .ratebutton__label:before {
     height: 24px;
-    width: 24px;
+    width: 100%;
+    max-width: 24px;
     font-family        : 'Material Icons';
     font-size          :  24px;
     content            : 'star_border';

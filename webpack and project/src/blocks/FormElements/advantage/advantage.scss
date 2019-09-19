@@ -1,16 +1,17 @@
 .advantage {
     height: 69px;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
 .advantage__icon { //иконка
-    position: absolute;
-    font-size: 48px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text; //обрезаем фон по границе текста
     -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
+    position: absolute;
+    font-size: 48px;
 } 
 
 .label__wrapper {

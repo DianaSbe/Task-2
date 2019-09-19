@@ -1,5 +1,6 @@
 .button__rectangle {
-    width: 99px;
+    width: 100%;
+    max-width: 99px;
     height: 44px;
 
     border-radius: 22px;
@@ -14,11 +15,10 @@
 }
 
 .default-w, .hover-w {
-    //position: absolute;
-    width: 95px;
+    width: 100%;
+    max-width: 95px;
     height: 40px;
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: white;
     padding-bottom: 4px;

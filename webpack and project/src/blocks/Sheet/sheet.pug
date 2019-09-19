@@ -72,8 +72,9 @@ mixin sheet(name)
         +dropdown("Dropdown", "", "2 спальни, 2 кровати...", 'Default', '', 'dropdown-rooms')
       div.dropdowns-roomsExp-wrapper
         +dropdown("Dropdown", "", "2 спальни, 2 кровати...", 'expanded', 'expanded', 'dropdown-rooms')
-      div.expandable-checkbox-list-wrapper
+      div.checkbox-list-wrapper
         +checkbox("Expandable Checkbox List", '', '1')
+      div.checkbox-list-expanded-wrapper
         +checkbox("Expandable Checkbox List", 'expanded', '2')
       div.advantages-wrapper
         +advantage('mood', "Комфорт", "Шумопоглощающие стены")
@@ -82,12 +83,17 @@ mixin sheet(name)
         +checkbox("Checkbox Buttons")
       div.radiobuttons-wrapper
         +radiobutton("Radio Buttons")
+      div.toggle-checked-wrapper
+        +toggle("Toggle", 'checked')
       div.toggle-wrapper
-        +toggle("Toggle")
+        +toggle("")
       div.likebutton-wrapper
         +likebutton("Like Button")
+      div.likebutton-checked-wrapper
+        +likebutton("", 'checked')
       div.ratebutton-wrapper
         +ratebutton("Rate Button", '4', '1')
+      div.ratebutton-full-wrapper
         +ratebutton("", '5', '2')
       div.dropdowns-guestsExpE-wrapper
         +dropdown("Dropdown", "", "Сколько гостей", '', 'expanded', 'dropdown-guests')

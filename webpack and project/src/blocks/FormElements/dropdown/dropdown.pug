@@ -3,7 +3,7 @@ mixin dropdown(name, value, hint, status, state, type)
     h3(class=`rectang-name`)= name
     h3(class=`rectang-status`)= status
     
-    if name=="Date Dropdown"
+    if name=='Date Dropdown'
       div.wrapper__date-dropdown
         input(class="rectang date_mask" type="text" name="data" value=`${value}` placeholder=`${hint}`)
         i.material-icons.dropdown__arrow keyboard_arrow_down
@@ -12,14 +12,14 @@ mixin dropdown(name, value, hint, status, state, type)
       div(class=`wrapper__dropdown ${type}`)
         input(class=`rectang input_${state}` type="text" name="data" value=`${value}` placeholder=`${hint}`)
         i(class=`material-icons dropdown__arrow arrow_${state}`) keyboard_arrow_down
-      if type=="dropdown-guests"
+      if type=='dropdown-guests'
         ul(class=`rectang dropdown__ul ${type}-ul ul_${state}`)
-          +listitem("Взрослые", "0", 'inactive')
-          +listitem("Дети", "0", 'inactive')
-          +listitem("Младенцы", "0", 'inactive')
+          +listitem('Взрослые', '0', 'inactive')
+          +listitem('Дети', '0', 'inactive')
+          +listitem('Младенцы', '0', 'inactive')
           h3.dropdown__button-apply Применить
-      if type=="dropdown-rooms"
+      if type=='dropdown-rooms'
         ul(class=`rectang dropdown__ul ${type}-ul ul_${state}`)
-          +listitem("Спальни", "2")
-          +listitem("Кровати", "2")
-          +listitem("Ванные комнаты", "0", 'inactive')
+          +listitem('Спальни', '2')
+          +listitem('Кровати', '2')
+          +listitem('Ванные комнаты', '0', 'inactive')

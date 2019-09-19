@@ -2,13 +2,15 @@
 
 .sheet {
     position: relative;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     border: 1px solid black;
     margin: 10px 10px;
 }
 
 .sheet__inner {
-    position: absolute;
+    width: 100%;
+    max-width: 48px;
     margin: 30px;
 }
 
@@ -42,43 +44,47 @@
 
 .colors-wrapper, .fonts-wrapper {
     position: absolute;
+    width: 100%;
     top: 145px;
+    //border: 1px solid black;
 }
   
 .colors-wrapper {
     left: 150px;
-    width: 269.26px;
-    height: 610px;
+    max-width: 270px;
 }
   
 .fonts-wrapper {
     left: 846px;
-    width: 403px;
-    height: 321px;
+    max-width: 403px;
 }
 
 //////////FormElements//////////
 
 %first-column {
     position: absolute; 
+    width: 100%;
     left: 141px;
     //border: 1px solid black;
 }
 
 %second-column {
     position: absolute; 
+    width: 100%;
     left: 587px;
     //border: 1px solid black;
 }
 
 %third-column {
     position: absolute; 
+    width: 100%;
     left: 979px;
     //border: 1px solid black;
 }
 
 %fourth-column {
     position: absolute; 
+    width: 100%;
     left: 1098px;
     //border: 1px solid black;
 }
@@ -86,199 +92,184 @@
 .textfields-wrapper {
     @extend %first-column;
     top: 140px; 
-
-    width: 320px;
-    height: 67px;
+    max-width: 320px;
 }
 
 .textfields-hover-wrapper {
     @extend %first-column;
     top: 225px; 
-
-    width: 320px;
-    height: 67px;
+    max-width: 320px;
 }
 
 .dropdowns-guests-wrapper {
     @extend %first-column;
     top: 309px; 
-
-    width: 320px;
-    height: 67px;
+    max-width: 320px;
 }
 
 .textfields-data-wrapper {
     @extend %first-column;
     top: 395px; 
-
-    width: 320px;
-    height: 67px;
+    max-width: 320px;
 }  
 
 .dropdowns-data-wrapper {
     @extend %first-column;
     top: 500px; 
-
-    width: 340px;
-    height: 67px;
+    max-width: 340px;
 }
 
 .dropdowns-filter-data-wrapper {
     @extend %first-column;
     top: 604px; 
-
-    width: 266px;
-    height: 67px;
+    max-width: 266px;
 }
 
 .textfields-subscription-wrapper {
     @extend %first-column;
     top: 709px; 
-
-    width: 266px;
-    height: 67px;
+    max-width: 266px;
 }
 
 .dropdowns-rooms-wrapper {
     @extend %first-column;
     top: 873px; 
-
-    width: 266px;
-    height: 67px;
+    max-width: 266px;
 }
 
 .dropdowns-roomsExp-wrapper {
     @extend %first-column;
     top: 957px; 
-
-    width: 266px;
-    height: 185px;
+    max-width: 266px;
 }
 
-.expandable-checkbox-list-wrapper {
+.checkbox-list-wrapper {
     @extend %first-column;
     top: 1193px; 
+    max-width: 266px;
+}
 
-    width: 266px;
-    height: 330px;
+.checkbox-list-expanded-wrapper {
+    @extend %first-column;
+    top: 1256px;
+    max-width: 266px;
+    height: 270px;
 }
 
 .advantages-wrapper {
     @extend %first-column;
     top: 1563px; 
-
-    width: 291px;
-    height: 160px;
+    max-width: 291px;
 }
 
 .checkbox-buttons-wrapper {
     @extend %second-column;
     top: 140px; 
-
-    width: 222px;
+    max-width: 222px;
     height: 130px;
 }
 
 .radiobuttons-wrapper {
     @extend %second-column;
     top: 309px; 
-
-    width: 222px;
+    max-width: 222px;
     height: 57px;
+}
+
+.toggle-checked-wrapper {
+    @extend %second-column;
+    top: 400px; 
+    max-width: 260px;
+    height: 56px;
 }
 
 .toggle-wrapper {
     @extend %second-column;
-    top: 400px; 
-
-    width: 260px;
-    height: 86px;
+    top: 456px; 
+    max-width: 260px;
+    height: 56px;
 }
 
 .likebutton-wrapper {
     @extend %second-column;
     top: 530px; 
+    max-width: 90px;
+    height: 57px;
+}
 
-    width: 90px;
+.likebutton-checked-wrapper {
+    @extend %second-column;
+    left: 638px;
+    top: 530px; 
+    max-width: 90px;
     height: 57px;
 }
 
 .ratebutton-wrapper {
     @extend %second-column;
     top: 622px; 
+    max-width: 120px;
+}
 
-    width: 260px;
-    height: 55px;
+.ratebutton-full-wrapper {
+    @extend %second-column;
+    top: 640px;
+    left: 727px;
+    max-width: 120px;
 }
 
 .dropdowns-guestsExpE-wrapper {
     @extend %second-column;
     top: 873px; 
-
-    width: 320px;
-    height: 225px;
+    max-width: 320px;
 }
 
 .rich-checkbox-buttons-wrapper {
     @extend %second-column;
     top: 1193px; 
-
-    width: 266px;
+    max-width: 266px;
     height: 148px;
 }
 
 .rangeslider-wrapper {
     @extend %third-column;
     top: 140px; 
-
-    width: 266px;
+    max-width: 266px;
     height: 52px;
 }
 
 .button-default-v-wrapper {
     @extend %third-column;
     top: 228px; 
-
-    width: 99px;
-    height: 78px;
+    max-width: 99px;
 }
 
 .button-hover-v-wrapper {
     @extend %fourth-column;
     top: 246px; 
-
-    width: 99px;
-    height: 78px;
+    max-width: 99px;
 }
 
 .button-default-w-wrapper {
     @extend %third-column;
     top: 322px; 
-
-    width: 99px;
-    height: 75px;
+    max-width: 99px;
 }
 
 .button-hover-w-wrapper {
     @extend %fourth-column;
     top: 322px; 
-
-    width: 99px;
-    height: 75px;
+    max-width: 99px;
 }
 
 .textbutton-v-wrapper {
     @extend %third-column;
     top: 408px; 
-
-    width: 61px;
-    height: 16px;
+    max-width: 61px;
 }
 
 .textbutton-g-wrapper {
     @extend %fourth-column;
     top: 408px; 
-
-    width: 61px;
-    height: 16px;
+    max-width: 61px;
 }

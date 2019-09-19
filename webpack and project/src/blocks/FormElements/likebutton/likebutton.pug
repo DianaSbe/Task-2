@@ -1,8 +1,8 @@
-mixin likebutton(name)
+mixin likebutton(name, status)
   div.likebutton
     h3.rectang-name= name
     div.switchitem__wrapper
-      div.wrapper__switchitem-left
-        +switchitem("", "2", '', 'lb01', '', 'checkbox', 'like')
-      div.wrapper__switchitem-right
-        +switchitem("", "12", 'checked', 'lb02', '', 'checkbox', 'like')
+      if status == 'checked'
+        +switchitem('', '12', 'checked', 'lb02', '', 'checkbox', 'like')
+      else
+        +switchitem('', '2', '', 'lb01', '', 'checkbox', 'like')
