@@ -12,4 +12,4 @@ mixin textfield(options)
         input(class=`textfield__input textfield__input_${options.status}` type="text" value=options.value placeholder=options.hint)
         if options.type=='subscription'
           div.textfield__icon
-            +icon({name: 'arrow_forward'})
+            +icon({name: 'arrow_forward', theme: 'purple'})

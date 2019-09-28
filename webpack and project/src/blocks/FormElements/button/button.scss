@@ -16,6 +16,10 @@
     opacity: 0.5;
  }
 
+ .button__rectangle_type_payment {
+    max-width: 320px;
+ }
+
 .button__substrate_theme_white {
     background: white;
     border-radius: 22px;
@@ -27,4 +31,10 @@
     align-items: center;
     //align-content: center; 
     justify-content: center; 
+}
+
+.button__icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }

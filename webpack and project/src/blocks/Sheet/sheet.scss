@@ -141,7 +141,7 @@
     max-width: 266px;
 }
 
-.sheet__dropdown_type_rooms_expanded {
+.sheet__dropdown_type_rooms_expanded_filled {
     @extend %first-column;
     top: 960px; 
     max-width: 266px;
@@ -149,6 +149,12 @@
 
 .sheet__dropdown_type_guests_expanded {
     @extend %second-column;
+    top: 876px; 
+    max-width: 320px;
+}
+
+.sheet__dropdown_type_guests_expanded_filled {
+    @extend %third-column;
     top: 876px; 
     max-width: 320px;
 }
@@ -240,13 +246,13 @@
     max-width: 266px;
 }
 
-.sheet__button_theme_purple {
+.sheet__button {
     @extend %third-column;
     top: 230px; 
     max-width: 99px;
 }
 
-.sheet__button_theme_purple_selected {
+.sheet__button_selected {
     @extend %third-column;
     left: 1098px;
     top: 262px; 
@@ -277,4 +283,10 @@
     left: 1060px;
     top: 411px; 
     max-width: 61px;
+}
+
+.sheet__button_type_payment {
+    @extend %third-column;
+    top: 456px; 
+    max-width: 320px;
 }

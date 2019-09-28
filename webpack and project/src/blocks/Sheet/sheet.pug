@@ -76,7 +76,7 @@ mixin sheet(options)
         +dropdown({name:"Dropdown", statusname: "Default", value: "", hint: "2 спальни, 2 кровати...", type: 'rooms',
                    item: "Спальни,Кровати,Ванные комнаты",
                    counter: "2,2,0"})
-      div.sheet__dropdown_type_rooms_expanded
+      div.sheet__dropdown_type_rooms_expanded_filled
         +dropdown({name:"Dropdown", statusname: "Expanded", value: "", hint: "2 спальни, 2 кровати...", state: 'expanded', type: 'rooms',
                    item: "Спальни,Кровати,Ванные комнаты",
                    counter: "2,2,0"})
@@ -84,6 +84,10 @@ mixin sheet(options)
         +dropdown({name:"Dropdown", value: "", hint: "Сколько гостей", state: 'expanded', type: 'guests',
                    item: "Взрослые,Дети,Младенцы",
                    counter: "0,0,0"})
+      div.sheet__dropdown_type_guests_expanded_filled
+        +dropdown({name:"Dropdown", value: "", hint: "3 гостя", state: 'expanded', type: 'guests',
+                   item: "Взрослые,Дети,Младенцы",
+                   counter: "2,1,0"})
 
       div.sheet__checkbox_type_list
         +checkbox({name: "Expandable Checkbox List", type: 'list', state: 'nonexpanded', id: '1checklst', 
@@ -127,15 +131,17 @@ mixin sheet(options)
       div.sheet__rangeslider
         +rangeslider({name: "Range Slider"})
 
-      div.sheet__button_theme_purple
-        +button({name: "Buttons", theme: 'purple', textcolor: 'white'})
-      div.sheet__button_theme_purple_selected
-        +button({name: "", theme: 'purple', status: 'selected', textcolor: 'white'})
+      div.sheet__button
+        +button({name: "Buttons", text: 'Click Me', textcolor: 'white'})
+      div.sheet__button_selected
+        +button({name: "", status: 'selected', text: 'Click Me', textcolor: 'white'})
       div.sheet__button_theme_white
-        +button({name: "", theme: 'white', textcolor: 'purple'})
+        +button({name: "", theme: 'white', text: 'Click Me', textcolor: 'purple'})
       div.sheet__button_theme_white_selected
-        +button({name: "", theme: 'white', status: 'selected', textcolor: 'purple'})
+        +button({name: "", theme: 'white', status: 'selected', text: 'Click Me', textcolor: 'purple'})
       div.sheet__caption_theme_purple
         +caption({name:"Click Me", theme: 'purple'})
       div.sheet__caption_theme_grey
         +caption({name:"Click Me", theme: 'grey'})
+      div.sheet__button_type_payment
+        +button({name: "", text: 'Перейти к оплате', textcolor: 'white', type: 'payment'})

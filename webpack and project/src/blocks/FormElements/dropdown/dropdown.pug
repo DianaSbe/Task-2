@@ -16,13 +16,15 @@ mixin dropdown(options)
       ul(class=`dropdown__ul dropdown__ul_${options.state} dropdown__ul_type_${options.type}`)
         - for (i=0; i<items.length; i++)
           li.dropdown__li
-            button.dropdown__counterbutton +
+            button.dropdown__counterbutton.dropdown__addbutton +
             h3.dropdown__counter=counters[i]
             if counters[i]!='0'
-              button.dropdown__counterbutton -
+              button.dropdown__counterbutton.dropdown__subtractbutton -
             else
-              button(class=`dropdown__counterbutton dropdown__subtractbutton_inactive`) -
+              button(class=`dropdown__counterbutton dropdown__subtractbutton dropdown__subtractbutton_inactive`) -
             h3.dropdown__item=items[i]
         if options.type=='guests'
           div.dropdown__applybutton
             +caption({name: "Применить", theme: 'purple'})
+          div.dropdown__clearbutton
+            +caption({name: "Очистить", theme: 'grey'})

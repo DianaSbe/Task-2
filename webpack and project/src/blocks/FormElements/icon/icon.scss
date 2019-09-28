@@ -1,12 +1,15 @@
-.icon__arrow_forward {
+.icon__arrow_forward_theme_purple {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text; //обрезаем фон по границе текста
     -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
 }
 
+.icon__arrow_forward_theme_white {
+    color: #FFFFFF;
+}
+
 .icon__keyboard_arrow_down {
     color: rgba(31, 32, 65, 0.5);
-    //color: rgba(31, 32, 65, 0.75);
 }
 
 .icon__keyboard_arrow_up {
