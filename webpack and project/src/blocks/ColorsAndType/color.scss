@@ -1,59 +1,73 @@
 $dark: #1F2041;
 
-.color__cell {
-    position: absolute;
+.color__inner {
+    margin-bottom: 20px;
+}
+
+.color__inner:before { //псевдоэлемент для выравнивания текста
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+    content: "";
+}
+
+.color__rectangle { // цветная ячейка
     width: 100%;
     max-width: 70px;
     height: 70px;
     border-radius: 6px;
+    
+    //position: relative;
+    display: block;
+    float: left;
+
+    margin-right: 40px;
 }
 
-.dark100 {
+.color__rectangle_theme_dark100 {
     background: $dark;
 }
 
-.dark75 {
+.color__rectangle_theme_dark75 {
     background: rgba($dark, 0.75);
 }
 
-.dark50 {
+.color__rectangle_theme_dark50 {
     background: rgba($dark, 0.5);
 }
 
-.dark25 {
+.color__rectangle_theme_dark25 {
     background: rgba($dark, 0.25);
 }
 
-.dark5 {
+.color__rectangle_theme_dark5 {
     background: rgba($dark, 0.05);
 }
 
-.purple {
+.color__rectangle_theme_purple {
     background: #BC9CFF;
 }
 
-.green {
+.color__rectangle_theme_green {
     background: #6FCF97;
 }
 
-.wrapper__color {
-    margin-bottom: 26px;
+.color__specification {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.color__cell__inner {
-    margin-left: 110px;
-    width: 100%;
-    max-width: 159px;
-    height: 57px;
-
-    display: inline-block;
-    margin-top: 7px; //влияет на маргины wrapper__color
-    
-    //шрифт
+%color__font {
     color: $dark;
-    font-family: 'Conv_Quicksand-Regular';
+    font-family: 'Conv_Quicksand'; //Regular
     font-size: 19px;
     line-height: 29px;
 }
 
+.color__title {
+    @extend %color__font;
+}
 
+.color__description {
+    @extend %color__font;
+}

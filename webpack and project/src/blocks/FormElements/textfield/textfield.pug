@@ -1,14 +1,15 @@
-mixin textfield(name, value, hint, status)
+mixin textfield(options)
   div.textfield
-    h3.rectang-name= name
-    h3.rectang-status= status
-    if status=="Hover / Focus"
-      input(class="rectang _hover" type="text" value=`${value}` placeholder=`${hint}`)
-    else if name=="Masked Text Field" 
-      input(class="rectang js-date" maxlength="10" type="text" name="data" value=`${value}` placeholder=`${hint}`)
-    else if name=="Subscription Text Field"
-      div.wrapper__subscription-textfield
-        input(class="rectang" name="email" value=`${value}` placeholder=`${hint}`)
-        i.material-icons.subscription__arrow arrow_forward
+    +caption({name: options.statusname, theme: 'status'})
+    if options.name!=''
+      div.textfield__name
+        +caption({name: options.name})
+        
+    if options.type=='date' 
+      input.textfield__input.textfield__input_mask_date(maxlength="10" type="text" name="data" value=options.value placeholder=options.hint)
     else
-      input(class="rectang" name="email" value=`${value}` placeholder=`${hint}`)
+      div.textfield__inner
+        input(class=`textfield__input textfield__input_${options.status}` type="text" value=options.value placeholder=options.hint)
+        if options.type=='subscription'
+          div.textfield__icon
+            +icon({name: 'arrow_forward'})

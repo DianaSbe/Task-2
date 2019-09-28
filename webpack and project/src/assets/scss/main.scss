@@ -4,13 +4,10 @@
 @import "../../blocks/ColorsAndType/color.scss";
 @import "../../blocks/ColorsAndType/font.scss";
 
-@import "../../blocks/FormElements/rectang"; //общий стиль
 @import "../../blocks/FormElements/materials-icons"; //общий стиль
 
 @import "../../blocks/FormElements/textfield/textfield"; //компонент
 @import "../../blocks/FormElements/dropdown/dropdown"; //компонент
-@import "../../blocks/FormElements/listitem/listitem"; //компонент
-@import "../../blocks/FormElements/switchitem/switchitem"; //общий компонент для checkbox, radiobutton, toggle и likebutton
 @import "../../blocks/FormElements/checkbox/checkbox"; //компонент
 @import "../../blocks/FormElements/radiobutton/radiobutton"; //компонент
 @import "../../blocks/FormElements/toggle/toggle"; //компонент
@@ -19,7 +16,8 @@
 @import "../../blocks/FormElements/ratebutton/ratebutton"; //компонент
 @import "../../blocks/FormElements/rangeslider/rangeslider"; //компонент
 @import "../../blocks/FormElements/button/button"; //компонент
-@import "../../blocks/FormElements/textbutton/textbutton"; //компонент для button
+@import "../../blocks/FormElements/caption/caption"; //компонент для button (и не только)
+@import "../../blocks/FormElements/icon/icon";
 
 .ui-kit {
   width: 330%;
@@ -33,37 +31,35 @@
   color: #1F2041;
 }
 
-%heads_font-spacing { //h1,h2
-  font-family: 'Conv_Quicksand-Medium';
+%heads_font { //h1,h2
+  font-family: 'Conv_Quicksand'; //Medium
 }
 
 h1 {
   @extend %heads_bold-margin;
-  @extend %heads_font-spacing;
+  @extend %heads_font;
   font-size: 24px;
 }
 
 h2 {
   @extend %heads_bold-margin;
-  @extend %heads_font-spacing;
+  @extend %heads_font;
   font-size: 19px;
 }
 
 h3 {
   @extend %heads_bold-margin;
   font-size: 12px;
-  font-family: 'Conv_Montserrat-Medium';
+  font-family: 'Conv_Montserrat'; //Meduim
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 body {
   color: rgba(31, 32, 65, 0.75);
-  font-family: 'Conv_Montserrat-Light';
+  font-family: 'Conv_Montserrat'; //Light
+  font-weight: 300;
   font-size: 14px;
-}
-
-span {
-  display: inline-block;
 }
 
 label {
@@ -72,9 +68,4 @@ label {
 
 .textfield ::placeholder {
   color: rgba(31, 32, 65, 0.25);
-}
-
-.subtitle {
-  font-family: 'Conv_Montserrat-Bold';
-  color: rgba(31, 32, 65, 0.75);
 }

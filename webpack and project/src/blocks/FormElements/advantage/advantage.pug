@@ -1,6 +1,7 @@
-mixin advantage(icon, text, comment)
+mixin advantage(options)
   div.advantage
-    i.material-icons.advantage__icon #{icon}
-    div.label__wrapper
-      label.subtitle= text
-      label.advantage__comment= comment
+    div.advantage__inner
+      i.material-icons.advantage__icon #{options.icon}
+      div.advantage__specification
+        label.advantage__title= options.title
+        label.advantage__description= options.description

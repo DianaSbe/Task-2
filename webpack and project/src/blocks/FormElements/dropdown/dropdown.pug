@@ -1,25 +1,28 @@
-mixin dropdown(name, value, hint, status, state, type)
-  div(class=`dropdown ${type}`)
-    h3(class=`rectang-name`)= name
-    h3(class=`rectang-status`)= status
+mixin dropdown(options)
+  div.dropdown
+    - const items = `${options.item}`.split(',')
+    - const counters = `${options.counter}`.split(',')
     
-    if name=='Date Dropdown'
-      div.wrapper__date-dropdown
-        input(class="rectang date_mask" type="text" name="data" value=`${value}` placeholder=`${hint}`)
-        i.material-icons.dropdown__arrow keyboard_arrow_down
+    +caption({name: options.statusname, theme: 'status'})
+    if options.name!=''
+      div.dropdown__name
+        +caption({name: options.name})
     
-    else
-      div(class=`wrapper__dropdown ${type}`)
-        input(class=`rectang input_${state}` type="text" name="data" value=`${value}` placeholder=`${hint}`)
-        i(class=`material-icons dropdown__arrow arrow_${state}`) keyboard_arrow_down
-      if type=='dropdown-guests'
-        ul(class=`rectang dropdown__ul ${type}-ul ul_${state}`)
-          +listitem('Взрослые', '0', 'inactive')
-          +listitem('Дети', '0', 'inactive')
-          +listitem('Младенцы', '0', 'inactive')
-          h3.dropdown__button-apply Применить
-      if type=='dropdown-rooms'
-        ul(class=`rectang dropdown__ul ${type}-ul ul_${state}`)
-          +listitem('Спальни', '2')
-          +listitem('Кровати', '2')
-          +listitem('Ванные комнаты', '0', 'inactive')
+    div.dropdown__inner
+      input(class=`dropdown__input dropdown__input_mask_${options.type} dropdown__input_${options.state}` type="text" name=options.type value=options.value placeholder=options.hint)
+      div.dropdown__icon
+        +icon({name: 'keyboard_arrow_down'})
+    if options.type!='date' || options.type!=''
+      ul(class=`dropdown__ul dropdown__ul_${options.state} dropdown__ul_type_${options.type}`)
+        - for (i=0; i<items.length; i++)
+          li.dropdown__li
+            button.dropdown__counterbutton +
+            h3.dropdown__counter=counters[i]
+            if counters[i]!='0'
+              button.dropdown__counterbutton -
+            else
+              button(class=`dropdown__counterbutton dropdown__subtractbutton_inactive`) -
+            h3.dropdown__item=items[i]
+        if options.type=='guests'
+          div.dropdown__applybutton
+            +caption({name: "Применить", theme: 'purple'})

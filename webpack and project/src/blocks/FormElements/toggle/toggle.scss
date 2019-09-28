@@ -1,21 +1,45 @@
-//Внешний вид тоггла (основной класс - switchitem.scss)
-
-.toggle-input + label {
-    @extend %switchitem;
-    padding-left: 49px;
+.toggle__name {
+    margin-bottom: 16px;
 }
 
-.toggle-input + label:before {
-    @extend %switchitem-before;
+.toggle__input { //скрываем кастомный чекбокс
+    display: none;
+}
+
+.toggle__input + .toggle__label {
+    position: relative;
+}
+
+.toggle__input + .toggle__label:before {
+    display: flex;
+    float: left;
+    height: 20px;
     width: 100%;
     max-width: 40px;
-    background: url('/circlemark-unactive.svg') no-repeat 10% 50%;
     border-radius: 10px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    content: '';
+
+    background: url('/circlemark-unactive.svg') no-repeat 10% 50%;
     transition: .2s;
 }
 
-.toggle-input:checked + label:before {
-    @extend %switchitem-checked;
+.toggle__input:checked + .toggle__label:before {
+    border: 1px solid #BC9CFF;
     background: url('/circlemark-active.svg') no-repeat 90% 50%;
     transition: .2s;
 }
+
+.toggle__input ~ .toggle__text { //дефолтный цвет
+    color: rgba(31, 32, 65, 0.5);
+    margin-left: 49px; //отодвигаем текст
+}
+
+.toggle__input:checked ~ .toggle__text { //меняем цвет текста при checked
+    color: rgba(31, 32, 65, 0.75);
+}
+
+//Прим. toggle__label - вспомогательный элемент, его не видно

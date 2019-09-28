@@ -1,8 +1,12 @@
-mixin toggle(name, status)
+mixin toggle(options)
   div.toggle
-    h3.rectang-name= name
-    div.switchitem__wrapper
-      if status == 'checked'
-        +switchitem("Получать спецпредложения", "", 'checked', 'tg01', '', 'checkbox', 'toggle')
-      else
-        +switchitem("Получать спецпредложения", "", '', 'tg02', '', 'checkbox', 'toggle')
+    if options.name!=''
+      div.toggle__name
+        +caption({name: options.name})
+        
+    if options.status == 'checked'
+      input.toggle__input(type=`checkbox` id=`toggle${options.id}` checked)
+    else
+      input.toggle__input(type=`checkbox` id=`toggle${options.id}`)
+    label.toggle__label(for=`toggle${options.id}`)
+    label.toggle__text(for=`toggle${options.id}`)=options.text

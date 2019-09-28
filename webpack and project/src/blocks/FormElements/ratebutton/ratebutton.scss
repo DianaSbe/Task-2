@@ -1,11 +1,9 @@
-.ratebutton__wrapper { //отодвигаем от заголовка
-    display: inline-block;
-    margin-top: 16px;
+.ratebutton__name {
+    margin-bottom: 16px;
 }
 
 .ratebutton__input { //скрываем кастомный чекбокс
     display: none;
-    position: absolute;
 }
 
 .ratebutton__input + .ratebutton__label {

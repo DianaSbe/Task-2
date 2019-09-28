@@ -2,17 +2,20 @@
 	display: block;
 	float: right;
 	text-align: right;
-	margin-top: 2px;
 	color: rgba(31, 32, 65, 0.5);
 	border: 0px;
 	font-size: 12px;
-	font-family: 'Conv_Montserrat-Regular';
+	font-family: 'Conv_Montserrat'; //Regular
+}
+
+.rangeslider__name {
+	margin-bottom: 23px;
 }
 
 .ui-slider {
 	position: relative;
 	text-align: left;
-	transform: translateY(41px);
+	//transform: translateY(41px);
 }
 
 .ui-slider .ui-slider-handle { //переключатели

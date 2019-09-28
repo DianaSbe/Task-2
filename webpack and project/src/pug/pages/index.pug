@@ -1,15 +1,16 @@
-include ../../blocks/Sheet/sheet
-
 doctype html
+include ../../blocks/Sheet/sheet
 html(lang="en")
   head
-    meta(chaset="UTF-8" name="viewport" content="width=800, initial-scale=1")
+    meta(chaset="UTF-8" name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="keywords" content="Ui-Kit")
+    meta(name="description" content="Ui-Kit")
     title Ui-Kit
     
   body
     div.ui-kit
-      +sheet('ColorsAndTypes')
-      +sheet('Cards')
-      +sheet('HeadersAndFooters')
-      +sheet('FormElements')
+      +sheet({name: "colors-and-types"})
+      +sheet({name: "headers-and-footers"})
+      +sheet({name: "cards"})
+      +sheet({name: "form-elements"})
       // .class(cell-green)

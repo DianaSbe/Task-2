@@ -1,8 +1,12 @@
-mixin radiobutton(name)
+mixin radiobutton(options)
   div.radiobutton
-    h3.rectang-name= name
-    div.switchitem__wrapper
-      div.wrapper__switchitem-left
-        +switchitem('Мужчина', '', 'checked', 'rd01', 'gender', 'radio', 'radio')
-      div.wrapper__switchitem-right
-        +switchitem('Женщина', '', '', 'rd02', 'gender', 'radio', 'radio')
+    if options.name!=''
+      div.radiobutton__name
+        +caption({name: options.name})
+        
+    if options.status=='checked'
+      input.radiobutton__input(type="radio" name="gender" id=`radiobtn${options.id}` checked)
+    else
+      input.radiobutton__input(type="radio" name="gender" id=`radiobtn${options.id}`)
+    label.radiobutton__label(for=`radiobtn${options.id}`)
+    label.radiobutton__text(for=`radiobtn${options.id}`)=options.text

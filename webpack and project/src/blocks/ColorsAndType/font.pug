@@ -1,14 +1,9 @@
-mixin font(title, description)
-  div.font.wrapper__font
-    if title=='H1'
-      h1.font__title= title
-      h1.font__description= description
-    else if title=='H2'
-      h2.font__title= title
-      h2.font__description= description
-    else if title=='H3'
-      h3.font__title= title
-      h3.font__description= description
-    else if title=='Body'
-      span.font__title= title
-      span.font__description.text_body= description
+mixin font(options)
+  div.font
+    div.font__inner
+      if options.title=='Body'
+        label.font__title= options.title
+        label.font__description.font__description_height_s= options.description
+      else 
+        #{options.title}.font__title= options.title
+        #{options.title}.font__description= options.description

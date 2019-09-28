@@ -1,26 +1,24 @@
+.font__inner {
+    margin-bottom: 50px;
+}
+
 .font__title {
-    position: absolute;
     width: 100%;
     max-width: 37px;
     text-align: right;
+    float: left;
     
     //шрифт
-    font-family: 'Conv_Montserrat-Regular';
     color: rgba(31, 32, 65, 0.25);
+    font-family: 'Conv_Montserrat'; //Regular
     font-weight: normal;
-}
-
-.wrapper__font {
-    margin-bottom: 50px;
 }
 
 .font__description {
     margin-left: 67px;
 }
 
-.text_body {
+.font__description_height_s {
     transform: translateY(-3px);
-    
-    //шрифт (хранить именно тут, т.к. если в main-body - влияет на заголовки)
     line-height: 24px;
 }

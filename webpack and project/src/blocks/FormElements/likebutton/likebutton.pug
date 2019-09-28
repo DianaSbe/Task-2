@@ -1,8 +1,13 @@
-mixin likebutton(name, status)
+mixin likebutton(options)
   div.likebutton
-    h3.rectang-name= name
-    div.switchitem__wrapper
-      if status == 'checked'
-        +switchitem('', '12', 'checked', 'lb02', '', 'checkbox', 'like')
+    if options.name!=''
+      div.likebutton__name
+        +caption({name: options.name})
+        
+    div.likebutton__inner
+      if options.status == 'checked'
+        input.likebutton__input(type="checkbox" id=`likebtn${options.id}` checked)
       else
-        +switchitem('', '2', '', 'lb01', '', 'checkbox', 'like')
+        input.likebutton__input(type="checkbox" id=`likebtn${options.id}`)
+      label.likebutton__label(for=`likebtn${options.id}`)
+      label.likebutton__counter(for=`likebtn${options.id}`)=options.text

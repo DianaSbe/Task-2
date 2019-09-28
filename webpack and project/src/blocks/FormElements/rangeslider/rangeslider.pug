@@ -1,5 +1,9 @@
-mixin rangeslider(name)
+mixin rangeslider(options)
   div.rangeslider
-    h3.rectang-name= name
-    input(class="rangeslider__input" type="text" id="amount" readonly)
+    input.rangeslider__input(type="text" id="amount" readonly)
+
+    if options.name!=''
+      div.rangeslider__name
+        +caption({name: options.name})
+        
     div.slider-range

@@ -1,6 +1,6 @@
 // JS
-import './blocks/FormElements/textfield/textfield-data.js'
-import './blocks/FormElements/dropdown/inputmask.js'
+import './blocks/FormElements/textfield/textfield__input_mask_date.js'
+import './blocks/FormElements/dropdown/dropdown__input_mask_date.js'
 import './blocks/FormElements/rangeslider/rangeslider.js'
 
 import 'inputmask.dependencyLib'

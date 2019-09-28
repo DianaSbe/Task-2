@@ -1,22 +1,41 @@
-.radiobutton .wrapper__switchitem-right {
-    margin-left: 22px;
+.radiobutton__name {
+    margin-bottom: 16px;
 }
 
-//Внешний вид рэдиобаттона (основной класс - switchitem.scss)
-
-.radio-input + label {
-    @extend %switchitem;
-    padding-left: 29px;
+.radiobutton__input { //скрываем кастомный чекбокс
+    display: none;
 }
 
-.radio-input + label:before {
-    @extend %switchitem-before;
+.radiobutton__input + .radiobutton__label {
+    position: relative;
+}
+
+.radiobutton__input + .radiobutton__label:before {
+    display: flex;
+    float: left;
+    height: 20px;
     width: 100%;
     max-width: 20px;
     border-radius: 10px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    content: '';
 }
 
-.radio-input:checked + label:before {
-    @extend %switchitem-checked;
+.radiobutton__input:checked + .radiobutton__label:before {
+    border: 1px solid #BC9CFF;
     background: url('/circlemark-active.svg') no-repeat center 50%;
 }
+
+.radiobutton__input ~ .radiobutton__text { //дефолтный цвет
+    color: rgba(31, 32, 65, 0.5);
+    margin-left: 29px; //отодвигаем текст
+}
+
+.radiobutton__input:checked ~ .radiobutton__text { //меняем цвет текста при checked
+    color: rgba(31, 32, 65, 0.75);
+}
+
+//Прим. radiobutton__label - вспомогательный элемент, его не видно

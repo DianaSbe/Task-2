@@ -1,10 +1,12 @@
-mixin ratebutton(name, value, num)
+mixin ratebutton(options)
   div.ratebutton
-    h3.rectang-name= name
-    div.ratebutton__wrapper
-      - for(var i = 5; i > 0; i--)
-        if i==value
-          input.ratebutton__input(id=num+`srb${i}` type="radio" name=`rating${num}` value=i checked)
-        else
-          input.ratebutton__input(id=num+`srb${i}` type="radio" name=`rating${num}` value=i)
-        label.ratebutton__label(for=num+`srb${i}`)
+    if options.name!=''
+      div.ratebutton__name
+        +caption({name: options.name})
+        
+  - for(var i = 5; i > 0; i--)
+    if i==options.amount
+      input.ratebutton__input(id=options.id+`ratebtn${i}` type="radio" name=`rating${options.id}` value=i checked)
+    else
+      input.ratebutton__input(id=options.id+`ratebtn${i}` type="radio" name=`rating${options.id}` value=i)
+    label.ratebutton__label(for=options.id+`ratebtn${i}`)

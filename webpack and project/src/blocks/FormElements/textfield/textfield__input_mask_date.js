@@ -1,4 +1,4 @@
-var input = document.querySelectorAll('.js-date')[0];
+var input = document.querySelectorAll('.textfield__input_mask_date')[0];
   
 var dateInputMask = function dateInputMask(elm) {
   elm.addEventListener('keypress', function(e) {

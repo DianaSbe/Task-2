@@ -1,6 +1,7 @@
 ////////////////////Стиль для каждого раздела////////////////////
 
-.sheet {
+///////////////Расположение и размер каждого раздела///////////////
+%sheet {
     position: relative;
     width: 100%;
     max-width: 1440px;
@@ -8,53 +9,54 @@
     margin: 10px 10px;
 }
 
-.sheet__inner {
-    width: 100%;
-    max-width: 48px;
-    margin: 30px;
-}
-
-///////////////Расположение и размер каждого раздела///////////////
-
 %floats {
     display: block;
     float: left;
 }
 
-.ColorsAndTypes {
+.sheet__colors-and-types {
+    @extend %sheet;
+    @extend %floats;
     background: #FFFFFF;
     height: 900px;
-    @extend %floats;
 }
 
-.Cards, .HeadersAndFooters{
+.sheet__cards, .sheet__headers-and-footers {
+    @extend %sheet;
+    @extend %floats;
     float: right;
     background: #F4F4F6;
     height: 1350px;
-    @extend %floats;
 }
 
-.FormElements {
+.sheet__form-elements {
+    @extend %sheet;
+    @extend %floats;
     background: #FFFFFF;
     height: 1853px;
-    @extend %floats;
+}
+
+.sheet__logo {
+    width: 100%;
+    max-width: 48px;
+    margin: 30px;
 }
 
 //////////ColorsAndTypes//////////
 
-.colors-wrapper, .fonts-wrapper {
+.sheet__color, .sheet__font {
     position: absolute;
     width: 100%;
     top: 145px;
     //border: 1px solid black;
 }
   
-.colors-wrapper {
+.sheet__color {
     left: 150px;
     max-width: 270px;
 }
   
-.fonts-wrapper {
+.sheet__font {
     left: 846px;
     max-width: 403px;
 }
@@ -82,194 +84,197 @@
     //border: 1px solid black;
 }
 
-%fourth-column {
-    position: absolute; 
-    width: 100%;
-    left: 1098px;
-    //border: 1px solid black;
-}
+//////
 
-.textfields-wrapper {
+.sheet__textfield {
     @extend %first-column;
-    top: 140px; 
+    top: 143px; 
     max-width: 320px;
 }
 
-.textfields-hover-wrapper {
+.sheet__textfield_selected {
     @extend %first-column;
-    top: 225px; 
+    top: 228px; 
     max-width: 320px;
 }
 
-.dropdowns-guests-wrapper {
+.sheet__textfield_type_date {
     @extend %first-column;
-    top: 309px; 
+    top: 398px; 
     max-width: 320px;
 }
 
-.textfields-data-wrapper {
+.sheet__textfield_type_subscription {
     @extend %first-column;
-    top: 395px; 
+    top: 712px; 
+    max-width: 266px;
+}
+
+.sheet__dropdown_type_guests {
+    @extend %first-column;
+    top: 312px; 
     max-width: 320px;
-}  
-
-.dropdowns-data-wrapper {
-    @extend %first-column;
-    top: 500px; 
-    max-width: 340px;
 }
 
-.dropdowns-filter-data-wrapper {
+.sheet__dropdown_type_start-date {
     @extend %first-column;
-    top: 604px; 
+    top: 502px; 
+    max-width: 150px;
+}
+
+.sheet__dropdown_type_end-date {
+    @extend %first-column;
+    left: 311px;
+    top: 502px;
+    max-width: 150px;
+}
+
+.sheet__dropdown_type_date-filter {
+    @extend %first-column;
+    top: 607px; 
     max-width: 266px;
 }
 
-.textfields-subscription-wrapper {
+.sheet__dropdown_type_rooms {
     @extend %first-column;
-    top: 709px; 
+    top: 876px; 
     max-width: 266px;
 }
 
-.dropdowns-rooms-wrapper {
+.sheet__dropdown_type_rooms_expanded {
     @extend %first-column;
-    top: 873px; 
+    top: 960px; 
     max-width: 266px;
 }
 
-.dropdowns-roomsExp-wrapper {
+.sheet__dropdown_type_guests_expanded {
+    @extend %second-column;
+    top: 876px; 
+    max-width: 320px;
+}
+
+.sheet__checkbox_type_list {
     @extend %first-column;
-    top: 957px; 
+    top: 1196px; 
     max-width: 266px;
 }
 
-.checkbox-list-wrapper {
+.sheet__checkbox_type_list_expanded {
     @extend %first-column;
-    top: 1193px; 
+    top: 1260px;
     max-width: 266px;
 }
 
-.checkbox-list-expanded-wrapper {
-    @extend %first-column;
-    top: 1256px;
-    max-width: 266px;
-    height: 270px;
+.sheet__checkbox_type_buttons {
+    @extend %second-column;
+    top: 143px; 
+    max-width: 222px;
 }
 
-.advantages-wrapper {
+.sheet__checkbox_type_rich-buttons {
+    @extend %second-column;
+    top: 1196px; 
+    max-width: 254px;
+}
+
+.sheet__advantage {
     @extend %first-column;
     top: 1563px; 
     max-width: 291px;
 }
 
-.checkbox-buttons-wrapper {
+.sheet__radiobutton_checked {
     @extend %second-column;
-    top: 140px; 
-    max-width: 222px;
-    height: 130px;
+    top: 313px; 
+    max-width: 110px;
 }
 
-.radiobuttons-wrapper {
+.sheet__radiobutton {
     @extend %second-column;
-    top: 309px; 
-    max-width: 222px;
-    height: 57px;
+    left: 706px;
+    top: 344px; 
+    max-width: 110px;
 }
 
-.toggle-checked-wrapper {
+.sheet__toggle_checked {
     @extend %second-column;
-    top: 400px; 
+    top: 404px; 
     max-width: 260px;
-    height: 56px;
 }
 
-.toggle-wrapper {
+.sheet__toggle {
     @extend %second-column;
-    top: 456px; 
+    top: 469px; 
     max-width: 260px;
-    height: 56px;
 }
 
-.likebutton-wrapper {
+.sheet__likebutton {
     @extend %second-column;
-    top: 530px; 
-    max-width: 90px;
-    height: 57px;
+    top: 534px; 
+    max-width: 84px;
 }
 
-.likebutton-checked-wrapper {
+.sheet__likebutton_checked {
     @extend %second-column;
-    left: 638px;
-    top: 530px; 
-    max-width: 90px;
-    height: 57px;
+    left: 637px;
+    top: 565px; 
+    max-width: 50px;
 }
 
-.ratebutton-wrapper {
+.sheet__ratebutton {
     @extend %second-column;
-    top: 622px; 
+    top: 625px; 
     max-width: 120px;
 }
 
-.ratebutton-full-wrapper {
+.sheet__ratebutton_filled {
     @extend %second-column;
-    top: 640px;
     left: 727px;
+    top: 655px;
     max-width: 120px;
 }
 
-.dropdowns-guestsExpE-wrapper {
-    @extend %second-column;
-    top: 873px; 
-    max-width: 320px;
-}
-
-.rich-checkbox-buttons-wrapper {
-    @extend %second-column;
-    top: 1193px; 
+.sheet__rangeslider {
+    @extend %third-column;
+    top: 143px; 
     max-width: 266px;
-    height: 148px;
 }
 
-.rangeslider-wrapper {
+.sheet__button_theme_purple {
     @extend %third-column;
-    top: 140px; 
-    max-width: 266px;
-    height: 52px;
-}
-
-.button-default-v-wrapper {
-    @extend %third-column;
-    top: 228px; 
+    top: 230px; 
     max-width: 99px;
 }
 
-.button-hover-v-wrapper {
-    @extend %fourth-column;
-    top: 246px; 
-    max-width: 99px;
-}
-
-.button-default-w-wrapper {
+.sheet__button_theme_purple_selected {
     @extend %third-column;
-    top: 322px; 
+    left: 1098px;
+    top: 262px; 
     max-width: 99px;
 }
 
-.button-hover-w-wrapper {
-    @extend %fourth-column;
-    top: 322px; 
-    max-width: 99px;
-}
-
-.textbutton-v-wrapper {
+.sheet__button_theme_white {
     @extend %third-column;
-    top: 408px; 
+    top: 336px; 
+    max-width: 99px;
+}
+
+.sheet__button_theme_white_selected {
+    @extend %third-column;
+    left: 1098px;
+    top: 336px; 
+    max-width: 99px;
+}
+
+.sheet__caption_theme_purple {
+    @extend %third-column;
+    top: 411px; 
     max-width: 61px;
 }
 
-.textbutton-g-wrapper {
-    @extend %fourth-column;
-    top: 408px; 
+.sheet__caption_theme_grey {
+    @extend %third-column;
+    left: 1060px;
+    top: 411px; 
     max-width: 61px;
 }

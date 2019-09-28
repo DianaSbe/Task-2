@@ -1,8 +1,9 @@
-mixin button(name, style)
+mixin button(options)
   div.button
-    h3.rectang-name= name
-    button(class=`button__rectangle ${style}`)
-      if style == 'default-v' || style == 'hover-v'
-        +textbutton('Click Me', 'w')
-      else if style == 'default-w' || style == 'hover-w'
-        +textbutton('Click Me', 'v')
+    if options.name!=''
+      div.button__name
+        +caption({name: options.name})
+        
+    button(class=`button__rectangle button__rectangle_${options.status}`)
+      div(class=`button__substrate button__substrate_theme_${options.theme}`)
+        +caption({name: 'Click Me', theme: options.textcolor})

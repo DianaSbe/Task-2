@@ -1,39 +1,71 @@
-.checkbox__arrow { //новая иконка
-    position: absolute;
-    right: 10px;
-    color: rgba(31, 32, 65, 0.5);
+.checkbox__name {
+    margin-bottom: 17px;
 }
 
-.checkbox__wrapper_{
+.checkbox__arrow { //новая иконка
+    position: absolute;
+    top: -4px;
+    right: 10px;
+}
+
+.checkbox__list_nonexpanded {
     display: none; //по умолчанию скрыт
 }
 
-.checkbox__wrapper_expanded { //развернут при указанном параметре expanded
-    display: block;
+.checkbox__inner { // отодвигаем чекбоксы друг от друга
+    margin-bottom: 12px;
 }
 
-//Внешний вид чекбокса (основной класс - switchitem.scss)
+//Внешний вид чекбокса и текста
 
-.checkbox-input + label {
-    @extend %switchitem;
-    padding-left: 29px;
+.checkbox__input { //скрываем кастомный чекбокс
+    display: none;
 }
 
-.checkbox-input + label:before {
-    @extend %switchitem-before;
+.checkbox__input + .checkbox__label {
+    position: relative;
+}
+
+.checkbox__input + .checkbox__label:before {
+    display: flex;
+    float: left;
+    height: 20px;
     width: 100%;
     max-width: 20px;
     border-radius: 4px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    content: '';
 }
 
-.checkbox-input:checked + label:before {
-    @extend %switchitem-checked;
+.checkbox__input:checked + .checkbox__label:before {
+    border: 1px solid #BC9CFF;
     background: url('/boxmark.svg') no-repeat center 40%;
 }
 
+.checkbox__input ~ .checkbox__text { //дефолтный цвет
+    color: rgba(31, 32, 65, 0.5);
+    margin-left: 29px; //отодвигаем текст
+}
+
+.checkbox__input:checked ~ .checkbox__text { //меняем цвет текста при checked
+    color: rgba(31, 32, 65, 0.75);
+}
+
 //Дополнительные параметры для Rich Checkbox Buttons (текст)
-.checkbox__rich-comment {
+.checkbox__subtitle {
+    font-family: 'Conv_Montserrat'; //Bold
+    font-weight: 600;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 29px;
+}
+
+.checkbox__comment {
     font-size: 12px;
     padding-left: 29px;
     transform: translateY(5px); //опустить текст без влияния на нижнего соседа
 }
+
+//Прим. checkbox__label - вспомогательный элемент, его не видно

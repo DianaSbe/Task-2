@@ -1,81 +1,108 @@
-.custom-arrow { //убираем кастомную иконку
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-     appearance: none;
+.dropdown__name {
+    margin-bottom: 5px;
 }
 
-.dropdown__arrow { //новая иконка
-    position: absolute;
-    right: 10px;
-    top: 34px;
-    color: rgba(31, 32, 65, 0.5);
-}
-
-.dropdown-date { //флоат заголовков с инпутами (класс, полученный с аргумента type)
-    width: 100%;
-    max-width: 150px;
-    float: left;
-    margin-right: 20px;
-}
-
-.dropdown .dropdown-guests input { //ширина инпута с гостями
-    width: 100%;
-    max-width: 320px;
-}
-
-.wrapper__date-dropdown, .wrapper__dropdown { //контейнер для инпута и иконки
+.dropdown__inner { //контейнер для инпута и иконки
     position: relative;
 }
 
-.wrapper__date-dropdown input { //переопределение ширины инпута с датой
-    width: 100%;
-    max-width: 150px;
+.dropdown__icon { //иконка
+    position: absolute;
+    right: 10px;
+    top: 12px;
 }
 
-.wrapper__dropdown input { //переопределение ширины инпута
+.dropdown__input:hover ~ .dropdown__icon .icon__keyboard_arrow_down, //менять цвет иконки при наведении на инпут
+.dropdown__input:focus ~ .dropdown__icon .icon__keyboard_arrow_down,
+.dropdown__input_expanded ~ .dropdown__icon .icon__keyboard_arrow_down {
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown__input {
+    height: 44px;
     width: 100%;
-    max-width: 266px;
+    max-width: 320px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    padding-left: 13px;
+    padding-right: 33px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background: #FFFFFF;
+    
+    //шрифт набираемого текста в инпуте
+    color: rgba(31, 32, 65, 0.75);
+    font-family: 'Conv_Montserrat'; //Light
+    font-size: 14px;
+}
+
+.dropdown__input:hover, .dropdown__input:focus, .dropdown__input_selected {
+    border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
 ////////////////ВЫПАДАЮЩИЙ СПИСОК
 
-.dropdown .dropdown__ul { //выпадающий список
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-    transform: translateY(-1px);
-}
-
-.dropdown .ul_expanded { //внешний вид списка при выпадении
-    display: block;
-    border-radius: 0px 0px 4px 4px;
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-.dropdown .input_expanded { //внешний вид инпута при выпадении списка
+.dropdown__input_expanded { //внешний вид инпута при выпадении списка
     border-radius: 4px 4px 0px 0px;
     border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.dropdown .arrow_expanded {
-    color: rgba(31, 32, 65, 0.75);
+.dropdown__ul { //выпадающий список
+    display: none;
+    transform: translateY(-1px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px 0px 4px 4px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.dropdown-guests-ul {
-    height: 159px;
+.dropdown__ul_expanded { //внешний вид списка при выпадении
+    display: block;
+}
+
+.dropdown__ul_type_guests { //высота инпута с гостями
+    height: 157px;
+}
+
+.dropdown__ul_type_rooms { //высота инпута с комнатами
+    height: 117px;
+}
+
+/////// стили для элементов списка
+
+.dropdown__li { //элементы списка
+    height: 37px;
+    line-height: 37px;
+    padding: 0px 6px 0px 14px;
+}
+
+.dropdown__counterbutton { //кнопки
     width: 100%;
-    max-width: 320px;
+    max-width: 30px;
+    height: 30px;
+    margin-top: 5px;
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background: white;
+    color: rgba(31, 32, 65, 0.5);
+    border-radius: 22px;
+    float: right;
 }
 
-.dropdown-rooms-ul { //ширина инпута с гостями
-    height: 119px;
-    width: 100%;
-    max-width: 266px;
+.dropdown__subtractbutton_inactive {  //кнопка "-"
+    opacity: 0.38;
+} 
+
+.dropdown__addbutton  { //кнопка "+"
 }
 
-.dropdown__button-apply { //кнопка "применить"
-    color: #BC9CFF;
-    float:right;
+.dropdown__counter { //счетчик
+    padding: 0px 13px;
+    float: right;
+}
+
+.dropdown__applybutton { //кнопка "применить"
+    float: right;
     margin: 18px 7px 0px 0px;
 }

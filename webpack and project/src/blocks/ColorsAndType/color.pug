@@ -1,6 +1,7 @@
-mixin color(title, description, background)
-  div.color.wrapper__color
-    div(class=`color__cell ${background}`)
-    div.color__cell__inner
-      h2.color__title= title
-      span.color__description= description
+mixin color(options)
+  div.color
+    div.color__inner
+      div(class=`color__rectangle color__rectangle_theme_${options.theme}`)    
+      div.color__specification
+        h2.color__title= options.title
+        span.color__description= options.description
