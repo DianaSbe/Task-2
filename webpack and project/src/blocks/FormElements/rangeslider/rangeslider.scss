@@ -5,17 +5,18 @@
 	color: rgba(31, 32, 65, 0.5);
 	border: 0px;
 	font-size: 0.75rem; //12px
-	font-family: 'Conv_Montserrat'; //Regular
+	font-family: 'Conv_Montserrat', Arial, sans-serif; //Regular
 }
 
 .rangeslider__name {
 	margin-bottom: 23px;
 }
 
+/////// классы компонента
+
 .ui-slider {
 	position: relative;
 	text-align: left;
-	//transform: translateY(41px);
 }
 
 .ui-slider .ui-slider-handle { //переключатели

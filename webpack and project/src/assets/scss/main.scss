@@ -35,7 +35,7 @@
 }
 
 %heads_font { //h1,h2
-  font-family: 'Conv_Quicksand'; //Medium
+  font-family: 'Conv_Quicksand', Arial, sans-serif; //Medium
 }
 
 h1 {
@@ -53,14 +53,14 @@ h2 {
 h3 {
   @extend %heads_bold-margin;
   font-size: 0.75rem; //12px
-  font-family: 'Conv_Montserrat'; //Meduim
+  font-family: 'Conv_Montserrat', Arial, sans-serif; //Meduim
   font-weight: 500;
   text-transform: uppercase;
 }
 
 body {
   font-size: 0.88rem; //14px
-  font-family: 'Conv_Montserrat'; //Light
+  font-family: 'Conv_Montserrat', Arial, sans-serif; //Light
   font-weight: 300;
   color: rgba(31, 32, 65, 0.75);
 }
