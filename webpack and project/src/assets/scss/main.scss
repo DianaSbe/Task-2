@@ -41,28 +41,28 @@
 h1 {
   @extend %heads_bold-margin;
   @extend %heads_font;
-  font-size: 24px;
+  font-size: 1.5rem; //24px
 }
 
 h2 {
   @extend %heads_bold-margin;
   @extend %heads_font;
-  font-size: 19px;
+  font-size: 1.18rem; //19px
 }
 
 h3 {
   @extend %heads_bold-margin;
-  font-size: 12px;
+  font-size: 0.75rem; //12px
   font-family: 'Conv_Montserrat'; //Meduim
   font-weight: 500;
   text-transform: uppercase;
 }
 
 body {
-  color: rgba(31, 32, 65, 0.75);
+  font-size: 0.88rem; //14px
   font-family: 'Conv_Montserrat'; //Light
   font-weight: 300;
-  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 label {

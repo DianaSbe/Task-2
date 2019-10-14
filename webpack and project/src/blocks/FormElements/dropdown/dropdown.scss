@@ -34,7 +34,7 @@
     //шрифт набираемого текста в инпуте
     color: rgba(31, 32, 65, 0.75);
     font-family: 'Conv_Montserrat'; //Light
-    font-size: 14px;
+    font-size: 0.88rem; //14px
 }
 
 .dropdown__input:hover, .dropdown__input:focus, .dropdown__input_selected {
@@ -97,15 +97,12 @@
 } 
 
 .dropdown__subtractbutton {  //кнопка "-"
-    //margin-right: 13px;
 } 
 
 .dropdown__addbutton  { //кнопка "+"
-    //margin-left: 13px;
 }
 
 .dropdown__counter { //счетчик
-    //padding: 0px 13px;
     float: right;
     width: 100%;
     max-width: 32px; //цифры влияют на ширину, поэтому она выставлена вместо паддингов

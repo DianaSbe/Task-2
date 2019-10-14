@@ -4,6 +4,7 @@
 
 .likebutton__inner { //для того, чтобы ровно спозиционировать счетчик в кнопке
     position: relative;
+    font-size: 0.64rem; //10px
 }
 
 .likebutton__input { //скрываем кастомный чекбокс
@@ -25,7 +26,6 @@
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     font-family        : 'Material Icons';
-    font-size          :  10px;
     content            : 'favorite_border';
     color: rgba(31, 32, 65, 0.25);
     padding: 4px;
@@ -46,7 +46,6 @@
 }
 
 .likebutton__counter { //засовываем счетчик в likebutton
-    font-size: 10px;
     position: absolute;
     top: 3px;
     left: 20px;

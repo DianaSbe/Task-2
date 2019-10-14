@@ -62,7 +62,7 @@ span.ellipse.clickable {
 	justify-content: center; 
 
 	color: rgba(31, 32, 65, 0.5);
-	font-size: 12px;
+	font-size: 0.75rem; //12px
 	line-height: 15px;
 	text-decoration: none;
 
@@ -89,7 +89,7 @@ span.ellipse.clickable {
 	cursor: default;
 	&::before {
 		font-family        : 'Material Icons';
-		font-size          :  24px;
+		font-size          :  1.5rem; //24px
 		content            : 'arrow_forward';
 	}
 }
