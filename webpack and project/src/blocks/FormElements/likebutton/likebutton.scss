@@ -17,7 +17,7 @@
 
 .likebutton__input + .likebutton__label:before {
     display: flex;
-    height: 20px;
+    min-height: 20px;
     width: 100%;
     max-width: 40px;
     border-radius: 10px;

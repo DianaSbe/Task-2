@@ -18,7 +18,7 @@
     @extend %sheet;
     @extend %floats;
     background: #FFFFFF;
-    height: 900px;
+    min-height: 900px;
 }
 
 .sheet__cards, .sheet__headers-and-footers {
@@ -26,14 +26,14 @@
     @extend %floats;
     float: right;
     background: #F4F4F6;
-    height: 1350px;
+    min-height: 1350px;
 }
 
 .sheet__form-elements {
     @extend %sheet;
     @extend %floats;
     background: #FFFFFF;
-    height: 1853px;
+    min-height: 1853px;
 }
 
 .sheet__logo {

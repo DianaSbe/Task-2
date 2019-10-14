@@ -13,7 +13,7 @@
 .toggle__input + .toggle__label:before {
     display: flex;
     float: left;
-    height: 20px;
+    min-height: 20px;
     width: 100%;
     max-width: 40px;
     border-radius: 10px;

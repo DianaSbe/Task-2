@@ -13,7 +13,7 @@
 }
 
 .ratebutton__input + .ratebutton__label:before {
-    height: 24px;
+    min-height: 24px;
     width: 100%;
     max-width: 24px;
     font-family        : 'Material Icons';

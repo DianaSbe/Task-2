@@ -20,7 +20,7 @@
 }
 
 .dropdown__input {
-    height: 44px;
+    min-height: 44px;
     width: 100%;
     max-width: 320px;
     border-radius: 4px;
@@ -64,17 +64,17 @@
 }
 
 .dropdown__ul_type_guests { //высота инпута с гостями
-    height: 157px;
+    min-height: 157px;
 }
 
 .dropdown__ul_type_rooms { //высота инпута с комнатами
-    height: 117px;
+    min-height: 117px;
 }
 
 /////// стили для элементов списка
 
 .dropdown__li { //элементы списка
-    height: 37px;
+    min-height: 37px;
     line-height: 37px;
     padding: 0px 6px 0px 14px;
 }
@@ -82,7 +82,7 @@
 .dropdown__counterbutton { //кнопки
     width: 100%;
     max-width: 30px;
-    height: 30px;
+    min-height: 30px;
     margin-top: 5px;
 
     border: 1px solid rgba(31, 32, 65, 0.25);

@@ -10,7 +10,7 @@
 .bulletlist__inner {
     width: 100%;
     max-width: 10px;
-    height: 24px;
+    min-height: 24px;
     display: flex;
 	align-items: center;
     float: left;
@@ -19,7 +19,7 @@
 .bulletlist__marker {
     width: 100%;
     max-width: 10px;
-    height: 10px;
+    min-height: 10px;
     border-radius: 5px;
     background: rgba(31, 32, 65, 0.25);
 }
