@@ -304,3 +304,9 @@
     top: 540px; 
     max-width: 325px;
 }
+
+.sheet__bulletlist {
+    @extend %third-column;
+    top: 1196px; 
+    max-width: 250px;
+}

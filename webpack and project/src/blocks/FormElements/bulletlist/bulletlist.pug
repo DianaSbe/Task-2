@@ -1,0 +1,13 @@
+mixin bulletlist(options)
+  div.bulletlist
+    - const items = `${options.item}`.split(';')
+    
+    if options.name!='' && options.name!=undefined
+      div.bulletlist__name
+        +caption({name: options.name})
+    
+    ul.bulletlist__list
+      - for (i=0; i<items.length; i++)
+        div.bulletlist__inner
+          div.bulletlist__marker
+        li.bulletlist__item= items[i]

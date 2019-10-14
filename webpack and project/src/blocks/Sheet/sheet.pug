@@ -16,6 +16,7 @@ include ../../blocks/FormElements/button/button
 include ../../blocks/FormElements/caption/caption
 include ../../blocks/FormElements/icon/icon
 include ../../blocks/FormElements/pagination/pagination
+include ../../blocks/FormElements/bulletlist/bulletlist
 
 mixin sheet(options)
   if options.name=="colors-and-types"
@@ -149,3 +150,7 @@ mixin sheet(options)
 
       div.sheet__pagination
         +pagination({name: "Pagination", text: "1 – 12 из 100+ вариантов аренды"})
+
+      div.sheet__bulletlist
+        +bulletlist({name: "Bullet list",
+                     item: "Нельзя с питомцами;Без вечеринок и мероприятий;Время прибытия – после 13:00, а выезд до 12:00"})
