@@ -4,7 +4,7 @@ mixin checkbox(options)
     - const comments = `${options.comment}`.split(',')
     - const statuses = `${options.status}`.split(',')
     
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.checkbox__name
         +caption({name: options.name})
 

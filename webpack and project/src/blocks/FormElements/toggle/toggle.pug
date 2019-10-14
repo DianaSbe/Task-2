@@ -1,6 +1,6 @@
 mixin toggle(options)
   div.toggle
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.toggle__name
         +caption({name: options.name})
         

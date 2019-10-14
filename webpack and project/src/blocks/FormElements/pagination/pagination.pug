@@ -1,0 +1,8 @@
+mixin pagination(options)
+  div.pagination
+    if options.name!='' && options.name!=undefined
+      div.pagination__name
+        +caption({name: options.name})
+    
+    div.paginator
+    label.pagination__label= options.text

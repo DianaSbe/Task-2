@@ -240,6 +240,12 @@
     max-width: 120px;
 }
 
+.sheet__review {
+    @extend %second-column;
+    top: 1573px; 
+    max-width: 706px;
+}
+
 .sheet__rangeslider {
     @extend %third-column;
     top: 143px; 
@@ -276,6 +282,7 @@
     @extend %third-column;
     top: 411px; 
     max-width: 61px;
+    cursor: default;
 }
 
 .sheet__caption_theme_grey {
@@ -283,10 +290,17 @@
     left: 1060px;
     top: 411px; 
     max-width: 61px;
+    cursor: default;
 }
 
 .sheet__button_type_payment {
     @extend %third-column;
     top: 456px; 
     max-width: 320px;
+}
+
+.sheet__pagination {
+    @extend %third-column;
+    top: 540px; 
+    max-width: 325px;
 }

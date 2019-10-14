@@ -1,6 +1,6 @@
 mixin ratebutton(options)
   div.ratebutton
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.ratebutton__name
         +caption({name: options.name})
         

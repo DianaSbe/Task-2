@@ -6,18 +6,20 @@
 
 @import "../../blocks/FormElements/materials-icons"; //общий стиль
 
-@import "../../blocks/FormElements/textfield/textfield"; //компонент
-@import "../../blocks/FormElements/dropdown/dropdown"; //компонент
-@import "../../blocks/FormElements/checkbox/checkbox"; //компонент
-@import "../../blocks/FormElements/radiobutton/radiobutton"; //компонент
-@import "../../blocks/FormElements/toggle/toggle"; //компонент
-@import "../../blocks/FormElements/likebutton/likebutton"; //компонент
-@import "../../blocks/FormElements/advantage/advantage"; //компонент
-@import "../../blocks/FormElements/ratebutton/ratebutton"; //компонент
-@import "../../blocks/FormElements/rangeslider/rangeslider"; //компонент
-@import "../../blocks/FormElements/button/button"; //компонент
-@import "../../blocks/FormElements/caption/caption"; //компонент для button (и не только)
+@import "../../blocks/FormElements/textfield/textfield"; 
+@import "../../blocks/FormElements/dropdown/dropdown";
+@import "../../blocks/FormElements/checkbox/checkbox";
+@import "../../blocks/FormElements/advantage/advantage";
+@import "../../blocks/FormElements/radiobutton/radiobutton";
+@import "../../blocks/FormElements/toggle/toggle";
+@import "../../blocks/FormElements/likebutton/likebutton";
+@import "../../blocks/FormElements/ratebutton/ratebutton";
+@import "../../blocks/FormElements/review/review";
+@import "../../blocks/FormElements/rangeslider/rangeslider";
+@import "../../blocks/FormElements/button/button";
+@import "../../blocks/FormElements/caption/caption";
 @import "../../blocks/FormElements/icon/icon";
+@import "../../blocks/FormElements/pagination/pagination";
 
 .ui-kit {
   width: 330%;

@@ -1,6 +1,6 @@
 mixin radiobutton(options)
   div.radiobutton
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.radiobutton__name
         +caption({name: options.name})
         

@@ -3,8 +3,7 @@
 }
 
 .likebutton__inner { //для того, чтобы ровно спозиционировать счетчик в кнопке
-    width: 100%;
-    max-width: 50px;
+    position: relative;
 }
 
 .likebutton__input { //скрываем кастомный чекбокс
@@ -17,7 +16,6 @@
 
 .likebutton__input + .likebutton__label:before {
     display: flex;
-    float: left;
     height: 20px;
     width: 100%;
     max-width: 40px;
@@ -30,8 +28,7 @@
     font-size          :  10px;
     content            : 'favorite_border';
     color: rgba(31, 32, 65, 0.25);
-    padding-left: 4px;
-    padding-top: 4px;
+    padding: 4px;
 }
 
 .likebutton__input:checked + .likebutton__label:before {
@@ -49,9 +46,10 @@
 }
 
 .likebutton__counter { //засовываем счетчик в likebutton
-    display: flex;
     font-size: 10px;
-    transform: translate(-190%, 20%);
+    position: absolute;
+    top: 3px;
+    left: 20px;
 }
 
 //Прим. likebutton__label - вспомогательный элемент, его не видно

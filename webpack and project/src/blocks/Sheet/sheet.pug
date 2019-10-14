@@ -4,18 +4,18 @@ include ../../blocks/ColorsAndType/font
 
 include ../../blocks/FormElements/textfield/textfield
 include ../../blocks/FormElements/dropdown/dropdown
-
 include ../../blocks/FormElements/checkbox/checkbox
+include ../../blocks/FormElements/advantage/advantage
 include ../../blocks/FormElements/radiobutton/radiobutton
 include ../../blocks/FormElements/toggle/toggle
 include ../../blocks/FormElements/likebutton/likebutton
-
-include ../../blocks/FormElements/advantage/advantage
 include ../../blocks/FormElements/ratebutton/ratebutton
+include ../../blocks/FormElements/review/review
 include ../../blocks/FormElements/rangeslider/rangeslider
 include ../../blocks/FormElements/button/button
 include ../../blocks/FormElements/caption/caption
 include ../../blocks/FormElements/icon/icon
+include ../../blocks/FormElements/pagination/pagination
 
 mixin sheet(options)
   if options.name=="colors-and-types"
@@ -113,35 +113,39 @@ mixin sheet(options)
       div.sheet__radiobutton_checked
         +radiobutton({name: "Radio Buttons", text: "Мужчина", status: 'checked', id: '01'})
       div.sheet__radiobutton
-        +radiobutton({name: "", text: "Женщина", id: '02'})
+        +radiobutton({text: "Женщина", id: '02'})
       div.sheet__toggle_checked
         +toggle({name: "Toggle", text: "Получать спецпредложения", status: 'checked', id: '01'})
       div.sheet__toggle
-        +toggle({name: "", text: "Получать спецпредложения", id: '02'})
+        +toggle({text: "Получать спецпредложения", id: '02'})
       div.sheet__likebutton
         +likebutton({name: "Like Button", text: "2", id: '01'})
       div.sheet__likebutton_checked
-        +likebutton({name: "", text: "12", status: 'checked', id: '02'})
-
+        +likebutton({text: "12", status: 'checked', id: '02'})
       div.sheet__ratebutton
         +ratebutton({name: "Rate Button", amount: '4', id: '1'})
       div.sheet__ratebutton_filled
-        +ratebutton({name: "", amount: '5', id: '2'})
-        
+        +ratebutton({amount: '5', id: '2'})
+
+      div.sheet__review
+        +review({name: "Мурад Сарафанов", date: "5 дней назад", userpic: '01', like: '12', comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."})
       div.sheet__rangeslider
         +rangeslider({name: "Range Slider"})
 
       div.sheet__button
         +button({name: "Buttons", text: 'Click Me', textcolor: 'white'})
       div.sheet__button_selected
-        +button({name: "", status: 'selected', text: 'Click Me', textcolor: 'white'})
+        +button({status: 'selected', text: 'Click Me', textcolor: 'white'})
       div.sheet__button_theme_white
-        +button({name: "", theme: 'white', text: 'Click Me', textcolor: 'purple'})
+        +button({theme: 'white', text: 'Click Me', textcolor: 'purple'})
       div.sheet__button_theme_white_selected
-        +button({name: "", theme: 'white', status: 'selected', text: 'Click Me', textcolor: 'purple'})
+        +button({theme: 'white', status: 'selected', text: 'Click Me', textcolor: 'purple'})
       div.sheet__caption_theme_purple
         +caption({name:"Click Me", theme: 'purple'})
       div.sheet__caption_theme_grey
         +caption({name:"Click Me", theme: 'grey'})
       div.sheet__button_type_payment
-        +button({name: "", text: 'Перейти к оплате', textcolor: 'white', type: 'payment'})
+        +button({text: 'Перейти к оплате', textcolor: 'white', type: 'payment'})
+
+      div.sheet__pagination
+        +pagination({name: "Pagination", text: "1 – 12 из 100+ вариантов аренды"})

@@ -1,6 +1,6 @@
 mixin likebutton(options)
   div.likebutton
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.likebutton__name
         +caption({name: options.name})
         

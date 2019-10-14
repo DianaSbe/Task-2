@@ -10,6 +10,7 @@
     position: absolute;
     right: 10px;
     top: 12px;
+    cursor: default;
 }
 
 .dropdown__input:hover ~ .dropdown__icon .icon__keyboard_arrow_down, //менять цвет иконки при наведении на инпут
@@ -55,6 +56,7 @@
     padding: 0;
     border-radius: 0px 0px 4px 4px;
     border: 1px solid rgba(31, 32, 65, 0.5);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .dropdown__ul_expanded { //внешний вид списка при выпадении
@@ -113,8 +115,10 @@
 .dropdown__applybutton { //кнопка "применить"
     float: right;
     margin: 18px 7px 0px 0px;
+    cursor: default;
 }
 
 .dropdown__clearbutton {
     margin: 18px 0px 0px 14px;
+    cursor: default;
 }

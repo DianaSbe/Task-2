@@ -1,0 +1,95 @@
+.pagination__name {
+    margin-bottom: 17px;
+}
+
+.pagination__label {
+	width: 100%;
+	max-width: 240px;
+	line-height: 28px;
+	text-align: center;
+}
+
+/**
+* CSS themes for simplePagination.js
+* Author: Flavius Matis - http://flaviusmatis.github.com/
+* URL: https://github.com/flaviusmatis/simplePagination.js
+*/
+
+ul.simple-pagination {
+	list-style: none;
+}
+
+.simple-pagination {
+	display: block;
+	overflow: hidden;
+	padding: 0 5px 5px 0;
+	margin: 0;
+}
+
+.simple-pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.simple-pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+span.ellipse.clickable {
+	//cursor: pointer;
+}
+
+.ellipse input {
+	width: 3em;
+}
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+
+.light-theme a, .light-theme span {
+	float: left;
+    width: 100%; 
+	min-width: 40px;
+	height: 40px;
+	border-radius: 22px;
+	background: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+
+	color: rgba(31, 32, 65, 0.5);
+	font-size: 12px;
+	line-height: 15px;
+	text-decoration: none;
+
+	cursor: default;
+}
+
+.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
+	//background: #FCFCFC;
+}
+
+.light-theme .current {
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	color: #FFFFFF;
+	cursor: default;
+}
+
+.light-theme .ellipse {
+	//cursor: default;
+}
+
+.light-theme .next {
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	color: #FFFFFF;
+	cursor: default;
+	&::before {
+		font-family        : 'Material Icons';
+		font-size          :  24px;
+		content            : 'arrow_forward';
+	}
+}

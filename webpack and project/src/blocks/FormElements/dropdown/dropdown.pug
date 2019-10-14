@@ -4,7 +4,7 @@ mixin dropdown(options)
     - const counters = `${options.counter}`.split(',')
     
     +caption({name: options.statusname, theme: 'status'})
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.dropdown__name
         +caption({name: options.name})
     

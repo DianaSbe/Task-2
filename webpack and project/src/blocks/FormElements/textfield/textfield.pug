@@ -1,7 +1,7 @@
 mixin textfield(options)
   div.textfield
     +caption({name: options.statusname, theme: 'status'})
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.textfield__name
         +caption({name: options.name})
         

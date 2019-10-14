@@ -115,7 +115,7 @@ module.exports = {
       'inputmask.numeric.extensions': path.resolve(__dirname, '../node_modules/inputmask/lib/extensions/inputmask.numeric.extensions.js'),
       'inputmask.date.extensions': path.resolve(__dirname, '../node_modules/inputmask/lib/extensions/inputmask.date.extensions.js'),
 
-      'jquery-ui': path.resolve(__dirname, '../node_modules/jquery-ui-dist/jquery-ui.js')
+      'jquery-ui-slider': path.resolve(__dirname, '../node_modules/jquery-ui-dist/jquery-ui.js'),
     }
   },
   plugins: [
@@ -124,7 +124,7 @@ module.exports = {
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/[name].svg`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),

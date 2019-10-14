@@ -1,6 +1,6 @@
 mixin button(options)
   div.button
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.button__name
         +caption({name: options.name})
         

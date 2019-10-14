@@ -2,7 +2,7 @@ mixin rangeslider(options)
   div.rangeslider
     input.rangeslider__input(type="text" id="amount" readonly)
 
-    if options.name!=''
+    if options.name!='' && options.name!=undefined
       div.rangeslider__name
         +caption({name: options.name})
         
