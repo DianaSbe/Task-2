@@ -23,21 +23,22 @@ mixin sheet(options)
     div(class=`sheet__${options.name}`)
       div.sheet__logo
         include logo.svg
+        
+      div.sheet__colors-and-types-inner
+        div.sheet__color
+          +color({title: 'Dark Shade 100%', description: '#1F2041', theme: 'dark100'})
+          +color({title: 'Dark Shade 75%', description: '#1F2041', theme: 'dark75'})
+          +color({title: 'Dark Shade 50%', description: '#1F2041', theme: 'dark50'})
+          +color({title: 'Dark Shade 25%', description: '#1F2041', theme: 'dark25'})
+          +color({title: 'Dark Shade 5%', description: '#1F2041', theme: 'dark5'})
+          +color({title: 'Purple', description: '#BC9CFF', theme: 'purple'})
+          +color({title: 'Green', description: '#6FCF97', theme: 'green'})
 
-      div.sheet__color
-        +color({title: 'Dark Shade 100%', description: '#1F2041', theme: 'dark100'})
-        +color({title: 'Dark Shade 75%', description: '#1F2041', theme: 'dark75'})
-        +color({title: 'Dark Shade 50%', description: '#1F2041', theme: 'dark50'})
-        +color({title: 'Dark Shade 25%', description: '#1F2041', theme: 'dark25'})
-        +color({title: 'Dark Shade 5%', description: '#1F2041', theme: 'dark5'})
-        +color({title: 'Purple', description: '#BC9CFF', theme: 'purple'})
-        +color({title: 'Green', description: '#6FCF97', theme: 'green'})
-
-      div.sheet__font
-        +font({title: 'H1', description: 'This one is the sub-section or widget title'})
-        +font({title: 'H2', description: 'Next one is the item title inside widgets'})
-        +font({title: 'H3', description: 'This is a label or cta text'})
-        +font({title: 'Body', description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+        div.sheet__font
+          +font({title: 'H1', description: 'This one is the sub-section or widget title'})
+          +font({title: 'H2', description: 'Next one is the item title inside widgets'})
+          +font({title: 'H3', description: 'This is a label or cta text'})
+          +font({title: 'Body', description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
 
   if options.name=="headers-and-footers"
     div(class=`sheet__${options.name}`)

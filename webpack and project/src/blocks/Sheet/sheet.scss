@@ -14,11 +14,24 @@
     float: left;
 }
 
+.sheet__logo {
+    width: 100%;
+    max-width: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 30px;
+}
+
 .sheet__colors-and-types {
     @extend %sheet;
     @extend %floats;
     background: #FFFFFF;
     min-height: 900px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .sheet__cards, .sheet__headers-and-footers {
@@ -36,29 +49,25 @@
     min-height: 1853px;
 }
 
-.sheet__logo {
-    width: 100%;
-    max-width: 48px;
-    margin: 30px;
-}
-
 //////////ColorsAndTypes//////////
 
-.sheet__color, .sheet__font {
-    position: absolute;
+.sheet__colors-and-types-inner {
     width: 100%;
-    top: 145px;
-    //border: 1px solid black;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
   
 .sheet__color {
-    left: 150px;
+    width: 100%;
     max-width: 270px;
 }
   
 .sheet__font {
-    left: 846px;
-    max-width: 403px;
+    width: 100%;
+    max-width: 445px;
+    padding-top: 9px;
 }
 
 //////////FormElements//////////

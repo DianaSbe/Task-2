@@ -1,14 +1,9 @@
 $dark: #1F2041;
 
 .color__inner {
-    margin-bottom: 20px;
-}
-
-.color__inner:before { //псевдоэлемент для выравнивания текста
-    display: inline-block;
-    min-height: 70px;
-    vertical-align: middle;
-    content: "";
+    min-height: 90px;
+    display: flex;
+	align-items: center;
 }
 
 .color__rectangle { // цветная ячейка
@@ -17,7 +12,6 @@ $dark: #1F2041;
     min-height: 70px;
     border-radius: 6px;
     
-    //position: relative;
     display: block;
     float: left;
 
