@@ -25,7 +25,15 @@
 .ui-kit {
   width: 330%;
   max-width: 4405px;
-  min-height: 2796px;
+  min-height: 2780px;
+  display: flex;
+  
+  .ui-kit__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
 }
 
 %heads_bold-margin { //h1,h2,h3

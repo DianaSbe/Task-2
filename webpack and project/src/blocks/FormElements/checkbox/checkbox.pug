@@ -7,13 +7,13 @@ mixin checkbox(options)
     if options.name!='' && options.name!=undefined
       div.checkbox__name
         +caption({name: options.name})
+        if options.type=='list'
+          div.checkbox__arrow
+            if options.state=='nonexpanded'
+              +icon({name: 'keyboard_arrow_down'})
+            else
+              +icon({name: 'keyboard_arrow_up'})
 
-    if options.type=='list'
-      div.checkbox__arrow
-        if options.state=='nonexpanded'
-          +icon({name: 'keyboard_arrow_down'})
-        else
-          +icon({name: 'keyboard_arrow_up'})
     div(class=`checkbox__list_${options.state}`)
       - for (i=0; i<values.length; i++)
         div.checkbox__inner

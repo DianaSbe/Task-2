@@ -7,6 +7,6 @@ mixin button(options)
     button(class=`button__rectangle button__rectangle_${options.status} button__rectangle_type_${options.type}`)
       div(class=`button__substrate button__substrate_theme_${options.theme}`)
         +caption({name: options.text, theme: options.textcolor})
-        if options.type=='payment'
-          div.button__icon
-            +icon({name: 'arrow_forward', theme: 'white'})
+      if options.type=='payment'
+        div.button__icon
+          +icon({name: 'arrow_forward', theme: 'white'})

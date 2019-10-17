@@ -9,8 +9,9 @@ html(lang="en")
     
   body
     div.ui-kit
-      +sheet({name: "colors-and-types"})
+      div.ui-kit__inner
+        +sheet({name: "colors-and-types"})
+        +sheet({name: "form-elements"})
       +sheet({name: "headers-and-footers"})
       +sheet({name: "cards"})
-      +sheet({name: "form-elements"})
       // .class(cell-green)

@@ -1,7 +1,6 @@
 include ../../blocks/ColorsAndType/color
 include ../../blocks/ColorsAndType/font
 
-
 include ../../blocks/FormElements/textfield/textfield
 include ../../blocks/FormElements/dropdown/dropdown
 include ../../blocks/FormElements/checkbox/checkbox
@@ -19,139 +18,139 @@ include ../../blocks/FormElements/pagination/pagination
 include ../../blocks/FormElements/bulletlist/bulletlist
 
 mixin sheet(options)
-  if options.name=="colors-and-types"
-    div(class=`sheet__${options.name}`)
-      div.sheet__logo
-        include logo.svg
+  div.sheet
+    if options.name=="colors-and-types"
+      div(class=`sheet__${options.name}`)
+        div.sheet__logo
+          include logo.svg
         
-      div.sheet__colors-and-types-inner
-        div.sheet__color
-          +color({title: 'Dark Shade 100%', description: '#1F2041', theme: 'dark100'})
-          +color({title: 'Dark Shade 75%', description: '#1F2041', theme: 'dark75'})
-          +color({title: 'Dark Shade 50%', description: '#1F2041', theme: 'dark50'})
-          +color({title: 'Dark Shade 25%', description: '#1F2041', theme: 'dark25'})
-          +color({title: 'Dark Shade 5%', description: '#1F2041', theme: 'dark5'})
-          +color({title: 'Purple', description: '#BC9CFF', theme: 'purple'})
-          +color({title: 'Green', description: '#6FCF97', theme: 'green'})
+        div.sheet__colors-and-types-inner
+          div.sheet__color
+            +color({title: 'Dark Shade 100%', description: '#1F2041', theme: 'dark100'})
+            +color({title: 'Dark Shade 75%', description: '#1F2041', theme: 'dark75'})
+            +color({title: 'Dark Shade 50%', description: '#1F2041', theme: 'dark50'})
+            +color({title: 'Dark Shade 25%', description: '#1F2041', theme: 'dark25'})
+            +color({title: 'Dark Shade 5%', description: '#1F2041', theme: 'dark5'})
+            +color({title: 'Purple', description: '#BC9CFF', theme: 'purple'})
+            +color({title: 'Green', description: '#6FCF97', theme: 'green'})
 
-        div.sheet__font
-          +font({title: 'H1', description: 'This one is the sub-section or widget title'})
-          +font({title: 'H2', description: 'Next one is the item title inside widgets'})
-          +font({title: 'H3', description: 'This is a label or cta text'})
-          +font({title: 'Body', description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+          div.sheet__font
+            +font({title: 'H1', description: 'This one is the sub-section or widget title'})
+            +font({title: 'H2', description: 'Next one is the item title inside widgets'})
+            +font({title: 'H3', description: 'This is a label or cta text'})
+            +font({title: 'Body', description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
 
-  if options.name=="headers-and-footers"
-    div(class=`sheet__${options.name}`)
-      div.sheet__logo
-        include logo.svg
+    if options.name=="form-elements"
+      div(class=`sheet__${options.name}`)
+        div.sheet__logo
+          include logo.svg
         
-  if options.name=="cards"
-    div(class=`sheet__${options.name}`)
-      div.sheet__logo
-        include logo.svg
+        div.sheet__form-elements-inner
 
-  if options.name=="form-elements"
-    div(class=`sheet__${options.name}`)
-      div.sheet__logo
-        include logo.svg
-
-      div.sheet__textfield
-        +textfield({name: "Text Field", statusname: "Default", value: "", hint: "Email"})
-      div.sheet__textfield_selected
-        +textfield({name:"Text Field", statusname: "Hover / Focus", value: "This is pretty awesome", status: 'selected'})
-      div.sheet__textfield_type_date  
-        +textfield({name:"Masked Text Field", statusname: "Default", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'}) 
-      div.sheet__textfield_type_subscription  
-        +textfield({name:"Subscription Text Field", value: "", hint: "Email", type: 'subscription'})
-
-      div.sheet__dropdown_type_guests
-        +dropdown({name:"Dropdown", statusname: "Default", value: "", hint: "Сколько гостей", type: 'guests',
-                   item: "Взрослые,Дети,Младенцы",
-                   counter: "0,0,0"})
-      div.sheet__dropdown_type_start-date
-        +dropdown({name:"Date Dropdown", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'})
-      div.sheet__dropdown_type_end-date
-        +dropdown({name:"Date Dropdown", value: "19.08.2019", hint: "ДД.ММ.ГГГГ", type: 'date'})
-      div.sheet__dropdown_type_date-filter
-        +dropdown({name:"Filter Date Dropdown", value: "19 авг - 23 авг"})
-      div.sheet__dropdown_type_rooms
-        +dropdown({name:"Dropdown", statusname: "Default", value: "", hint: "2 спальни, 2 кровати...", type: 'rooms',
-                   item: "Спальни,Кровати,Ванные комнаты",
-                   counter: "2,2,0"})
-      div.sheet__dropdown_type_rooms_expanded_filled
-        +dropdown({name:"Dropdown", statusname: "Expanded", value: "", hint: "2 спальни, 2 кровати...", state: 'expanded', type: 'rooms',
-                   item: "Спальни,Кровати,Ванные комнаты",
-                   counter: "2,2,0"})
-      div.sheet__dropdown_type_guests_expanded
-        +dropdown({name:"Dropdown", value: "", hint: "Сколько гостей", state: 'expanded', type: 'guests',
-                   item: "Взрослые,Дети,Младенцы",
-                   counter: "0,0,0"})
-      div.sheet__dropdown_type_guests_expanded_filled
-        +dropdown({name:"Dropdown", value: "", hint: "3 гостя", state: 'expanded', type: 'guests',
-                   item: "Взрослые,Дети,Младенцы",
-                   counter: "2,1,0"})
-
-      div.sheet__checkbox_type_list
-        +checkbox({name: "Expandable Checkbox List", type: 'list', state: 'nonexpanded', id: '1checklst', 
-                   value: "Завтрак,Письменный стол,Стул для кормления,Кроватка,Телевизор,Шампунь,Телевизор,Шампунь",
-                   status: ',checked,checked,checked'})
-      div.sheet__checkbox_type_list_expanded
-        +checkbox({name: "Expandable Checkbox List", type: 'list', id: '2checklst', 
-                   value: "Завтрак,Письменный стол,Стул для кормления,Кроватка,Телевизор,Шампунь,Телевизор,Шампунь", 
-                   status: ',checked,checked,checked'})
-      div.sheet__checkbox_type_buttons
-        +checkbox({name: "Checkbox Buttons", id: '1checkbtn', 
-                   value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
-                   status: ',checked,checked'})
-      div.sheet__checkbox_type_rich-buttons
-        +checkbox({name: "Rich Checkbox Buttons", id: '1rcheckbtn',
-                   value: "Широкий коридор,Помощник для инвалидов",
-                   comment: "Ширина коридоров в номере не менее 91 см.,На 1 этаже вас встретит специалист и проводит до номера"})
-
-      div.sheet__advantage
-        +advantage({icon:'mood', title: "Комфорт", description: "Шумопоглощающие стены"})
-        +advantage({icon:'location_city', title: "Удобство", description: "Окно в каждой из спален"})
-        
-      div.sheet__radiobutton_checked
-        +radiobutton({name: "Radio Buttons", text: "Мужчина", status: 'checked', id: '01'})
-      div.sheet__radiobutton
-        +radiobutton({text: "Женщина", id: '02'})
-      div.sheet__toggle_checked
-        +toggle({name: "Toggle", text: "Получать спецпредложения", status: 'checked', id: '01'})
-      div.sheet__toggle
-        +toggle({text: "Получать спецпредложения", id: '02'})
-      div.sheet__likebutton
-        +likebutton({name: "Like Button", text: "2", id: '01'})
-      div.sheet__likebutton_checked
-        +likebutton({text: "12", status: 'checked', id: '02'})
-      div.sheet__ratebutton
-        +ratebutton({name: "Rate Button", amount: '4', id: '1'})
-      div.sheet__ratebutton_filled
-        +ratebutton({amount: '5', id: '2'})
-
-      div.sheet__review
-        +review({name: "Мурад Сарафанов", date: "5 дней назад", userpic: '01', like: '12', comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."})
-      div.sheet__rangeslider
-        +rangeslider({name: "Range Slider"})
-
-      div.sheet__button
-        +button({name: "Buttons", text: 'Click Me', textcolor: 'white'})
-      div.sheet__button_selected
-        +button({status: 'selected', text: 'Click Me', textcolor: 'white'})
-      div.sheet__button_theme_white
-        +button({theme: 'white', text: 'Click Me', textcolor: 'purple'})
-      div.sheet__button_theme_white_selected
-        +button({theme: 'white', status: 'selected', text: 'Click Me', textcolor: 'purple'})
-      div.sheet__caption_theme_purple
-        +caption({name:"Click Me", theme: 'purple'})
-      div.sheet__caption_theme_grey
-        +caption({name:"Click Me", theme: 'grey'})
-      div.sheet__button_type_payment
-        +button({text: 'Перейти к оплате', textcolor: 'white', type: 'payment'})
-
-      div.sheet__pagination
-        +pagination({name: "Pagination", text: "1 – 12 из 100+ вариантов аренды"})
-
-      div.sheet__bulletlist
-        +bulletlist({name: "Bullet list",
-                     item: "Нельзя с питомцами;Без вечеринок и мероприятий;Время прибытия – после 13:00, а выезд до 12:00"})
+          div.sheet_form-elements-column-first
+            div.sheet__textfield
+              +textfield({name: "Text Field", statusname: "Default", value: "", hint: "Email"})
+            div.sheet__textfield_selected
+              +textfield({name:"Text Field", statusname: "Hover / Focus", value: "This is pretty awesome", status: 'selected'})
+            div.sheet__dropdown_type_guests
+              +dropdown({name:"Dropdown", statusname: "Default", value: "", hint: "Сколько гостей", type: 'guests',
+                         item: "Взрослые,Дети,Младенцы",
+                         counter: "0,0,0"})           
+            div.sheet__textfield_type_date  
+              +textfield({name:"Masked Text Field", statusname: "Default", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'}) 
+            div.sheet__dropdown_type_date
+              div.sheet__dropdown_type_start-date
+                +dropdown({name:"Date Dropdown", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'})
+              div.sheet__dropdown_type_end-date
+                +dropdown({name:"Date Dropdown", value: "19.08.2019", hint: "ДД.ММ.ГГГГ", type: 'date'})
+            div.sheet__dropdown_type_date-filter
+              +dropdown({name:"Filter Date Dropdown", value: "19 авг - 23 авг"})
+            div.sheet__textfield_type_subscription  
+              +textfield({name:"Subscription Text Field", value: "", hint: "Email", type: 'subscription'})
+            div.sheet__dropdown_type_rooms
+              +dropdown({name:"Dropdown", statusname: "Default", value: "", hint: "2 спальни, 2 кровати...", type: 'rooms',
+                         item: "Спальни,Кровати,Ванные комнаты",
+                         counter: "2,2,0"})
+            div.sheet__dropdown_type_rooms_expanded_filled
+              +dropdown({name:"Dropdown", statusname: "Expanded", value: "", hint: "2 спальни, 2 кровати...", state: 'expanded', type: 'rooms',
+                         item: "Спальни,Кровати,Ванные комнаты",
+                         counter: "2,2,0"})
+            div.sheet__checkbox_type_list
+              +checkbox({name: "Expandable Checkbox List", type: 'list', state: 'nonexpanded', id: '1checklst', 
+                         value: "Завтрак,Письменный стол,Стул для кормления,Кроватка,Телевизор,Шампунь,Телевизор,Шампунь",
+                         status: ',checked,checked,checked'})
+            div.sheet__checkbox_type_list_expanded
+              +checkbox({name: "Expandable Checkbox List", type: 'list', id: '2checklst', 
+                         value: "Завтрак,Письменный стол,Стул для кормления,Кроватка,Телевизор,Шампунь,Телевизор,Шампунь", 
+                         status: ',checked,checked,checked'})
+            div.sheet__advantage
+              +advantage({icon:'mood', title: "Комфорт", description: "Шумопоглощающие стены"})
+              +advantage({icon:'location_city', title: "Удобство", description: "Окно в каждой из спален"})
+     
+          div.sheet_form-elements-column-second
+            div.sheet__checkbox_type_buttons
+              +checkbox({name: "Checkbox Buttons", id: '1checkbtn', 
+                         value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
+                         status: ',checked,checked'})
+            div.sheet__radiobutton
+              div.sheet__radiobutton_checked
+                +radiobutton({name: "Radio Buttons", text: "Мужчина", status: 'checked', id: '01'})
+              div.sheet__radiobutton_unchecked
+                +radiobutton({text: "Женщина", id: '02'})
+            div.sheet__toggle
+              +toggle({name: "Toggle", text: "Получать спецпредложения", status: 'checked', id: '01'})
+              +toggle({text: "Получать спецпредложения", id: '02'})
+            div.sheet__likebutton
+              div.sheet__likebutton_unchecked
+                +likebutton({name: "Like Button", text: "2", id: '01'})
+              div.sheet__likebutton_checked
+                +likebutton({text: "12", status: 'checked', id: '02'})
+            div.sheet__ratebutton
+              +ratebutton({name: "Rate Button", amount: '4', id: '1'})
+              div.sheet__ratebutton_filled
+                +ratebutton({amount: '5', id: '2'})
+            div.sheet__dropdown_type_guests_expanded
+              +dropdown({name:"Dropdown", value: "", hint: "Сколько гостей", state: 'expanded', type: 'guests',
+                         item: "Взрослые,Дети,Младенцы",
+                         counter: "0,0,0"})
+            div.sheet__checkbox_type_rich-buttons
+              +checkbox({name: "Rich Checkbox Buttons", id: '1rcheckbtn',
+                         value: "Широкий коридор,Помощник для инвалидов",
+                         comment: "Ширина коридоров в номере не менее 91 см.,На 1 этаже вас встретит специалист и проводит до номера"})
+            //div.sheet__review
+              +review({name: "Мурад Сарафанов", date: "5 дней назад", userpic: '01', like: '12', comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."})
+          
+          div.sheet_form-elements-column-third
+            div.sheet__rangeslider
+              +rangeslider({name: "Range Slider"})
+            div.sheet__button
+              +button({name: "Buttons", text: 'Click Me', textcolor: 'white'})
+              div.sheet__button_selected
+                +button({status: 'selected', text: 'Click Me', textcolor: 'white'})
+            div.sheet__button
+              +button({theme: 'white', text: 'Click Me', textcolor: 'purple'})
+              +button({theme: 'white', status: 'selected', text: 'Click Me', textcolor: 'purple'})
+            div.sheet__caption  
+              +caption({name:"Click Me", theme: 'purple'})
+              +caption({name:"Click Me", theme: 'grey'})
+            div.sheet__button_type_payment
+              +button({text: 'Перейти к оплате', textcolor: 'white', type: 'payment'})
+            div.sheet__pagination
+              +pagination({name: "Pagination", text: "1 – 12 из 100+ вариантов аренды"})
+            div.sheet__dropdown_type_guests_expanded_filled
+              +dropdown({name:"Dropdown", value: "", hint: "3 гостя", state: 'expanded', type: 'guests',
+                         item: "Взрослые,Дети,Младенцы",
+                         counter: "2,1,0"})
+            div.sheet__bulletlist
+              +bulletlist({name: "Bullet list",
+                           item: "Нельзя с питомцами;Без вечеринок и мероприятий;Время прибытия – после 13:00, а выезд до 12:00"})
+      
+    if options.name=="cards"
+      div(class=`sheet__${options.name}`)
+        div.sheet__logo
+          include logo.svg
+    
+    if options.name=="headers-and-footers"
+      div(class=`sheet__${options.name}`)
+        div.sheet__logo
+          include logo.svg

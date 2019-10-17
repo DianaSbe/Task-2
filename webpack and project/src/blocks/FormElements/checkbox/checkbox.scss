@@ -1,12 +1,15 @@
 .checkbox__name {
-    margin-bottom: 17px;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .checkbox__arrow { //новая иконка
-    position: absolute;
-    top: -4px;
-    right: 10px;
     cursor: default;
+    max-height: 24px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .checkbox__list_nonexpanded {
