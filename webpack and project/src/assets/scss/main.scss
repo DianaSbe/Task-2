@@ -1,10 +1,9 @@
 @import "/utils/fonts.scss"; //общий стиль
+@import "../../blocks/FormElements/materials-icons"; //общий стиль
 @import "../../blocks/Sheet/sheet.scss";
 
-@import "../../blocks/ColorsAndType/color.scss";
-@import "../../blocks/ColorsAndType/font.scss";
-
-@import "../../blocks/FormElements/materials-icons"; //общий стиль
+@import "../../blocks/ColorsAndType/color/color.scss";
+@import "../../blocks/ColorsAndType/font/font.scss";
 
 @import "../../blocks/FormElements/textfield/textfield"; 
 @import "../../blocks/FormElements/dropdown/dropdown";
@@ -21,6 +20,8 @@
 @import "../../blocks/FormElements/icon/icon";
 @import "../../blocks/FormElements/pagination/pagination";
 @import "../../blocks/FormElements/bulletlist/bulletlist";
+
+@import "../../blocks/Cards/room-selection/room-selection";
 
 .ui-kit {
   width: 330%;

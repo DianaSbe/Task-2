@@ -1,0 +1,33 @@
+.room-selection {
+    width: 100%;
+    max-width: 380px;
+    min-height: 374px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.room-selection__inner {
+    max-width: 320px;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.room-selection__dropdown_type_date {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-selection__dropdown_type_guests {
+    width: 100%;
+    min-height: 75px;
+}

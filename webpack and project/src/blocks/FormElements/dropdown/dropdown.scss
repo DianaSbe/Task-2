@@ -1,16 +1,24 @@
+.dropdown {
+    width: 100%;
+}
+
 .dropdown__name {
     margin-bottom: 5px;
 }
 
 .dropdown__inner { //контейнер для инпута и иконки
     position: relative;
+    display: flex;
 }
 
 .dropdown__icon { //иконка
-    position: absolute;
-    right: 10px;
-    top: 12px;
     cursor: default;
+    width: 97%;
+    height: 74%;
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
 }
 
 .dropdown__input:hover ~ .dropdown__icon .icon__keyboard_arrow_down, //менять цвет иконки при наведении на инпут
@@ -41,6 +49,10 @@
     border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
+.dropdown__input_mask_date {
+    max-width: 150px;
+}
+
 ////////////////ВЫПАДАЮЩИЙ СПИСОК
 
 .dropdown__input_expanded { //внешний вид инпута при выпадении списка
@@ -63,11 +75,11 @@
     display: block;
 }
 
-.dropdown__ul_type_guests { //высота инпута с гостями
+.dropdown__ul_type_guests { //высота списка с гостями
     min-height: 157px;
 }
 
-.dropdown__ul_type_rooms { //высота инпута с комнатами
+.dropdown__ul_type_rooms { //высота списка с комнатами
     min-height: 117px;
 }
 

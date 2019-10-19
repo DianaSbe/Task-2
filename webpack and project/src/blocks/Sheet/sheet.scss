@@ -6,6 +6,10 @@
     width: 100%;
     max-width: 1440px;
     border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .sheet {
@@ -14,19 +18,11 @@
         @extend %sheet;
         background: #FFFFFF;
         min-height: 900px;
-    
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
     }
     .sheet__form-elements {
         @extend %sheet;
         background: #FFFFFF;
         min-height: 1853px;
-    
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
     }
     .sheet__cards, .sheet__headers-and-footers {
         @extend %sheet;
@@ -73,7 +69,7 @@
     display: flex;
     justify-content: space-between;
 
-    .sheet_form-elements-column-first, .sheet_form-elements-column-second, .sheet_form-elements-column-third {
+    .sheet__form-elements-column-first, .sheet__form-elements-column-second, .sheet__form-elements-column-third {
         width: 100%;
         max-width: 320px;
         display: flex;
@@ -81,22 +77,9 @@
         align-content: space-between; 
     }
 
-    .sheet_form-elements-column-first {
-        .sheet__textfield {
-            width: 100%;
-            max-width: 320px;
-        }
-        .sheet__textfield_selected {
-            width: 100%;
-            max-width: 320px;
-        }
-        .sheet__dropdown_type_guests {
-            width: 100%;
-            max-width: 320px;
-        }
+    .sheet__form-elements-column-first {
         .sheet__textfield_type_date {
             width: 100%;
-            max-width: 320px;
             min-height: 85px;
         }
         .sheet__dropdown_type_date {
@@ -104,14 +87,6 @@
             min-height: 85px;
             display: flex;
             justify-content: space-between;
-            .sheet__dropdown_type_start-date {
-                width: 100%;
-                max-width: 150px;
-            }
-            .sheet__dropdown_type_end-date {
-                width: 100%;
-                max-width: 150px;
-            }
         }
         .sheet__dropdown_type_date-filter {
             width: 100%;
@@ -147,7 +122,7 @@
         }
     }
     
-    .sheet_form-elements-column-second {
+    .sheet__form-elements-column-second {
         max-height: 1206px;
         justify-content: space-evenly;
         .sheet__checkbox_type_buttons {
@@ -216,7 +191,7 @@
         }
     }
     
-    .sheet_form-elements-column-third {
+    .sheet__form-elements-column-third {
         max-height: 1206px;
         .sheet__rangeslider {
             width: 100%;
@@ -259,5 +234,33 @@
             width: 100%;
             max-width: 250px;
         }
+    }
+}
+
+//////////Cards//////////
+.sheet__cards-inner {
+    width: 100%;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+
+    .sheet__cards-column-first, .sheet__cards-column-second, .sheet__cards-column-third {
+        width: 100%;
+        max-width: 380px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        border: 1px solid black;
+    }
+    .sheet__cards-column-first {
+        .sheet__room-selection {
+            width: 100%;
+        }
+    }
+
+    .sheet__cards-column-third {
+        width: 100%;
+        max-width: 320px;
     }
 }
