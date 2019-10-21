@@ -4,9 +4,10 @@ mixin radiobutton(options)
       div.radiobutton__name
         +caption({name: options.name})
         
-    if options.status=='checked'
-      input.radiobutton__input(type="radio" name="gender" id=`radiobtn${options.id}` checked)
-    else
-      input.radiobutton__input(type="radio" name="gender" id=`radiobtn${options.id}`)
-    label.radiobutton__label(for=`radiobtn${options.id}`)
-    label.radiobutton__text(for=`radiobtn${options.id}`)=options.text
+    div.radiobutton__inner    
+      if options.status=='checked'
+        input.radiobutton__input(type="radio" name=options.rdname id=`radiobtn${options.id}` checked)
+      else
+        input.radiobutton__input(type="radio" name=options.rdname id=`radiobtn${options.id}`)
+      label.radiobutton__label(for=`radiobtn${options.id}`)
+      label.radiobutton__text(for=`radiobtn${options.id}`)=options.text

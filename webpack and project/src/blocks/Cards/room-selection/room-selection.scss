@@ -15,10 +15,11 @@
 
 .room-selection__inner {
     max-width: 320px;
-    min-height: 300px;
+    min-height: 304px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    margin-top: 10px;
 }
 
 .room-selection__dropdown_type_date {

@@ -133,10 +133,6 @@
             width: 100%;
             max-width: 266px;
             display: flex;
-            .sheet__radiobutton_checked {
-                width: 100%;
-                max-width: 118px;
-            }
             .sheet__radiobutton_unchecked {
                 display: flex;
                 align-items: flex-end;
@@ -215,7 +211,7 @@
             justify-content: space-between;
             cursor: default;
         }
-        .sheet__button_type_payment {
+        .sheet__button_size_big {
             width: 100%;
             max-width: 320px;
             min-height: 54px;
@@ -243,7 +239,8 @@
     max-width: 1160px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    padding-top: 10px;
+    //border: 1px solid black;
 
     .sheet__cards-column-first, .sheet__cards-column-second, .sheet__cards-column-third {
         width: 100%;
@@ -251,12 +248,11 @@
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
-        border: 1px solid black;
+        //border: 1px solid black;
     }
+
     .sheet__cards-column-first {
-        .sheet__room-selection {
-            width: 100%;
-        }
+        min-height: 1060px;
     }
 
     .sheet__cards-column-third {

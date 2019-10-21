@@ -34,12 +34,8 @@
 }
 
 .toggle__input ~ .toggle__text { //дефолтный цвет
-    color: rgba(31, 32, 65, 0.5);
-    margin-left: 49px; //отодвигаем текст
-}
-
-.toggle__input:checked ~ .toggle__text { //меняем цвет текста при checked
     color: rgba(31, 32, 65, 0.75);
+    margin-left: 49px; //отодвигаем текст
 }
 
 //Прим. toggle__label - вспомогательный элемент, его не видно

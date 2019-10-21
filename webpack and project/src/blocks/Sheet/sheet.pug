@@ -18,6 +18,7 @@ include ../../blocks/FormElements/pagination/pagination
 include ../../blocks/FormElements/bulletlist/bulletlist
 
 include ../../blocks/Cards/room-selection/room-selection
+include ../../blocks/Cards/account-registration/account-registration
 
 mixin sheet(options)
   div.sheet
@@ -93,10 +94,9 @@ mixin sheet(options)
                          value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
                          status: ',checked,checked'})
             div.sheet__radiobutton
-              div.sheet__radiobutton_checked
-                +radiobutton({name: "Radio Buttons", text: "Мужчина", status: 'checked', id: '01'})
+              +radiobutton({name: "Radio Buttons", text: "Мужчина", status: 'checked', rdname: 'form-elements-gender', id: 'form-elements_01'})
               div.sheet__radiobutton_unchecked
-                +radiobutton({text: "Женщина", id: '02'})
+                +radiobutton({text: "Женщина", rdname: 'form-elements-gender', id: 'form-elements_02'})
             div.sheet__toggle
               +toggle({name: "Toggle", text: "Получать спецпредложения", status: 'checked', id: '01'})
               +toggle({text: "Получать спецпредложения", id: '02'})
@@ -133,8 +133,8 @@ mixin sheet(options)
             div.sheet__caption  
               +caption({name:"Click Me", theme: 'purple'})
               +caption({name:"Click Me", theme: 'grey'})
-            div.sheet__button_type_payment
-              +button({text: 'Перейти к оплате', textcolor: 'white', type: 'payment'})
+            div.sheet__button_size_big
+              +button({text: 'Перейти к оплате', textcolor: 'white', size: 'big'})
             div.sheet__pagination
               +pagination({name: "Pagination", text: "1 – 12 из 100+ вариантов аренды"})
             div.sheet__dropdown_type_guests_expanded_filled
@@ -152,8 +152,8 @@ mixin sheet(options)
 
         div.sheet__cards-inner
           div.sheet__cards-column-first
-            div.sheet__room-selection
-              +room-selection()
+            +room-selection()
+            +account-registration()
           
           div.sheet__cards-column-second
 

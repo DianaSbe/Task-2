@@ -1,0 +1,21 @@
+mixin account-registration(options)
+  div.account-registration
+    div.account-registration__inner
+      h1.account-registration__title Регистрация аккаунта
+      +textfield({value: "", hint: "Имя"})
+      +textfield({value: "", hint: "Фамилия"})
+      div.account-registration__radiobutton
+        +radiobutton({text: "Мужчина", status: 'checked', rdname: 'cards-gender', id: 'cards_01'})
+        +radiobutton({text: "Женщина", rdname: 'cards-gender', id: 'cards_02'})
+      div.account-registration__textfield_type_date
+        +textfield({name:"Дата рождения", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'}) 
+      +textfield({name: "Данные для входа в сервис", value: "", hint: "Email"})
+      +textfield({value: "", hint: "Пароль"})
+      div.account-registration__toggle
+        +toggle({text: "Получать спецпредложения", id: 'Cards_01'})
+      div.account-registration__button_size_big
+        +button({text: 'Перейти к оплате', textcolor: 'white', size: 'big'})
+      div.account-registration__login
+        label.account-registration__label Уже есть аккаунт на Toxin
+        div.account-registration__button
+          +button({theme: 'white', text: 'Войти', textcolor: 'purple'})

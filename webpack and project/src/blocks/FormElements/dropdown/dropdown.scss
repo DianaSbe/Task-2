@@ -9,16 +9,17 @@
 .dropdown__inner { //контейнер для инпута и иконки
     position: relative;
     display: flex;
+    justify-content: flex-end;
 }
 
 .dropdown__icon { //иконка
     cursor: default;
-    width: 97%;
     height: 74%;
     position: absolute;
     display: flex;
     align-self: flex-end;
     justify-content: flex-end;
+    padding-right: 10px;
 }
 
 .dropdown__input:hover ~ .dropdown__icon .icon__keyboard_arrow_down, //менять цвет иконки при наведении на инпут
