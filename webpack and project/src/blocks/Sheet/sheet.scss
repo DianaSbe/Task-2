@@ -244,7 +244,6 @@
 
     .sheet__cards-column-first, .sheet__cards-column-second, .sheet__cards-column-third {
         width: 100%;
-        max-width: 380px;
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
@@ -252,11 +251,17 @@
     }
 
     .sheet__cards-column-first {
+        max-width: 380px;
         min-height: 1060px;
     }
 
+    .sheet__cards-column-second {
+        max-width: 380px;
+        min-height: 909px;
+    }
+
     .sheet__cards-column-third {
-        width: 100%;
         max-width: 320px;
+        min-height: 965px;
     }
 }

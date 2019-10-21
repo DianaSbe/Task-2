@@ -19,6 +19,7 @@ include ../../blocks/FormElements/bulletlist/bulletlist
 
 include ../../blocks/Cards/room-selection/room-selection
 include ../../blocks/Cards/account-registration/account-registration
+include ../../blocks/Cards/account-login/account-login
 
 mixin sheet(options)
   div.sheet
@@ -154,8 +155,8 @@ mixin sheet(options)
           div.sheet__cards-column-first
             +room-selection()
             +account-registration()
-          
           div.sheet__cards-column-second
+            +account-login()
 
           div.sheet__cards-column-third
             

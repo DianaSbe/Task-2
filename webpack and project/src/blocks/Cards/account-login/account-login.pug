@@ -1,0 +1,13 @@
+mixin account-login(options)
+  div.account-login
+    div.account-login__inner
+      h1.account-login__title Войти
+      +textfield({value: "", hint: "Email"})
+      div.account-login__textfield
+        +textfield({value: "", hint: "Пароль"})
+      div.account-login__button_size_big
+        +button({text: 'Войти', textcolor: 'white', size: 'big'})
+      div.account-login__registration
+        label.account-login__label Нет аккаунта на Toxin?
+        div.account-login__button
+          +button({theme: 'white', text: 'Создать', textcolor: 'purple'})
