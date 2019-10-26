@@ -251,17 +251,15 @@
     }
 
     .sheet__cards-column-first {
-        max-width: 380px;
         min-height: 1060px;
     }
 
     .sheet__cards-column-second {
-        max-width: 380px;
-        min-height: 909px;
+        max-height: 909px;
     }
 
     .sheet__cards-column-third {
         max-width: 320px;
-        min-height: 965px;
+        max-height: 965px;
     }
 }

@@ -19,6 +19,7 @@ include ../../blocks/FormElements/bulletlist/bulletlist
 
 include ../../blocks/Cards/room-selection/room-selection
 include ../../blocks/Cards/account-registration/account-registration
+include ../../blocks/Cards/room-reservation/room-reservation
 include ../../blocks/Cards/account-login/account-login
 
 mixin sheet(options)
@@ -70,11 +71,11 @@ mixin sheet(options)
             div.sheet__textfield_type_subscription  
               +textfield({name:"Subscription Text Field", value: "", hint: "Email", type: 'subscription'})
             div.sheet__dropdown_type_rooms
-              +dropdown({name:"Dropdown", statusname: "Default", value: "", hint: "2 спальни, 2 кровати...", type: 'rooms',
+              +dropdown({name:"Dropdown", statusname: "Default", value: "2 спальни, 2 кровати...", hint: "", type: 'rooms',
                          item: "Спальни,Кровати,Ванные комнаты",
                          counter: "2,2,0"})
             div.sheet__dropdown_type_rooms_expanded_filled
-              +dropdown({name:"Dropdown", statusname: "Expanded", value: "", hint: "2 спальни, 2 кровати...", state: 'expanded', type: 'rooms',
+              +dropdown({name:"Dropdown", statusname: "Expanded", value: "2 спальни, 2 кровати...", hint: "", state: 'expanded', type: 'rooms',
                          item: "Спальни,Кровати,Ванные комнаты",
                          counter: "2,2,0"})
             div.sheet__checkbox_type_list
@@ -139,7 +140,7 @@ mixin sheet(options)
             div.sheet__pagination
               +pagination({name: "Pagination", text: "1 – 12 из 100+ вариантов аренды"})
             div.sheet__dropdown_type_guests_expanded_filled
-              +dropdown({name:"Dropdown", value: "", hint: "3 гостя", state: 'expanded', type: 'guests',
+              +dropdown({name:"Dropdown", value: "3 гостя", hint: "", state: 'expanded', type: 'guests',
                          item: "Взрослые,Дети,Младенцы",
                          counter: "2,1,0"})
             div.sheet__bulletlist
@@ -156,6 +157,7 @@ mixin sheet(options)
             +room-selection()
             +account-registration()
           div.sheet__cards-column-second
+            +room-reservation()
             +account-login()
 
           div.sheet__cards-column-third
