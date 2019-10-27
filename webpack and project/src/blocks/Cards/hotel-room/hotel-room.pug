@@ -1,6 +1,6 @@
 mixin hotel-room(options)
   div.hotel-room
-    div.hotel-room__photo
+    div(class=`hotel-room__photo hotel-room__photo_${options.status}`)
       img.hotel-room__img(src=require("../../blocks/Cards/hotel-room/hotel-room_" + options.photo + ".png"))
       div.hotel-room__icons
         div.hotel-room__arrow_direction_left
