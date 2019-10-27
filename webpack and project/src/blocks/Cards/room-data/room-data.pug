@@ -1,0 +1,9 @@
+mixin room-data(options)
+  div.room-data
+    div.room-data__inner
+      h3.room-data__no №
+      h2(class=`room-data__number room-data__number_size_${options.size}`)= options.number
+      h3.room-data__class= options.class
+    div.room-data__inner
+      label.room-data__price-per-day 9 990₽
+      label.room-data__price-per-day-comment в сутки

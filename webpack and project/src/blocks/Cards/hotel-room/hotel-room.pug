@@ -1,0 +1,22 @@
+mixin hotel-room(options)
+  div.hotel-room
+    div.hotel-room__photo
+      img.hotel-room__img(src=require("../../blocks/Cards/hotel-room/hotel-room_" + options.photo + ".png"))
+      div.hotel-room__icons
+        div.hotel-room__arrow_direction_left
+          +icon({name: 'keyboard_arrow_left', theme: 'white'})
+        div.hotel-room__arrow_direction_right
+          +icon({name: 'keyboard_arrow_left', theme: 'white'})
+      div.hotel-room__switch-wrapper
+        div.hotel-room__switch_selected
+        div.hotel-room__switch
+        div.hotel-room__switch
+        div.hotel-room__switch
+    div.hotel-room__inner
+      div.hotel-room__data
+        +room-data({number: options.number, class: options.class})
+        div.hotel-room__reviews
+          +ratebutton({amount: options.stars, id: options.id})
+          div.hotel-room__reviews-inner
+            label.hotel-room__amount-of-reviews= options.reviews
+            label.hotel-room__amount-of-reviews-comment Отзывов

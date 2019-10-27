@@ -1,14 +1,7 @@
 mixin room-reservation(options)
   div.room-reservation
     div.room-reservation__inner
-      div.room-reservation__room-data
-        div.room-reservation__room-data-inner
-          h3.room-reservation__no №
-          h1.room-reservation__number 888
-          h3.room-reservation__class Люкс
-        div.room-reservation__room-data-inner
-          label.room-reservation__price-per-day 9 990₽
-          label.room-reservation__comment в сутки
+      +room-data({size: 'big', number: "888", class: "Люкс"})
       div.room-reservation__dropdown_type_date
         div.room-reservation__dropdown_type_start-date
           +dropdown({name:"Прибытие", value: "19.08.2019", hint: "", type: 'date'})
@@ -23,7 +16,7 @@ mixin room-reservation(options)
           label.room-reservation__all-day-price-formula 9 990₽ x 4 суток
           label.room-reservation__services-price-text Сбор за услуги: скидка 2 179₽
           label.room-reservation__additional-services-price-text Сбор за дополнительные услуги
-        div.room-reservation__info-wrapper
+        div.room-reservation__calculations-info
           div.room-reservation__info i
           div.room-reservation__info i
         div.room-reservation__calculations-price

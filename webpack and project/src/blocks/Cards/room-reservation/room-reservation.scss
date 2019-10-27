@@ -22,39 +22,6 @@
     margin-top: 10px;
 }
 
-.room-reservation__room-data {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    .room-reservation__room-data-inner {
-       display: flex;
-       align-items: flex-end;
-       .room-reservation__no {
-           font-size: 0.88rem; //14px
-           margin-right: 5px;
-           line-height: 22px;
-       }
-       .room-reservation__number {
-           margin-right: 5px;
-       }
-       .room-reservation__class {
-           color: #BC9CFF;
-           line-height: 22px;
-       }
-       .room-reservation__price-per-day {
-           font-weight: bold;
-           color: rgba(31, 32, 65, 0.5);
-           margin-right: 5px;
-           line-height: 22px;
-       }
-       .room-reservation__comment {
-           font-size: 0.75rem; //12px
-           line-height: 20px;
-       }
-    }
-}
-
 .room-reservation__dropdown_type_date {
     width: 100%;
     display: flex;
@@ -80,7 +47,7 @@
         flex-wrap: wrap;
         align-content: space-between;
     }
-    .room-reservation__info-wrapper {
+    .room-reservation__calculations-info {
         width: 100%;
         max-width: 20px;
         max-height: 56px;

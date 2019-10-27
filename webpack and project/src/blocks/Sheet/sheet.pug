@@ -20,7 +20,10 @@ include ../../blocks/FormElements/bulletlist/bulletlist
 include ../../blocks/Cards/room-selection/room-selection
 include ../../blocks/Cards/account-registration/account-registration
 include ../../blocks/Cards/room-reservation/room-reservation
+include ../../blocks/Cards/room-data/room-data
 include ../../blocks/Cards/account-login/account-login
+include ../../blocks/Cards/calendar/calendar
+include ../../blocks/Cards/hotel-room/hotel-room
 
 mixin sheet(options)
   div.sheet
@@ -108,9 +111,9 @@ mixin sheet(options)
               div.sheet__likebutton_checked
                 +likebutton({text: "12", status: 'checked', id: '02'})
             div.sheet__ratebutton
-              +ratebutton({name: "Rate Button", amount: '4', id: '1'})
+              +ratebutton({name: "Rate Button", amount: '4', id: 'form-elements_01'})
               div.sheet__ratebutton_filled
-                +ratebutton({amount: '5', id: '2'})
+                +ratebutton({amount: '5', id: 'form-elements_02'})
             div.sheet__dropdown_type_guests_expanded
               +dropdown({name:"Dropdown", value: "", hint: "Сколько гостей", state: 'expanded', type: 'guests',
                          item: "Взрослые,Дети,Младенцы",
@@ -159,8 +162,10 @@ mixin sheet(options)
           div.sheet__cards-column-second
             +room-reservation()
             +account-login()
-
           div.sheet__cards-column-third
+            +calendar()
+            +hotel-room({photo: '01', number: "888", class: "Люкс", stars: '5', id: 'cards_01', reviews: "145"})
+            +hotel-room({photo: '02', number: "840", stars: '4', id: 'cards_02', reviews: "65"})
             
     
     if options.name=="headers-and-footers"

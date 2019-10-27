@@ -1,0 +1,36 @@
+.room-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .room-data__inner {
+       display: flex;
+       align-items: flex-end;
+       .room-data__no {
+           font-size: 0.88rem; //14px
+           margin-right: 5px;
+           line-height: 22px;
+       }
+       .room-data__number {
+           margin-right: 5px;
+       }
+       .room-data__number_size_big {
+           font-size: 1.5rem; //24px
+       }
+       .room-data__class {
+           color: #BC9CFF;
+           line-height: 20px;
+       }
+       .room-data__price-per-day {
+           font-weight: bold;
+           color: rgba(31, 32, 65, 0.5);
+           margin-right: 5px;
+           line-height: 22px;
+       }
+       .room-data__price-per-day-comment {
+           color: rgba(31, 32, 65, 0.5);
+           font-size: 0.75rem; //12px
+           line-height: 20px;
+       }
+    }
+}
