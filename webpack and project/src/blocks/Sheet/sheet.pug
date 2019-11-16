@@ -25,6 +25,8 @@ include ../../blocks/Cards/account-login/account-login
 include ../../blocks/Cards/calendar/calendar
 include ../../blocks/Cards/hotel-room/hotel-room
 
+include ../../blocks/HeadersAndFooters/header/header
+
 mixin sheet(options)
   div.sheet
     if options.name=="colors-and-types"
@@ -172,3 +174,6 @@ mixin sheet(options)
       div(class=`sheet__${options.name}`)
         div.sheet__logo
           include logo.svg
+
+        div.sheet__headers-and-footers-inner
+          +header()

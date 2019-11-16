@@ -1,0 +1,21 @@
+mixin header(options)
+  div.header
+    div.header__inner
+      div.header__logo
+        include logo.svg
+        include title.svg
+      div.header__menu
+        label.header__home Home
+        label.header__info About Us
+        div.header__services
+          label Services
+          div.header__services-icon
+            +icon({name: 'keyboard_arrow_down'})
+        label.header__careers Careers
+        label.header__news News
+        label.header__documentation Documentation
+        div.header__login-button
+          +button({theme: 'white', text: 'Login', textcolor: 'purple', size: 'small', height: 'small'})
+        div.header__register-button
+          +button({text: 'Register', textcolor: 'white', height: 'small'})
+

@@ -1,0 +1,46 @@
+.header {
+    width: 100%;
+    max-height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    display: flex;
+    justify-content: center;
+}
+
+.header__inner {
+    width: 100%;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 106px;
+    }
+
+    .header__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 758px;
+        .header__home {
+            font-weight: bold;
+        }
+        .header__services {
+            display: flex;
+            align-items: center;
+            max-height: 18px;
+            .header__services-icon {
+                margin-top: 7px;
+            }
+        }
+        .header__register-button {
+            min-width: 100px;
+        }
+    }
+}

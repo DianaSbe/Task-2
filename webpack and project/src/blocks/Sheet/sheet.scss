@@ -240,14 +240,12 @@
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
-    //border: 1px solid black;
 
     .sheet__cards-column-first, .sheet__cards-column-second, .sheet__cards-column-third {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
-        //border: 1px solid black;
     }
 
     .sheet__cards-column-first {
@@ -262,4 +260,13 @@
         max-width: 320px;
         max-height: 965px;
     }
+}
+
+//////////Headers And Footers//////////
+.sheet__headers-and-footers-inner {
+    width: 100%;
+    min-height: 1070px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
 }

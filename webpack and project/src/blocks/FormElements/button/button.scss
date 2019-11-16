@@ -27,6 +27,14 @@
     max-width: 320px;
 }
 
+.button__rectangle_size_small {
+    max-width: 80px;
+}
+
+.button__rectangle_height_small {
+    min-height: 34px;
+}
+
 .button__substrate_theme_white {
     background: #FFFFFF;
     border-radius: 22px;
@@ -36,6 +44,11 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+
+.button__substrate_size_small {
+    min-width: 76px;
+    min-height: 30px;
 }
 
 .button__icon {

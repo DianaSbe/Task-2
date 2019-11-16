@@ -4,8 +4,8 @@ mixin button(options)
       div.button__name
         +caption({name: options.name})
         
-    button(class=`button__rectangle button__rectangle_${options.status} button__rectangle_size_${options.size}`)
-      div(class=`button__substrate button__substrate_theme_${options.theme}`)
+    button(class=`button__rectangle button__rectangle_${options.status} button__rectangle_size_${options.size} button__rectangle_height_${options.height} `)
+      div(class=`button__substrate button__substrate_theme_${options.theme} button__substrate_size_${options.size}`)
         +caption({name: options.text, theme: options.textcolor})
       if options.size=='big'
         div.button__icon
