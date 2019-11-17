@@ -267,6 +267,7 @@
     width: 100%;
     min-height: 1070px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
     margin-top: 24px;
 }
