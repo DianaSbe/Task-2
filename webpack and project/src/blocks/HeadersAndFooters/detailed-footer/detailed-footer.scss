@@ -1,0 +1,66 @@
+.detailed-footer {
+    width: 100%;
+    min-height: 443px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.detailed-footer__menu-wrapper {
+    min-height: 372px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    .detailed-footer__menu {
+        width: 100%;
+        max-width: 1160px;
+        min-height: 168px;
+        display: flex;
+        justify-content: space-between;
+        .detailed-footer__title, .detailed-footer__navigation-wrapper, .detailed-footer__about-wrapper, .detailed-footer__support-wrapper, .detailed-footer__subscribe-wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .detailed-footer__title {
+            max-width: 246px;
+            max-height: 152px;
+            .detailed-footer__logo-text {
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+        .detailed-footer__navigation-wrapper, .detailed-footer__about-wrapper, .detailed-footer__support-wrapper {
+            max-width: 95px;
+            padding-right: 50px; //чтобы слова не флексились
+            color: rgba(31, 32, 65, 0.5);
+        }
+        .detailed-footer__support-wrapper {
+            max-height: 130px;
+        }
+        .detailed-footer__subscribe-wrapper {
+            max-width: 260px;
+            max-height: 148px;
+            .detailed-footer__subscribe-text {
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+    }
+}
+
+.detailed-footer__copyright-wrapper {
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .detailed-footer__copyright {
+        width: 100%;
+        max-width: 1160px;
+        max-height: 24px;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(31, 32, 65, 0.75);
+    }
+}

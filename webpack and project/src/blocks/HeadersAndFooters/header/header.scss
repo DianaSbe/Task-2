@@ -13,23 +13,16 @@
     max-width: 1160px;
     display: flex;
     justify-content: space-between;
-
-    .header__logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 106px;
-    }
-
     .header__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        max-width: 758px;
+        max-width: 705px;
+        color: rgba(31, 32, 65, 0.5);
         .header__home {
             font-weight: bold;
+            color: rgba(31, 32, 65, 0.75);
         }
         .header__services {
             display: flex;
@@ -44,11 +37,15 @@
         }
         .header__cosmin-wrapper {
             width: 100%;
-            max-width: 150px;
-            border-left: 1px solid rgba(31, 32, 65, 0.1);;
+            max-width: 144px;
+            border-left: 1px solid rgba(31, 32, 65, 0.1);
+            line-height: 30px;
             .header__cosmin {
                 text-align: right;
             }
         }
+    }
+    .header__menu_type_register {
+        max-width: 758px;
     }
 }

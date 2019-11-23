@@ -1,10 +1,8 @@
 mixin header(options)
   div.header
     div.header__inner
-      div.header__logo
-        include logo.svg
-        include title.svg
-      div.header__menu
+      +company-logo()
+      div(class=`header__menu header__menu_type_${options.type}`)
         label.header__home Home
         label.header__info About Us
         div.header__services
