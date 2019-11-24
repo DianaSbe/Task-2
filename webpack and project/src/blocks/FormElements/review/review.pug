@@ -1,10 +1,12 @@
 mixin review(options)
   div.review
-    div.review__userpic
-      img.review__img(src=require("../../blocks/FormElements/review/review_" + options.userpic + ".png"))
-    div.review__specification
-      label.review__name= options.name
-      label.review__date= options.date
-    div.review__likebutton
-      +likebutton({text: "12", status: 'checked', id: 'review01'})
-    label.review__comment= options.comment
+    div.review__inner
+      div.review__userpic
+        img.review__img(src=require("../../blocks/FormElements/review/review_" + options.userpic + ".png"))
+      div.review__specification
+        label.review__name= options.name
+        label.review__date= options.date
+    div.review__inner
+      div.review__likebutton
+        +likebutton({text: "12", status: 'checked', id: 'review01'})
+      label.review__comment= options.comment
