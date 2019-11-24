@@ -1,58 +1,47 @@
 .likebutton {
     width: 100%;
+    .likebutton__name {
+        margin-bottom: 16px;
+    }
+    .likebutton__inner { //для того, чтобы ровно спозиционировать счетчик в кнопке
+        position: relative;
+        font-size: 0.64rem; //10px
+        .likebutton__input { //скрываем кастомный чекбокс
+            display: none;
+        }      
+        .likebutton__input + .likebutton__label {
+            position: relative;
+        }        
+        .likebutton__input + .likebutton__label:before {
+            display: flex;
+            min-height: 20px;
+            width: 100%;
+            max-width: 40px;
+            border-radius: 10px;
+            box-sizing: border-box;       
+            background: #FFFFFF;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            font-family        : 'Material Icons';
+            content            : 'favorite_border';
+            color: rgba(31, 32, 65, 0.25);
+            padding: 4px;
+        }  
+        .likebutton__input:checked + .likebutton__label:before {
+            border: 1px solid #BC9CFF;
+            content            : 'favorite';
+            color: #BC9CFF;
+        }   
+        .likebutton__input ~ .likebutton__counter { //цвет текста по дефолту
+            color: rgba(31, 32, 65, 0.25);
+        } 
+        .likebutton__input:checked ~ .likebutton__counter { //меняем цвет текста при checked
+            color: #BC9CFF;
+        }
+        .likebutton__counter { //засовываем счетчик в likebutton
+            position: absolute;
+            top: 3px;
+            left: 20px;
+        }       
+        //Прим. likebutton__label - вспомогательный элемент, его не видно
+    }
 }
-
-.likebutton__name {
-    margin-bottom: 16px;
-}
-
-.likebutton__inner { //для того, чтобы ровно спозиционировать счетчик в кнопке
-    position: relative;
-    font-size: 0.64rem; //10px
-}
-
-.likebutton__input { //скрываем кастомный чекбокс
-    display: none;
-}
-
-.likebutton__input + .likebutton__label {
-    position: relative;
-}
-
-.likebutton__input + .likebutton__label:before {
-    display: flex;
-    min-height: 20px;
-    width: 100%;
-    max-width: 40px;
-    border-radius: 10px;
-    box-sizing: border-box;
-
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    font-family        : 'Material Icons';
-    content            : 'favorite_border';
-    color: rgba(31, 32, 65, 0.25);
-    padding: 4px;
-}
-
-.likebutton__input:checked + .likebutton__label:before {
-    border: 1px solid #BC9CFF;
-    content            : 'favorite';
-    color: #BC9CFF;
-}
-
-.likebutton__input ~ .likebutton__counter { //цвет текста по дефолту
-    color: rgba(31, 32, 65, 0.25);
-}
-
-.likebutton__input:checked ~ .likebutton__counter { //меняем цвет текста при checked
-    color: #BC9CFF;
-}
-
-.likebutton__counter { //засовываем счетчик в likebutton
-    position: absolute;
-    top: 3px;
-    left: 20px;
-}
-
-//Прим. likebutton__label - вспомогательный элемент, его не видно

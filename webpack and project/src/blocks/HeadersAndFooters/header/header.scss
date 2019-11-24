@@ -3,49 +3,47 @@
     min-height: 70px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-
     display: flex;
     justify-content: center;
-}
-
-.header__inner {
-    width: 100%;
-    max-width: 1160px;
-    display: flex;
-    justify-content: space-between;
-    .header__menu {
+    .header__inner {
+        width: 100%;
+        max-width: 1160px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 705px;
-        color: rgba(31, 32, 65, 0.5);
-        .header__home {
-            font-weight: bold;
-            color: rgba(31, 32, 65, 0.75);
-        }
-        .header__services {
+        .header__menu {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            max-height: 18px;
-            .header__services-icon {
-                margin-top: 7px;
-            }
-        }
-        .header__register-button {
-            min-width: 100px;
-        }
-        .header__cosmin-wrapper {
             width: 100%;
-            max-width: 144px;
-            border-left: 1px solid rgba(31, 32, 65, 0.1);
-            line-height: 30px;
-            .header__cosmin {
-                text-align: right;
+            max-width: 705px;
+            color: rgba(31, 32, 65, 0.5);
+            .header__home {
+                font-weight: bold;
+                color: rgba(31, 32, 65, 0.75);
+            }
+            .header__services {
+                display: flex;
+                align-items: center;
+                max-height: 18px;
+                .header__services-icon {
+                    margin-top: 7px;
+                }
+            }
+            .header__register-button {
+                min-width: 100px;
+            }
+            .header__cosmin-wrapper {
+                width: 100%;
+                max-width: 144px;
+                border-left: 1px solid rgba(31, 32, 65, 0.1);
+                line-height: 30px;
+                .header__cosmin {
+                    text-align: right;
+                }
             }
         }
-    }
-    .header__menu_type_register {
-        max-width: 758px;
+        .header__menu_type_register {
+            max-width: 758px;
+        }
     }
 }

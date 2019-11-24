@@ -1,36 +1,35 @@
 .review {
     width: 100%;
     min-width: 711px;
-}
-
-.review__inner {
-    width: 100%;
-    display: flex;
-    .review__userpic {
+    .review__inner {
         width: 100%;
-        max-width: 48px;
-        max-height: 48px;
-        margin-top: 10px;
-        margin-right: 10px;
-        border: 2px solid #FFFFFF;
-        box-sizing: border-box;
-        border-radius: 32px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .review__specification, .review__comment {
-        line-height: 24px;
-        .review__name {
-            font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
-            font-weight: 600;
-            color: rgba(31, 32, 65, 0.75);
+        .review__userpic {
+            width: 100%;
+            max-width: 48px;
+            max-height: 48px;
+            margin-top: 10px;
+            margin-right: 10px;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    }
-    .review__likebutton {
-        width: 100%;
-        max-width: 40px;
-        max-height: 20px;
-        margin: 2px 14px 0px 4px;
+        .review__specification, .review__comment {
+            line-height: 24px;
+            .review__name {
+                font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
+                font-weight: 600;
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+        .review__likebutton {
+            width: 100%;
+            max-width: 40px;
+            max-height: 20px;
+            margin: 2px 14px 0px 4px;
+        }
     }
 }

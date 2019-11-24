@@ -2,25 +2,21 @@
     width: 100%;
     max-width: 403px;
     margin-bottom: 50px;
-}
-
-.font__title {
-    width: 100%;
-    max-width: 37px;
-    text-align: right;
-    float: left;
-    
-    //шрифт
-    color: rgba(31, 32, 65, 0.25);
-    font-family: 'Conv_Montserrat', Arial, sans-serif; //Regular
-    font-weight: normal;
-}
-
-.font__description {
-    margin-left: 67px;
-}
-
-.font__description_height_s {
-    transform: translateY(-3px);
-    line-height: 24px;
+    .font__title {
+        width: 100%;
+        max-width: 37px;
+        text-align: right;
+        float: left;
+        //шрифт
+        color: rgba(31, 32, 65, 0.25);
+        font-family: 'Conv_Montserrat', Arial, sans-serif; //Regular
+        font-weight: normal;
+    }
+    .font__description {
+        margin-left: 67px;
+    }
+    .font__description_height_s {
+        transform: translateY(-3px);
+        line-height: 24px;
+    }
 }

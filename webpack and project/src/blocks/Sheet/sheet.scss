@@ -6,7 +6,6 @@
     width: 100%;
     max-width: 1440px;
     border: 1px solid black;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -14,247 +13,239 @@
 
 .sheet {
     width: 100%;
+    .sheet__logo {
+        width: 100%;
+        max-width: 48px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 30px;
+    }
     .sheet__colors-and-types {
         @extend %sheet;
         background: #FFFFFF;
         min-height: 900px;
+        .sheet__colors-and-types-inner {
+            width: 100%;
+            max-width: 1140px;
+            display: flex;
+            justify-content: space-between;
+            .sheet__color {
+                width: 100%;
+                max-width: 270px;
+            }
+            .sheet__font {
+                width: 100%;
+                max-width: 445px;
+                padding-top: 9px;
+            }
+        }
     }
+
     .sheet__form-elements {
         @extend %sheet;
         background: #FFFFFF;
         min-height: 1853px;
+        .sheet__form-elements-inner {
+            width: 100%;
+            max-width: 1160px;
+            min-height: 1579px;
+            margin-top: 11px;
+            display: flex;
+            justify-content: space-between;
+        
+            .sheet__form-elements-column-first, .sheet__form-elements-column-second, .sheet__form-elements-column-third {
+                width: 100%;
+                max-width: 320px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between; 
+            }
+        
+            .sheet__form-elements-column-first {
+                .sheet__textfield_type_date {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .sheet__dropdown_type_date {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                }
+                .sheet__dropdown_type_date-filter {
+                    width: 100%;
+                    max-width: 266px;
+                    margin-bottom: 20px;
+                }
+                .sheet__textfield_type_subscription {
+                    width: 100%;
+                    max-width: 266px;
+                    margin-bottom: 80px;
+                }
+                .sheet__dropdown_type_rooms {
+                    width: 100%;
+                    max-width: 266px;
+                }
+                .sheet__dropdown_type_rooms_expanded_filled {
+                    width: 100%;
+                    max-width: 266px;
+                    margin-bottom: 20px;
+                }
+            }
+            
+            .sheet__form-elements-column-second {
+                max-height: 1561px;
+                justify-content: space-evenly;
+                .sheet__checkbox_type_buttons {
+                    width: 100%;
+                    max-width: 266px;
+                }
+                .sheet__radiobutton {
+                    width: 100%;
+                    max-width: 266px;
+                    display: flex;
+                    .sheet__radiobutton_unchecked {
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
+                .sheet__toggle {
+                    width: 100%;
+                    max-width: 266px;
+                    min-height: 85px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                }
+                .sheet__likebutton {
+                    width: 100%;
+                    max-width: 266px;
+                    display: flex;
+                    .sheet__likebutton_checked {
+                        width: 100%;
+                        max-width: 50px;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
+                .sheet__ratebutton {
+                    width: 100%;
+                    max-width: 266px;
+                    margin-bottom: 160px;
+                    display: flex;
+                    justify-content: space-between;
+                    .sheet__ratebutton_filled {
+                        width: 100%;
+                        min-height: 54px;
+                        max-width: 125px;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
+                .sheet__dropdown_type_guests_expanded {
+                    width: 100%;
+                    max-width: 320px;
+                    margin-bottom: 60px;
+                }
+                .sheet__checkbox_type_rich-buttons {
+                    width: 100%;
+                    max-width: 266px;
+                    margin-bottom: 192px;
+                }
+                .sheet__review {
+                    width: 100%;
+                    max-width: 706px;
+                    margin-left: 53px;
+                }
+            }
+            
+            .sheet__form-elements-column-third {
+                max-height: 1206px;
+                .sheet__rangeslider {
+                    width: 100%;
+                    max-width: 266px;
+                    margin-bottom: 10px;
+                }
+                .sheet__button {
+                    width: 100%;
+                    max-width: 238px;
+                    display: flex;
+                    .sheet__button_selected {
+                        width: 100%;
+                        align-self: flex-end;
+                    }
+                }
+                .sheet__caption  {
+                    width: 100%;
+                    max-width: 143px;
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: default;
+                }
+                .sheet__button_size_big {
+                    width: 100%;
+                    max-width: 320px;
+                    margin-bottom: 10px;
+                }
+                .sheet__pagination {
+                    width: 100%;
+                    max-width: 325px;
+                    margin-bottom: 200px;
+                }
+                .sheet__dropdown_type_guests_expanded_filled {
+                    width: 100%;
+                    max-width: 320px;
+                    margin-bottom: 70px;
+                }
+                .sheet__bulletlist {
+                    width: 100%;
+                    max-width: 250px;
+                }
+            }
+        }
     }
+
     .sheet__cards, .sheet__headers-and-footers {
         @extend %sheet;
         background: #F4F4F6;
         min-height: 1350px;
     }
-}
 
-.sheet__logo {
-    width: 100%;
-    max-width: 48px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 30px;
-}
-
-//////////ColorsAndTypes//////////
-
-.sheet__colors-and-types-inner {
-    width: 100%;
-    max-width: 1140px;
-    display: flex;
-    justify-content: space-between;
-
-    .sheet__color {
-        width: 100%;
-        max-width: 270px;
-    }
-    .sheet__font {
-        width: 100%;
-        max-width: 445px;
-        padding-top: 9px;
-    }
-}
-
-//////////FormElements//////////
-
-.sheet__form-elements-inner {
-    width: 100%;
-    max-width: 1160px;
-    min-height: 1579px;
-    margin-top: 11px;
-    display: flex;
-    justify-content: space-between;
-
-    .sheet__form-elements-column-first, .sheet__form-elements-column-second, .sheet__form-elements-column-third {
-        width: 100%;
-        max-width: 320px;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between; 
-    }
-
-    .sheet__form-elements-column-first {
-        .sheet__textfield_type_date {
+    .sheet__cards {
+        .sheet__cards-inner {
             width: 100%;
-            margin-bottom: 20px;
-        }
-        .sheet__dropdown_type_date {
-            width: 100%;
+            max-width: 1160px;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .sheet__dropdown_type_date-filter {
-            width: 100%;
-            max-width: 266px;
-            margin-bottom: 20px;
-        }
-        .sheet__textfield_type_subscription {
-            width: 100%;
-            max-width: 266px;
-            margin-bottom: 80px;
-        }
-        .sheet__dropdown_type_rooms {
-            width: 100%;
-            max-width: 266px;
-        }
-        .sheet__dropdown_type_rooms_expanded_filled {
-            width: 100%;
-            max-width: 266px;
-            margin-bottom: 20px;
-        }
-        .sheet__advantage {
-            width: 100%;
-            max-width: 291px;
-        }
-    }
-    
-    .sheet__form-elements-column-second {
-        max-height: 1561px;
-        justify-content: space-evenly;
-        .sheet__checkbox_type_buttons {
-            width: 100%;
-            max-width: 266px;
-        }
-        .sheet__radiobutton {
-            width: 100%;
-            max-width: 266px;
-            display: flex;
-            .sheet__radiobutton_unchecked {
+            padding-top: 10px;
+            .sheet__cards-column-first, .sheet__cards-column-second, .sheet__cards-column-third {
+                width: 100%;
                 display: flex;
-                align-items: flex-end;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            .sheet__cards-column-first {
+                min-height: 1060px;
+            }
+            .sheet__cards-column-second {
+                max-height: 909px;
+            }
+            .sheet__cards-column-third {
+                max-width: 320px;
+                max-height: 965px;
             }
         }
-        .sheet__toggle {
+    }
+
+    .sheet__headers-and-footers {
+        .sheet__headers-and-footers-inner {
             width: 100%;
-            max-width: 266px;
-            min-height: 85px;
+            min-height: 1070px;
             display: flex;
             flex-wrap: wrap;
             align-content: space-between;
-        }
-        .sheet__likebutton {
-            width: 100%;
-            max-width: 266px;
-            display: flex;
-            .sheet__likebutton_checked {
-                width: 100%;
-                max-width: 50px;
-                display: flex;
-                align-items: flex-end;
-            }
-        }
-        .sheet__ratebutton {
-            width: 100%;
-            max-width: 266px;
-            margin-bottom: 160px;
-            display: flex;
-            justify-content: space-between;
-            .sheet__ratebutton_filled {
-                width: 100%;
-                min-height: 54px;
-                max-width: 125px;
-                display: flex;
-                align-items: flex-end;
-            }
-        }
-        .sheet__dropdown_type_guests_expanded {
-            width: 100%;
-            max-width: 320px;
-            margin-bottom: 60px;
-        }
-        .sheet__checkbox_type_rich-buttons {
-            width: 100%;
-            max-width: 266px;
-            margin-bottom: 192px;
-        }
-        .sheet__review {
-            width: 100%;
-            max-width: 706px;
-            margin-left: 53px;
+            margin-top: 24px;
         }
     }
-    
-    .sheet__form-elements-column-third {
-        max-height: 1206px;
-        .sheet__rangeslider {
-            width: 100%;
-            max-width: 266px;
-            margin-bottom: 10px;
-        }
-        .sheet__button {
-            width: 100%;
-            max-width: 238px;
-            display: flex;
-            .sheet__button_selected {
-                width: 100%;
-                align-self: flex-end;
-            }
-        }
-        .sheet__caption  {
-            width: 100%;
-            max-width: 143px;
-            display: flex;
-            justify-content: space-between;
-            cursor: default;
-        }
-        .sheet__button_size_big {
-            width: 100%;
-            max-width: 320px;
-            margin-bottom: 10px;
-        }
-        .sheet__pagination {
-            width: 100%;
-            max-width: 325px;
-            margin-bottom: 200px;
-        }
-        .sheet__dropdown_type_guests_expanded_filled {
-            width: 100%;
-            max-width: 320px;
-            margin-bottom: 70px;
-        }
-        .sheet__bulletlist {
-            width: 100%;
-            max-width: 250px;
-        }
-    }
-}
-
-//////////Cards//////////
-.sheet__cards-inner {
-    width: 100%;
-    max-width: 1160px;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    .sheet__cards-column-first, .sheet__cards-column-second, .sheet__cards-column-third {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-    }
-    .sheet__cards-column-first {
-        min-height: 1060px;
-    }
-    .sheet__cards-column-second {
-        max-height: 909px;
-    }
-    .sheet__cards-column-third {
-        max-width: 320px;
-        max-height: 965px;
-    }
-}
-
-//////////Headers And Footers//////////
-.sheet__headers-and-footers-inner {
-    width: 100%;
-    min-height: 1070px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    margin-top: 24px;
 }

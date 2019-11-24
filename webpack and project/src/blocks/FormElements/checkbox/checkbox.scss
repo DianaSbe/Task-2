@@ -1,16 +1,15 @@
 .checkbox__name {
     width: 100%;
-    min-width: 291px;
+    min-width: 256px;
     margin-bottom: 13px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.checkbox__arrow { //новая иконка
-    max-height: 24px;
-    display: flex;
-    justify-content: flex-end;
+    .checkbox__arrow { //новая иконка
+        max-height: 24px;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .checkbox__list_nonexpanded {
@@ -19,58 +18,47 @@
 
 .checkbox__inner { // отодвигаем чекбоксы друг от друга
     margin-bottom: 12px;
+    //Внешний вид чекбокса и текста
+    .checkbox__input { //скрываем кастомный чекбокс
+        display: none;
+    }
+    .checkbox__input + .checkbox__label {
+        position: relative;
+    }
+    .checkbox__input + .checkbox__label:before {
+        display: flex;
+        float: left;
+        min-height: 20px;
+        width: 100%;
+        max-width: 20px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        content: '';
+    }
+    .checkbox__input:checked + .checkbox__label:before {
+        border: 1px solid #BC9CFF;
+        background: url('/boxmark.svg') no-repeat center 40%;
+    }
+    .checkbox__input ~ .checkbox__text { //дефолтный цвет
+        color: rgba(31, 32, 65, 0.5);
+        margin-left: 29px; //отодвигаем текст
+    }
+    .checkbox__input:checked ~ .checkbox__text { //меняем цвет текста при checked
+        color: rgba(31, 32, 65, 0.75);
+    }
+    //Дополнительные параметры для Rich Checkbox Buttons (текст)
+    .checkbox__subtitle {
+        font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
+        font-weight: 600;
+        color: rgba(31, 32, 65, 0.75);
+        padding-left: 29px;
+    }
+    .checkbox__comment {
+        font-size: 0.75rem; //12px
+        padding-left: 29px;
+        transform: translateY(5px); //опустить текст без влияния на нижнего соседа
+    }
+    //Прим. checkbox__label - вспомогательный элемент, его не видно
 }
-
-//Внешний вид чекбокса и текста
-
-.checkbox__input { //скрываем кастомный чекбокс
-    display: none;
-}
-
-.checkbox__input + .checkbox__label {
-    position: relative;
-}
-
-.checkbox__input + .checkbox__label:before {
-    display: flex;
-    float: left;
-    min-height: 20px;
-    width: 100%;
-    max-width: 20px;
-    border-radius: 4px;
-    box-sizing: border-box;
-
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    content: '';
-}
-
-.checkbox__input:checked + .checkbox__label:before {
-    border: 1px solid #BC9CFF;
-    background: url('/boxmark.svg') no-repeat center 40%;
-}
-
-.checkbox__input ~ .checkbox__text { //дефолтный цвет
-    color: rgba(31, 32, 65, 0.5);
-    margin-left: 29px; //отодвигаем текст
-}
-
-.checkbox__input:checked ~ .checkbox__text { //меняем цвет текста при checked
-    color: rgba(31, 32, 65, 0.75);
-}
-
-//Дополнительные параметры для Rich Checkbox Buttons (текст)
-.checkbox__subtitle {
-    font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
-    font-weight: 600;
-    color: rgba(31, 32, 65, 0.75);
-    padding-left: 29px;
-}
-
-.checkbox__comment {
-    font-size: 0.75rem; //12px
-    padding-left: 29px;
-    transform: translateY(5px); //опустить текст без влияния на нижнего соседа
-}
-
-//Прим. checkbox__label - вспомогательный элемент, его не видно

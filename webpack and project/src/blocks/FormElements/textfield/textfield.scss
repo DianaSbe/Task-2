@@ -1,38 +1,33 @@
 .textfield {
     width: 100%;
+    .textfield__name {
+        margin-bottom: 5px;
+    }
+
+    .textfield__input {
+        min-height: 44px;
+        width: 100%;
+        max-width: 320px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 0px 13px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        background: #FFFFFF;
+        //шрифт набираемого текста в инпуте
+        color: rgba(31, 32, 65, 0.75);
+        font-family: 'Conv_Montserrat', Arial, sans-serif; //Light
+        font-size: 0.88rem; //14px
+    }
+    .textfield__input:hover, .textfield__input:focus, .textfield__input_selected {
+        border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+
+    .textfield__inner { //контейнер для инпута и иконки
+        position: relative;
+        .textfield__icon { //иконка
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        } 
+    }
 }
-
-.textfield__name {
-    margin-bottom: 5px;
-}
-
-.textfield__input {
-    min-height: 44px;
-    width: 100%;
-    max-width: 320px;
-    border-radius: 4px;
-    box-sizing: border-box;
-
-    padding: 0px 13px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    background: #FFFFFF;
-    
-    //шрифт набираемого текста в инпуте
-    color: rgba(31, 32, 65, 0.75);
-    font-family: 'Conv_Montserrat', Arial, sans-serif; //Light
-    font-size: 0.88rem; //14px
-}
-
-.textfield__input:hover, .textfield__input:focus, .textfield__input_selected {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-.textfield__inner { //контейнер для инпута и иконки
-    position: relative;
-}
-
-.textfield__icon { //иконка
-    position: absolute;
-    right: 10px;
-    top: 10px;
-} 

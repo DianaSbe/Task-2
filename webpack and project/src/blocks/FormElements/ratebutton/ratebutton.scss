@@ -2,36 +2,32 @@
     width: 100%;
     max-width: 120px;
     max-height: 24px;
-}
+    .ratebutton__name {
+        margin-bottom: 16px;
+    }
 
-.ratebutton__name {
-    margin-bottom: 16px;
-}
-
-.ratebutton__input { //скрываем кастомный чекбокс
-    display: none;
-}
-
-.ratebutton__input + .ratebutton__label {
-    position: relative;
-    display: block;
-    float: right;
-}
-
-.ratebutton__input + .ratebutton__label:before {
-    min-height: 24px;
-    width: 100%;
-    max-width: 24px;
-    font-family        : 'Material Icons';
-    font-size          :  1.5rem; //24px
-    content            : 'star_border';
-    background         : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    -webkit-background-clip: text; //обрезаем фон по границе текста
-    -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
-}
-
-.ratebutton__label:hover:before,
-.ratebutton__label:hover ~ .ratebutton__label:before,
-.ratebutton__input:checked ~ .ratebutton__label:before {
-    content            : 'star';
+    .ratebutton__input { //скрываем кастомный чекбокс
+        display: none;
+    }
+    .ratebutton__input + .ratebutton__label {
+        position: relative;
+        display: block;
+        float: right;
+    }
+    .ratebutton__input + .ratebutton__label:before {
+        min-height: 24px;
+        width: 100%;
+        max-width: 24px;
+        font-family        : 'Material Icons';
+        font-size          :  1.5rem; //24px
+        content            : 'star_border';
+        background         : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        -webkit-background-clip: text; //обрезаем фон по границе текста
+        -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
+    }
+    .ratebutton__label:hover:before,
+    .ratebutton__label:hover ~ .ratebutton__label:before,
+    .ratebutton__input:checked ~ .ratebutton__label:before {
+        content            : 'star';
+    }
 }

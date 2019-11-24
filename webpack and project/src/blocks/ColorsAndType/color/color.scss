@@ -3,65 +3,52 @@ $dark: #1F2041;
 .color__inner {
     min-height: 90px;
     display: flex;
-	align-items: center;
-}
-
-.color__rectangle { // цветная ячейка
-    width: 100%;
-    max-width: 70px;
-    min-height: 70px;
-    border-radius: 6px;
+    align-items: center;
+    .color__rectangle { // цветная ячейка
+        width: 100%;
+        max-width: 70px;
+        min-height: 70px;
+        border-radius: 6px;  
+        display: block;
+        float: left;
+        margin-right: 40px;
+    }
+    .color__rectangle_theme_dark100 {
+        background: $dark;
+    }
+    .color__rectangle_theme_dark75 {
+        background: rgba($dark, 0.75);
+    }
+    .color__rectangle_theme_dark50 {
+        background: rgba($dark, 0.5);
+    }
+    .color__rectangle_theme_dark25 {
+        background: rgba($dark, 0.25);
+    }
+    .color__rectangle_theme_dark5 {
+        background: rgba($dark, 0.05);
+    }
+    .color__rectangle_theme_purple {
+        background: #BC9CFF;
+    }
+    .color__rectangle_theme_green {
+        background: #6FCF97;
+    }
     
-    display: block;
-    float: left;
-
-    margin-right: 40px;
-}
-
-.color__rectangle_theme_dark100 {
-    background: $dark;
-}
-
-.color__rectangle_theme_dark75 {
-    background: rgba($dark, 0.75);
-}
-
-.color__rectangle_theme_dark50 {
-    background: rgba($dark, 0.5);
-}
-
-.color__rectangle_theme_dark25 {
-    background: rgba($dark, 0.25);
-}
-
-.color__rectangle_theme_dark5 {
-    background: rgba($dark, 0.05);
-}
-
-.color__rectangle_theme_purple {
-    background: #BC9CFF;
-}
-
-.color__rectangle_theme_green {
-    background: #6FCF97;
-}
-
-.color__specification {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-%color__font {
-    color: $dark;
-    font-family: 'Conv_Quicksand', Arial, sans-serif; //Regular
-    font-size: 1.18rem; //19px
-    line-height: 29px;
-}
-
-.color__title {
-    @extend %color__font;
-}
-
-.color__description {
-    @extend %color__font;
+    .color__specification {
+        display: inline-block;
+        vertical-align: middle;
+        %color__font {
+            color: $dark;
+            font-family: 'Conv_Quicksand', Arial, sans-serif; //Regular
+            font-size: 1.18rem; //19px
+            line-height: 29px;
+        }
+        .color__title {
+            @extend %color__font;
+        }
+        .color__description {
+            @extend %color__font;
+        }
+    }
 }

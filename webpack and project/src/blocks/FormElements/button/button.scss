@@ -1,61 +1,53 @@
 .button {
     width: 100%;
-}
-
-.button__name {
-	margin-bottom: 17px;
-}
-
-.button__rectangle {
-    width: 100%;
-    max-width: 99px;
-    min-height: 44px;
-
-    border-radius: 22px;
-    border: 0px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
-    display: flex;
-    justify-content: center;
-}
-
-.button__rectangle:hover, .button__rectangle:focus, .button__rectangle_selected {
-    opacity: 0.5;
-}
-
-.button__rectangle_size_big {
-    max-width: 320px;
-}
-
-.button__rectangle_size_small {
-    max-width: 80px;
-}
-
-.button__rectangle_height_small {
-    min-height: 34px;
-}
-
-.button__substrate_theme_white {
-    background: #FFFFFF;
-    border-radius: 22px;
-    min-height: 40px;
-    min-width: 95px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-.button__substrate_size_small {
-    min-width: 76px;
-    min-height: 30px;
-}
-
-.button__icon {
-    width: 100%;
-    max-width: 298px;
-    position: absolute;
-    display: flex;
-    align-self: center;
-    justify-content: flex-end;
+    .button__name {
+        margin-bottom: 17px;
+    }
+    .button__rectangle {
+        width: 100%;
+        max-width: 99px;
+        min-height: 44px;
+    
+        border-radius: 22px;
+        border: 0px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    
+        display: flex;
+        justify-content: center;
+        .button__substrate_theme_white {
+            background: #FFFFFF;
+            border-radius: 22px;
+            min-height: 40px;
+            min-width: 95px;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+        .button__substrate_size_small {
+            min-width: 76px;
+            min-height: 30px;
+        }
+    
+        .button__icon {
+            width: 100%;
+            max-width: 298px;
+            position: absolute;
+            display: flex;
+            align-self: center;
+            justify-content: flex-end;
+        }
+    }
+    .button__rectangle:hover, .button__rectangle:focus, .button__rectangle_selected {
+        opacity: 0.5;
+    }
+    .button__rectangle_size_big {
+        max-width: 320px;
+    }
+    .button__rectangle_size_small {
+        max-width: 80px;
+    }
+    .button__rectangle_height_small {
+        min-height: 34px;
+    }
 }

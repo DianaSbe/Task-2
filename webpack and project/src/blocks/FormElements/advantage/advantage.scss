@@ -1,26 +1,23 @@
 .advantage__inner {
     min-height: 89px;
     width: 100%;
-    max-width: 280px;
+    min-width: 280px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     display: flex;
     align-items: center;
-}
-
-.advantage__icon { //иконка
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    -webkit-background-clip: text; //обрезаем фон по границе текста
-    -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
-    font-size: 3rem; //48px
-} 
-
-.advantage__specification {
-    margin-left: 10px;
-    line-height: 24px;
-}
-
-.advantage__title {
-    font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
-    font-weight: 600;
-    color: rgba(31, 32, 65, 0.75);
+    .advantage__icon { //иконка
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        -webkit-background-clip: text; //обрезаем фон по границе текста
+        -webkit-text-fill-color: transparent; //устанавливаем прозрачность текста
+        font-size: 3rem; //48px
+    } 
+    .advantage__specification {
+        margin-left: 10px;
+        line-height: 24px;
+        .advantage__title {
+            font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
+            font-weight: 600;
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
 }
