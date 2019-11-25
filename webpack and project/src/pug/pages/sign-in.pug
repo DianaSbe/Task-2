@@ -1,0 +1,22 @@
+include ../../blocks/Sheet/sheet
+
+doctype html
+html(lang="en")
+  head
+    meta(chaset="UTF-8" name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="keywords" content="Sign in")
+    meta(name="description" content="Sign in")
+    title Sign in
+    
+  body
+    div.sign-in
+      +header({type: 'ru-register', login_size: 'ru-header-login', register_size: 'ru-header-register', about: "О нас", services: "Услуги", careers: "Вакансии", news: "Новости", documentation: "Соглашения", login: "Войти", register: "Зарегистрироваться"})
+      div.sign-in__inner
+        +account-login()
+      +detailed-footer({logotext: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+                        copyright: "Copyright © 2018 Toxin отель. Все права защищены.",
+                        tnavigation: "Навигация", tabout: "О нас", tsupport: "Служба поддержки", tsubscribe: "Подписка",
+                        navigation: "О нас,Новости,Служба поддержки,Услуги", 
+                        about: "О сервисе,Наша команда,Вакансии,Инвесторы", 
+                        support: "Соглашения,Сообщества,Связь с нами",
+                        subscribe: "Получайте специальные предложения и новости сервиса"})

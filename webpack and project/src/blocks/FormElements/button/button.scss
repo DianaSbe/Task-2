@@ -7,11 +7,9 @@
         width: 100%;
         max-width: 99px;
         min-height: 44px;
-    
         border-radius: 22px;
         border: 0px;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    
         display: flex;
         justify-content: center;
         .button__substrate_theme_white {
@@ -23,10 +21,6 @@
             display: flex;
             align-items: center;
             justify-content: center; 
-        }
-        .button__substrate_size_small {
-            min-width: 76px;
-            min-height: 30px;
         }
     
         .button__icon {
@@ -44,10 +38,26 @@
     .button__rectangle_size_big {
         max-width: 320px;
     }
-    .button__rectangle_size_small {
-        max-width: 80px;
-    }
+
     .button__rectangle_height_small {
         min-height: 34px;
+        .button__substrate_size_en-header-login { //логин в английском хэдере (ширина по умолчанию)
+            min-width: 75px;
+            min-height: 30px;
+        }
+    }
+    .button__rectangle_size_ru-header-login { //логин в русском хэдере
+        max-width: 87px;
+        .button__substrate_size_ru-header-login { //обертка логина в русском хэдере
+            min-width: 83px;
+            min-height: 30px;
+        }
+    }
+
+    .button__rectangle_size_en-header-register { //регистрация в английском хэдере
+        max-width: 101px;
+    }
+    .button__rectangle_size_ru-header-register { //регистрация в русском хэдере
+        max-width: 196px;
     }
 }

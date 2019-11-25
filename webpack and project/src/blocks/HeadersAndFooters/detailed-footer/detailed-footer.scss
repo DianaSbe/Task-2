@@ -15,6 +15,9 @@
             min-height: 168px;
             display: flex;
             justify-content: space-between;
+            .detailed-footer__h3, .detailed-footer__item {
+                width: 100%;
+            }
             .detailed-footer__title, .detailed-footer__navigation-wrapper, .detailed-footer__about-wrapper, .detailed-footer__support-wrapper, .detailed-footer__subscribe-wrapper {
                 width: 100%;
                 display: flex;
@@ -30,8 +33,7 @@
                 }
             }
             .detailed-footer__navigation-wrapper, .detailed-footer__about-wrapper, .detailed-footer__support-wrapper {
-                max-width: 95px;
-                padding-right: 50px; //чтобы слова не флексились
+                max-width: 145px;
                 color: rgba(31, 32, 65, 0.5);
             }
             .detailed-footer__support-wrapper {

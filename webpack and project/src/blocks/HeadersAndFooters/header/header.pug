@@ -3,20 +3,23 @@ mixin header(options)
     div.header__inner
       +company-logo()
       div(class=`header__menu header__menu_type_${options.type}`)
-        label.header__home Home
-        label.header__info About Us
-        div.header__services
-          label.header__services-text Services
-          div.header__services-icon
+        label.header__home= options.home
+        label.header__info= options.about
+        div.header__icon-wrapper
+          label.header__services= options.services
+          div.header__icon
             +icon({name: 'keyboard_arrow_down'})
-        label.header__careers Careers
-        label.header__news News
-        label.header__documentation Documentation
-        if options.type == 'register' && options.type!=undefined
-          div.header__login-button
-            +button({theme: 'white', text: 'Login', textcolor: 'purple', size: 'small', height: 'small'})
-          div.header__register-button
-            +button({text: 'Register', textcolor: 'white', height: 'small'})
+        label.header__careers= options.careers
+        label.header__news= options.news
+        div.header__icon-wrapper
+          label.header__documentation= options.documentation
+          div.header__icon
+            +icon({name: 'keyboard_arrow_down'})
+        if (options.type == 'en-register' || options.type == 'ru-register') && options.type!=undefined
+          div(class=`header__${options.login_size}-button`)
+            +button({theme: 'white', text: options.login, textcolor: 'purple', size: options.login_size, height: 'small'})
+          div(class=`header__${options.register_size}-button`)
+            +button({text: options.register, textcolor: 'white', size: options.register_size, height: 'small'})
         else
           div.header__cosmin-wrapper
             label.header__cosmin Cosmin Negolita

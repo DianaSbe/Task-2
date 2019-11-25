@@ -171,7 +171,13 @@ mixin sheet(options)
         div.sheet__logo
           include logo.svg
         div.sheet__headers-and-footers-inner
-          +header({type: 'register'})
-          +header({})
-          +detailed-footer()
+          +header({type: 'en-register', login_size: 'en-header-login', register_size: 'en-header-register', home: "Home", about: "About Us", services: "Services", careers: "Careers", news: "News", documentation: "Documentation", login: "Login", register: "Register"})
+          +header({login_size: 'en-header-login', register_size: 'en-header-register', home: "Home", about: "About Us", services: "Services", careers: "Careers", news: "News", documentation: "Documentation", login: "Login", register: "Register"})
+          +detailed-footer({logotext: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+                            copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
+                            tnavigation: "navigation", tabout: "about us", tsupport: "support", tsubscribe: "subscribe to our newsletter",
+                            navigation: "About Us,News,Support,Products", 
+                            about: "Who we are,Our team,Careers,Investors", 
+                            support: "Documentation,Community,Get in Touch",
+                            subscribe: "Receive our latest news and promotions in your inbox!"})
           +footer()

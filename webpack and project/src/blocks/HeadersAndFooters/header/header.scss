@@ -21,16 +21,22 @@
                 font-weight: bold;
                 color: rgba(31, 32, 65, 0.75);
             }
-            .header__services {
+            .header__icon-wrapper {
                 display: flex;
                 align-items: center;
                 max-height: 18px;
-                .header__services-icon {
+                .header__icon {
                     margin-top: 7px;
                 }
             }
-            .header__register-button {
-                min-width: 100px;
+            .header__en-header-login-button {
+                max-width: 79px;
+            }
+            .header__en-header-register-button {
+                min-width: 101px;
+            }
+            .header__ru-header-register-button {
+                min-width: 196px;
             }
             .header__cosmin-wrapper {
                 width: 100%;
@@ -42,8 +48,11 @@
                 }
             }
         }
-        .header__menu_type_register {
+        .header__menu_type_en-register {
             max-width: 758px;
+        }
+        .header__menu_type_ru-register {
+            max-width: 789px;
         }
     }
 }
