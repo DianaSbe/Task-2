@@ -1,0 +1,58 @@
+@import "main.scss";
+
+.search-room-checkbox {
+    width: 120%;
+    max-width: 1440px;
+    max-height: 1880px;
+    .search-room-checkbox__inner {
+        width: 100%;
+        min-height: 1356px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+        .search-room-checkbox__content-wrapper {
+            width: 100%;
+            max-width: 1160px;
+            margin-bottom: 41px;
+            display: flex;
+            justify-content: space-between;
+            .search-room-checkbox__filter {
+                width: 100%;
+                max-width: 266px;
+                max-height: 973px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                .search-room-checkbox__checkbox_type_buttons {
+                    width: 100%;
+                    max-width: 222px;
+                }
+                .search-room-checkbox__checkbox_type_rich-buttons {
+                    width: 100%;
+                    max-width: 252px;
+                }
+            }
+            .search-room-checkbox__cards-wrapper {
+                width: 100%;
+                max-width: 834px;
+                min-height: 1257px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                justify-content: center;
+                .search-room-checkbox__cards {
+                    min-height: 1091px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    justify-content: space-between;
+                    margin-bottom: 64px;
+                }
+                .search-room-checkbox__title {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

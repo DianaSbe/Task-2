@@ -14,7 +14,7 @@ mixin hotel-room(options)
         div.hotel-room__switch
     div.hotel-room__inner
       div.hotel-room__data
-        +room-data({number: options.number, class: options.class})
+        +room-data({number: options.number, class: options.class, price: options.price})
         div.hotel-room__reviews
           +ratebutton({amount: options.stars, id: options.id})
           div.hotel-room__reviews-inner

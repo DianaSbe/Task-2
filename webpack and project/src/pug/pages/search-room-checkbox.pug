@@ -1,0 +1,59 @@
+include ../../blocks/Sheet/sheet
+
+doctype html
+html(lang="en")
+  head
+    meta(chaset="UTF-8" name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="keywords" content="Search room checkbox")
+    meta(name="description" content="Search room checkbox")
+    title Search room checkbox
+    
+  body
+    div.search-room-checkbox
+      +header({type: 'ru-register', login_size: 'ru-header-login', register_size: 'ru-header-register', about: "О нас", services: "Услуги", careers: "Вакансии", news: "Новости", documentation: "Соглашения", login: "Войти", register: "Зарегистрироваться"})
+      div.search-room-checkbox__inner
+        div.search-room-checkbox__content-wrapper
+          div.search-room-checkbox__filter
+            +dropdown({name:"Дата пребывания в отеле", value: "19 авг - 23 авг"})
+            +dropdown({name:"Гости", value: "3 гостя, 1 младенец", type: 'guests',
+                       item: "Взрослые,Дети,Младенцы",
+                       counter: "3,0,1"})
+            +rangeslider({name: "Диапазон цены", comment: "Стоимость за сутки пребывания в номере"})
+            div.search-room-checkbox__checkbox_type_buttons
+              +checkbox({name: "Checkbox Buttons", id: '1checkbtn', 
+                         value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
+                         status: ',checked,checked'})
+            div.search-room-checkbox__checkbox_type_rich-buttons
+              +checkbox({name: "Доступность", id: '1rcheckbtn',
+                         value: "Широкий коридор,Помощник для инвалидов",
+                         comment: "Ширина коридоров в номере не менее 91 см.,На 1 этаже вас встретит специалист и проводит до номера"})
+            +dropdown({name:"Удобства номера", value: "2 спальни, 2 кровати...", type: 'rooms',
+                       item: "Спальни,Кровати,Ванные комнаты",
+                       counter: "2,2,0"})
+            +checkbox({name: "Дополнительные удобства", type: 'list', id: '2checklst', 
+                         value: "Завтрак,Письменный стол,Стул для кормления,Кроватка,Телевизор,Шампунь,Телевизор,Шампунь", 
+                         status: ',checked,checked,checked'})
+          div.search-room-checkbox__cards-wrapper
+            h1.search-room-checkbox__title Номера, которые мы для вас подобрали
+            div.search-room-checkbox__cards
+              +hotel-room({status: 'selected', photo: '01', number: "888", class: "Люкс", price: "9 990₽", stars: '5', id: 'search-room_01', reviews: "145"})
+              +hotel-room({photo: '02', number: "840", price: "9 900₽", stars: '4', id: 'search-room_02', reviews: "65"})
+              +hotel-room({photo: '03', number: "980", class: "Люкс", price: "8 500₽", stars: '3', id: 'search-room_03', reviews: "35"})
+              +hotel-room({photo: '04', number: "856", price: "7 300₽", stars: '5', id: 'search-room_04', reviews: "19"})
+              +hotel-room({photo: '05', number: "740", price: "6 000₽", stars: '4', id: 'search-room_05', reviews: "44"})
+              +hotel-room({photo: '06', number: "982", price: "5 800₽", stars: '3', id: 'search-room_06', reviews: "56"})
+              +hotel-room({photo: '07', number: "678", price: "5 500₽", stars: '5', id: 'search-room_07', reviews: "45"})
+              +hotel-room({photo: '08', number: "450", price: "5 300₽", stars: '4', id: 'search-room_08', reviews: "39"})
+              +hotel-room({photo: '09', number: "350", price: "5 000₽", stars: '3', id: 'search-room_09', reviews: "77"})
+              +hotel-room({photo: '10', number: "666", price: "5 000₽", stars: '5', id: 'search-room_10', reviews: "25"})
+              +hotel-room({photo: '11', number: "444", price: "5 000₽", stars: '3', id: 'search-room_11', reviews: "15"})
+              +hotel-room({photo: '12', number: "352", price: "5 000₽", stars: '3', id: 'search-room_12', reviews: "55"})
+            +pagination({text: "1 – 12 из 100+ вариантов аренды"})
+
+      +detailed-footer({logotext: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+                        copyright: "Copyright © 2018 Toxin отель. Все права защищены.",
+                        tnavigation: "Навигация", tabout: "О нас", tsupport: "Служба поддержки", tsubscribe: "Подписка",
+                        navigation: "О нас,Новости,Служба поддержки,Услуги", 
+                        about: "О сервисе,Наша команда,Вакансии,Инвесторы", 
+                        support: "Соглашения,Сообщества,Связь с нами",
+                        subscribe: "Получайте специальные предложения и новости сервиса"})

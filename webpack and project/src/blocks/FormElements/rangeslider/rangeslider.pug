@@ -7,3 +7,6 @@ mixin rangeslider(options)
         +caption({name: options.name})
         
     div.slider-range
+
+    if options.comment!='' && options.comment!=undefined
+      label.rangeslider__comment= options.comment
