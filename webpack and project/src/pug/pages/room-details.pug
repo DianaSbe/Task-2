@@ -1,0 +1,46 @@
+include ../../blocks/Sheet/sheet
+
+doctype html
+html(lang="en")
+  head
+    meta(chaset="UTF-8" name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="keywords" content="Room details")
+    meta(name="description" content="Room details")
+    title Room details
+    
+  body
+    div.room-details
+      +header({type: 'ru-register', login_size: 'ru-header-login', register_size: 'ru-header-register', about: "О нас", services: "Услуги", careers: "Вакансии", news: "Новости", documentation: "Соглашения", login: "Войти", register: "Зарегистрироваться"})
+      div.room-details__img-wrapper
+        div.room-details__big-img
+        div.room-details__small-img-wrapper
+          div.room-details__small-img-up
+          div.room-details__small-img-bottom
+      div.room-details__inner
+        div.room-details__content-wrapper
+          div.room-details__first-column
+            div.room-details__advantages-impressions
+              div.room-details__advantages
+                +advantage({name: "Сведения о номере", icon:'mood', title: "Комфорт", description: "Шумопоглощающие стены"})
+                +advantage({icon:'location_city', title: "Удобство", description: "Окно в каждой из спален"})
+                +advantage({icon:'whatshot', title: "Уют", description: "Номер оснащён камином"})
+              div.room-details__diagram
+                h2 Впечатления от номера
+                include Pie.svg  
+            +review({name: "Отзывы посетителей номера", amount: "2 отзыва", person: "Мурад Сарафанов", date: "5 дней назад", userpic: '01', like: '12', lstatus: 'checked', comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."})
+            +review({person: "Патрисия Стёклышкова", date: "Неделю назад", userpic: '02', like: '2', comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+            div.room-details__bulletlist-cancel
+              +bulletlist({name: "Правила", ntype: 'h2',
+                           item: "Нельзя с питомцами;Без вечеринок и мероприятий;Время прибытия – после 13:00, а выезд до 12:00"})
+              div.room-details__cancel
+                h2.room-details__cancel-caption Отмена
+                label Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          div.room-details__second-column
+            +room-reservation()
+      +detailed-footer({logotext: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+                        copyright: "Copyright © 2018 Toxin отель. Все права защищены.",
+                        tnavigation: "Навигация", tabout: "О нас", tsupport: "Служба поддержки", tsubscribe: "Подписка",
+                        navigation: "О нас,Новости,Служба поддержки,Услуги", 
+                        about: "О сервисе,Наша команда,Вакансии,Инвесторы", 
+                        support: "Соглашения,Сообщества,Связь с нами",
+                        subscribe: "Получайте специальные предложения и новости сервиса"})

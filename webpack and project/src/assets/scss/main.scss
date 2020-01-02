@@ -1,3 +1,13 @@
+@import "sign-in.scss"; //страницы
+@import "registration.scss";
+@import "search-room.scss";
+@import "search-room-dropdown.scss";
+@import "search-room-checkbox.scss";
+@import "landing.scss";
+@import "landing-calendar.scss";
+@import "landing-dropdown.scss";
+@import "room-details.scss";
+
 @import "/utils/fonts.scss"; //общий стиль
 @import "../../blocks/FormElements/materials-icons"; //общий стиль
 @import "../../blocks/Sheet/sheet.scss";

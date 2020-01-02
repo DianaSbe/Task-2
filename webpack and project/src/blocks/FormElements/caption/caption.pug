@@ -1,3 +1,6 @@
 mixin caption(options)
   div.caption
-    h3(class=`caption__h3_theme_${options.theme}`)= options.name
+    if options.type != "h2"
+      h3(class=`caption__text_theme_${options.theme}`)= options.name
+    else
+      h2(class=`caption__text_theme_${options.theme}`)= options.name

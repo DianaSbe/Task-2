@@ -1,0 +1,18 @@
+.landing-calendar {
+    width: 120%;
+    max-width: 1440px;
+    max-height: 1343px;
+    .landing-calendar__inner {
+        width: 100%;
+        min-height: 830px;
+        background: url('../../pug/pages/landing-background.png') no-repeat 50% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .landing-calendar__room-selection {
+            width: 100%;
+            max-width: 1160px;
+            min-height: 690px;
+        }
+    }
+}

@@ -3,8 +3,8 @@ mixin bulletlist(options)
     - const items = `${options.item}`.split(';')
     
     if options.name!='' && options.name!=undefined
-      div.bulletlist__name
-        +caption({name: options.name})
+      div(class=`bulletlist__name bulletlist__name_type_${options.ntype}`)
+        +caption({name: options.name, type: options.ntype})
     
     ul.bulletlist__list
       - for (i=0; i<items.length; i++)

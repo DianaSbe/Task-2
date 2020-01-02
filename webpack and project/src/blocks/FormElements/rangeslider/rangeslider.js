@@ -1,4 +1,4 @@
-$(document).ready( function() {
+jQuery(document).ready( function($) {
     $('.slider-range').slider({
       range: true,
       min: 0,

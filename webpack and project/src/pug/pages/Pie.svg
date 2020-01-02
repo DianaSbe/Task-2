@@ -1,0 +1,169 @@
+<style>
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.chart-text {
+  fill: #BC9CFF;
+<!--   -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em); -->
+}
+.chart-number {
+  font-family: 'Conv_Quicksand', Arial, sans-serif;
+  font-size: 0.4rem;
+  font-weight: 600;
+  line-height: 1;
+  text-anchor: middle;
+<!-- -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em); -->
+}
+.chart-label {
+  font-family: 'Conv_Montserrat', Arial, sans-serif;
+  font-size:  0.20rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-anchor: middle;
+<!-- -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em); -->
+}
+figure {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 6px;
+}
+@media (min-width: 768px) {
+  figure {
+    flex-direction: row;
+  }
+}
+.figure-content,
+.figure-key {
+  flex: 1;
+}
+.figure-content {
+    max-height: 140px;
+}
+.figure-content svg {
+  height: auto;
+}
+.figure-key {
+  min-width: calc(8 / 12);
+  align-self: flex-end;
+  margin-right: 40px;
+}
+.figure-key [class*="shape-"] {
+  margin-right: 1px;
+}
+.figure-key-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.figure-key-list li {
+  margin: 0 0 6px;
+  padding: 0;
+}
+.shape-circle {
+  font-size: 0.88rem;
+  font-family: 'Conv_Montserrat', Arial, sans-serif;
+  font-weight: 300;
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+.shape-royally {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.shape-good {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.shape-passably {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.shape-upset {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+</style>
+
+<figure>
+  <div class="figure-content">
+    <svg width="150px" height="150px" viewBox="0 0 42 42" class="donut" aria-labelledby="beers-title beers-desc" role="img">
+      <title id="beers-title">Отзывы</title>
+      <desc id="beers-desc">Donut chart показывает отзывы</desc>
+      <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff" stroke="white" role="presentation"></circle>
+      <!-- <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3" role="presentation"></circle> -->
+      
+      <defs>
+        <linearGradient id="gradient-passably" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#BC9CFF" />
+          <stop offset="100%" stop-color="#8BA4F9" />
+        </linearGradient>
+      </defs>
+      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#gradient-passably)" stroke-width="3" stroke-dasharray="24 76" stroke-dashoffset="25" aria-labelledby="donut-segment-1-title donut-segment-1-desc">
+        <title id="donut-segment-1-title">Великолепно 40%</title>
+      </circle>
+
+      <defs>
+        <linearGradient id="gradient-good" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#6FCF97" />
+          <stop offset="100%" stop-color="#66D2EA" />
+        </linearGradient>
+      </defs>
+      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#gradient-good)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="0">
+        <title id="donut-segment-2-title">Хорошо 20%</title>
+      </circle>
+
+      <defs>
+        <linearGradient id="gradient-royally" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#FFE39C" />
+          <stop offset="100%" stop-color="#FFBA9C" />
+        </linearGradient>
+      </defs>
+      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#gradient-royally)" stroke-width="1" stroke-dasharray="49 61" stroke-dashoffset="85">
+        <title id="donut-segment-3-title">Удовлетворительно 30%</title>
+      </circle>
+
+      <!-- unused 10% -->
+      <g class="chart-text">
+        <text x="50%" y="50%" class="chart-number">
+          260
+        </text>
+        <text x="50%" y="50%" class="chart-label">
+          Голосов
+        </text>
+      </g>
+    </svg>
+  </div>
+
+  <figcaption class="figure-key">
+    <ul class="figure-key-list" aria-hidden="true" role="presentation">
+      <li>
+        <span class="shape-circle shape-royally"></span> Великолепно
+      </li>
+      <li>
+        <span class="shape-circle shape-good"></span> Хорошо
+      </li>
+      <li>
+        <span class="shape-circle shape-passably"></span> Удовлетворительно
+      </li>
+      <li>
+        <span class="shape-circle shape-upset"></span> Разочарован
+      </li>
+    </ul>
+  </figcaption>
+</figure>

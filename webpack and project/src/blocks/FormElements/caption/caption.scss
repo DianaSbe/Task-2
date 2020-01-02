@@ -1,19 +1,24 @@
-.caption__h3_theme_purple {
+.caption__text_theme_purple {
     color: #BC9CFF;
 }
 
-.caption__h3_theme_grey {
+.caption__text_theme_grey {
     color: rgba(31, 32, 65, 0.5);
 }
 
-.caption__h3_theme_white {
+.caption__text_theme_white {
     color: #FFFFFF;
 }
 
-.caption__h3_theme_status {
+.caption__text_theme_status, .caption__text_theme_amount {
     display: block;
     float: right;
 
     font-weight: 400;
     color: rgba(31, 32, 65, 0.5);
+}
+
+.caption__text_theme_amount {
+    text-transform: lowercase;
+    font-size: 0.88rem;
 }

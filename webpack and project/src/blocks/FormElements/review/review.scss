@@ -1,6 +1,9 @@
 .review {
     width: 100%;
     min-width: 711px;
+    .review__name {
+        margin-bottom: 17px;
+    }
     .review__inner {
         width: 100%;
         display: flex;
@@ -19,7 +22,7 @@
         }
         .review__specification, .review__comment {
             line-height: 24px;
-            .review__name {
+            .review__person {
                 font-family: 'Conv_Montserrat', Arial, sans-serif; //Bold
                 font-weight: 600;
                 color: rgba(31, 32, 65, 0.75);

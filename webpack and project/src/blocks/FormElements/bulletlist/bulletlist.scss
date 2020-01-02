@@ -2,7 +2,12 @@
     margin-bottom: 13px;
 }
 
+.bulletlist__name_type_h2 {
+    margin-left: 20px;
+}
+
 .bulletlist__list {
+    max-width: 254px;
     list-style: none;
     padding: 0;
     .bulletlist__inner {

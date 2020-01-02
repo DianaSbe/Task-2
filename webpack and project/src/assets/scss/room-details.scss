@@ -1,0 +1,74 @@
+.room-details {
+    width: 120%;
+    max-width: 1440px;
+    max-height: 1937px;
+    .room-details__img-wrapper {
+        width: 100%;
+        min-height: 485px;
+        display: flex;
+        .room-details__big-img {
+            width: 100%;
+            max-width: 981px;
+            background: url('../../pug/pages/details-big-img.png') no-repeat;
+        }
+        .room-details__small-img-wrapper {
+            width: 100%;
+            max-width: 459px;
+            .room-details__small-img-up {
+                min-height: 243px;
+                background: url('../../pug/pages/details-small-img-up.png') no-repeat;
+            }
+            .room-details__small-img-bottom {
+                min-height: 242px;
+                background: url('../../pug/pages/details-small-img-bottom.png') no-repeat;
+            }
+        }
+    }
+    .room-details__inner {
+        min-height: 939px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .room-details__content-wrapper {
+            width: 100%;
+            max-width: 1161px;
+            min-height: 808px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            .room-details__first-column {
+                width: 100%;
+                max-width: 703px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                .room-details__advantages-impressions {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .room-details__diagram {
+                        width: 100%;
+                        max-width: 343px;
+                    }
+                }
+                .room-details__bulletlist-cancel {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .room-details__cancel {
+                        max-width: 340px;
+                        line-height: 24px;
+                        .room-details__cancel-caption {
+                            margin-bottom: 13px;
+                        }
+                    }
+                }
+            }
+            .room-details__second-column {
+                width: 100%;
+                max-width: 380px;
+            }
+        }
+    }
+}

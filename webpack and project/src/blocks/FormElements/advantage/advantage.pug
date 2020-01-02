@@ -1,5 +1,10 @@
 mixin advantage(options)
   div.advantage
+
+    if options.name!='' && options.name!=undefined
+      div.advantage__name
+        +caption({name: options.name, type: "h2"})
+
     div.advantage__inner
       i.material-icons.advantage__icon #{options.icon}
       div.advantage__specification
