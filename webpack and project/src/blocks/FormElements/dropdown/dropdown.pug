@@ -2,6 +2,7 @@ mixin dropdown(options)
   div.dropdown
     - const items = `${options.item}`.split(',')
     - const counters = `${options.counter}`.split(',')
+    - var clearbtn_counter = 0;
     
     +caption({name: options.statusname, theme: 'status'})
     if options.name!='' && options.name!=undefined
@@ -20,11 +21,16 @@ mixin dropdown(options)
             h3.dropdown__counter=counters[i]
             if counters[i]!='0'
               button.dropdown__counterbutton.dropdown__subtractbutton -
-            else
+              - clearbtn_counter++;
+            else 
               button(class=`dropdown__counterbutton dropdown__subtractbutton dropdown__subtractbutton_inactive`) -
             h3.dropdown__item=items[i]
         if options.type=='guests'
           div.dropdown__applybutton
             +caption({name: "Применить", theme: 'purple'})
-          div.dropdown__clearbutton
-            +caption({name: "Очистить", theme: 'grey'})
+          if (clearbtn_counter > 0)
+            div.dropdown__clearbutton.dropdown__clearbutton_active
+              +caption({name: "Очистить", theme: 'grey'})
+          else
+            div.dropdown__clearbutton
+              +caption({name: "Очистить", theme: 'grey'})

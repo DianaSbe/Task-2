@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     align-content: space-between;
     .hotel-room__photo {
+        width: 100%;
         max-height: 151px;
         display: flex;
         .hotel-room__img {
@@ -21,7 +22,7 @@
         .hotel-room__icons {
             visibility: hidden;
             width: 100%;
-            max-width: 269px;
+            max-width: 270px;
             position: absolute;
             display: flex;
             justify-content: space-between;
