@@ -14,8 +14,8 @@ html(lang="en")
       div.search-room-dropdown__inner
         div.search-room-dropdown__content-wrapper
           div.search-room-dropdown__filter
-            +dropdown({name:"Дата пребывания в отеле", value: "19 авг - 23 авг"})
-            +dropdown({name:"Гости", value: "3 гостя, 1 младенец", type: 'guests',
+            +date-dropdown({name:"Дата пребывания в отеле", value: "19 авг - 23 авг", type: 'filter'})
+            +dropdown({name:"Гости", value: "3 гостя, 1 младенец", type: 'guests', size: 'small',
                        item: "Взрослые,Дети,Младенцы",
                        counter: "3,0,1"})
             +rangeslider({name: "Диапазон цены", comment: "Стоимость за сутки пребывания в номере"})

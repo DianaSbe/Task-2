@@ -17,13 +17,7 @@
         flex-wrap: wrap;
         align-content: space-between;
         margin-top: 10px;
-        .room-reservation__dropdown_type_date {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .room-reservation__dropdown_type_guests {
+        .room-reservation__dropdown_type_date, .room-reservation__dropdown_type_guests {
             width: 100%;
             margin-bottom: 10px;
         }

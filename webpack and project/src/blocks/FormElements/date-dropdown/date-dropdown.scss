@@ -1,0 +1,55 @@
+.date-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .date-dropdown-wrapper {
+        .date-dropdown__name {
+            margin-bottom: 5px;
+        }
+        
+        .date-dropdown__inner { //контейнер для инпута и иконки
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            .date-dropdown__input {
+                min-height: 44px;
+                //width: 100%;
+                width: 266px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                padding-left: 13px;
+                padding-right: 33px;
+                border: 1px solid rgba(31, 32, 65, 0.25);
+                background: #FFFFFF;
+                //шрифт набираемого текста в инпуте
+                color: rgba(31, 32, 65, 0.75);
+                font-family: 'Conv_Montserrat', Arial, sans-serif; //Light
+                font-size: 0.88rem; //14px
+            }
+            .date-dropdown__input:hover, .date-dropdown__input:focus, .date-dropdown__input_selected {
+                border: 1px solid rgba(31, 32, 65, 0.5);
+            }
+            .date-dropdown__input_mask_date {
+                max-width: 150px;
+            }
+            .date-dropdown__input_expanded { //внешний вид инпута при выпадении списка
+                border-radius: 4px 4px 0px 0px;
+                border: 1px solid rgba(31, 32, 65, 0.5);
+            }
+    
+            .date-dropdown__icon { //иконка
+                height: 74%;
+                position: absolute;
+                display: flex;
+                align-self: flex-end;
+                justify-content: flex-end;
+                padding-right: 10px;
+            }
+            .date-dropdown__input:hover ~ .date-dropdown__icon .icon__keyboard_arrow_down, //менять цвет иконки при наведении на инпут
+            .date-dropdown__input:focus ~ .date-dropdown__icon .icon__keyboard_arrow_down,
+            .date-dropdown__input_expanded ~ .date-dropdown__icon .icon__keyboard_arrow_down {
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+    }
+}

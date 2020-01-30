@@ -1,0 +1,22 @@
+mixin date-dropdown(options)
+  div.date-dropdown
+    - const names = `${options.name}`.split(',')
+    - const values = `${options.value}`.split(',')
+
+    - for (i=0; i<names.length; i++)
+      div.date-dropdown-wrapper
+        +caption({name: options.statusname, theme: 'status'})
+        if options.name!='' && options.name!=undefined
+          div.date-dropdown__name
+            +caption({name: names[i]})
+
+        div.date-dropdown__inner
+          if (options.type != "filter")
+            if (i==0)
+              input(class=`date-dropdown__input date-dropdown__input_mask_date date-dropdown__input_${options.state} datepicker-here` type="text" value=values[i] placeholder=options.hint data-range="true" data-clear-button="true" data-multiple-dates-separator=" - ")
+            else
+              input(class=`date-dropdown__input date-dropdown__input_mask_date date-dropdown__input_${options.state} datepicker-end` type="text" value=values[i] placeholder=options.hint)
+          else
+            input(class=`date-dropdown__input date-dropdown__input_${options.state} datepicker-here` type="text" name=options.type value=values[i] placeholder=options.hint data-range="true" data-clear-button="true" data-multiple-dates-separator=" - " data-date-format='dd M')
+          div.date-dropdown__icon
+            +icon({name: 'keyboard_arrow_down'})

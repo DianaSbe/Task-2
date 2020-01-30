@@ -2,11 +2,8 @@ mixin room-selection(options)
   div.room-selection
     div.room-selection__inner
       h1.room-selection__title Найдём номера под ваши пожелания
-      div.room-selection__dropdown_type_date
-        div.room-selection__dropdown_type_start-date
-          +dropdown({name:"Прибытие", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'})
-        div.room-selection__dropdown_type_end-date
-          +dropdown({name:"Выезд", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'})
+      +date-dropdown({hint: "ДД.ММ.ГГГГ", type: 'date',
+                      name: "Прибытие,Выезд"})
       div.room-selection__dropdown_type_guests
         +dropdown({name:"Гости", value: "", hint: "Сколько гостей", type: 'guests',
                  item: "Взрослые,Дети,Младенцы",

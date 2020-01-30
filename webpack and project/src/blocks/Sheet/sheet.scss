@@ -69,13 +69,10 @@
                 }
                 .sheet__dropdown_type_date {
                     width: 100%;
-                    display: flex;
-                    justify-content: space-between;
                     margin-bottom: 20px;
                 }
                 .sheet__dropdown_type_date-filter {
                     width: 100%;
-                    max-width: 266px;
                     margin-bottom: 20px;
                 }
                 .sheet__textfield_type_subscription {
@@ -83,13 +80,7 @@
                     max-width: 266px;
                     margin-bottom: 80px;
                 }
-                .sheet__dropdown_type_rooms {
-                    width: 100%;
-                    max-width: 266px;
-                }
                 .sheet__dropdown_type_rooms_expanded_filled {
-                    width: 100%;
-                    max-width: 266px;
                     margin-bottom: 20px;
                 }
             }
@@ -144,8 +135,6 @@
                     }
                 }
                 .sheet__dropdown_type_guests_expanded {
-                    width: 100%;
-                    max-width: 320px;
                     margin-bottom: 60px;
                 }
                 .sheet__checkbox_type_rich-buttons {
@@ -194,8 +183,6 @@
                     margin-bottom: 200px;
                 }
                 .sheet__dropdown_type_guests_expanded_filled {
-                    width: 100%;
-                    max-width: 320px;
                     margin-bottom: 70px;
                 }
                 .sheet__bulletlist {

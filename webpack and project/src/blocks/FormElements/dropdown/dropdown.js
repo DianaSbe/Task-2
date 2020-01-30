@@ -38,14 +38,23 @@ jQuery(document).ready( function($) {
     //кнопка "принять" для дропдауна с гостями
     $('.dropdown__applybutton').click(function() {
         var counter = $(this).parent('.dropdown__ul').children('.dropdown__li').children('.dropdown__counter');
+        var name = $(this).parent('.dropdown__ul').children('.dropdown__li').children('.dropdown__item');
         var result = $(this).parent('.dropdown__ul').parent('.dropdown').children('.dropdown__inner').children('.dropdown__input');
-        var sum = 0;
+        var guests = 0;
+        var babies = 0;
         for (var i = 0; i < counter.length; i++) {
-            sum += parseInt(counter[i].innerHTML);
+            if (name[i].innerHTML == "Младенцы")
+              babies = parseInt(counter[i].innerHTML);
+            else
+              guests += parseInt(counter[i].innerHTML);
         }
         result[0].value = "";
-        if (sum !=0)
-          result[0].value = sum + " " + f(sum, ['гость', 'гостя', 'гостей']);
+        if (guests !=0) {
+          result[0].value = guests + " " + f(guests, ['гость', 'гостя', 'гостей']);
+          if (babies !=0) result[0].value += ", ";
+        }
+        if (babies !=0)
+          result[0].value += babies + " " + f(babies, ['младенец', 'младенца', 'младенцев']);
     })
     //кнопка "очистить" для дропдауна с гостями
     $('.dropdown__clearbutton').click(function() {

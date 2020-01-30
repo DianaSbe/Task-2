@@ -1,12 +1,11 @@
 mixin room-reservation(options)
   div.room-reservation
     div.room-reservation__inner
-      +room-data({size: 'big', number: "888", class: "Люкс"})
+      +room-data({size: 'big', number: "888", class: "Люкс", price: "9 990₽"})
       div.room-reservation__dropdown_type_date
-        div.room-reservation__dropdown_type_start-date
-          +dropdown({name:"Прибытие", value: "19.08.2019", hint: "", type: 'date'})
-        div.room-reservation__dropdown_type_end-date
-          +dropdown({name:"Выезд", value: "23.08.2019", hint: "", type: 'date'})
+        +date-dropdown({hint: "ДД.ММ.ГГГГ", type: 'date',
+                        name: "Прибытие,Выезд",
+                        value: "19.08.2019,23.08.2019"})
       div.room-reservation__dropdown_type_guests
         +dropdown({name:"Гости", value: "3 гостя", hint: "", type: 'guests',
                  item: "Взрослые,Дети,Младенцы",

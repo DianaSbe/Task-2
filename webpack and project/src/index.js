@@ -14,7 +14,7 @@ import '../node_modules/air-datepicker/dist/css/datepicker.min.css'
 
 //скрипты
 import './blocks/FormElements/textfield/textfield__input_mask_date.js'
-import './blocks/FormElements/dropdown/dropdown__input_mask_date.js'
+import './blocks/FormElements/date-dropdown/date-dropdown__input_mask_date.js'
 import './blocks/FormElements/rangeslider/rangeslider.js'
 import './blocks/FormElements/pagination/pagination.js'
 import './blocks/Cards/calendar/calendar.js'
