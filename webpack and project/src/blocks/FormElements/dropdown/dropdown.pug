@@ -11,7 +11,7 @@ mixin dropdown(options)
 
     form(action="" method="POST")
       div.dropdown__inner
-        input(class=`dropdown__input dropdown__input_${options.state}` type="text" name=options.type value=options.value placeholder=options.hint)
+        input(class=`dropdown__input dropdown__input_${options.state}` type="text" name=options.type value=options.value placeholder=options.hint readonly)
         div.dropdown__icon
           +icon({name: 'keyboard_arrow_down'})
       ul(class=`dropdown__ul dropdown__ul_${options.state} dropdown__ul_type_${options.type}`)
