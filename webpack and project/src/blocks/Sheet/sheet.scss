@@ -95,11 +95,6 @@
                 .sheet__radiobutton {
                     width: 100%;
                     max-width: 266px;
-                    display: flex;
-                    .sheet__radiobutton_unchecked {
-                        display: flex;
-                        align-items: flex-end;
-                    }
                 }
                 .sheet__toggle {
                     width: 100%;

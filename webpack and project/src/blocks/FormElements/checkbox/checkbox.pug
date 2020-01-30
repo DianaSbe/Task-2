@@ -14,16 +14,17 @@ mixin checkbox(options)
             else
               +icon({name: 'keyboard_arrow_up'})
 
-    div(class=`checkbox__list checkbox__list_${options.state}`)
-      - for (i=0; i<values.length; i++)
-        div.checkbox__inner
-          if statuses[i]=='checked'
-            input(class="checkbox__input" type="checkbox" id=options.id+i checked)
-          else
-            input(class="checkbox__input" type="checkbox" id=options.id+i)
-          label.checkbox__label(for=options.id+i)
-          if comments[i]==undefined || comments[i]=='undefined'
-            label.checkbox__text(for=options.id+i)=values[i]
-          else
-            label.checkbox__subtitle(for=options.id+i)=values[i]
-            label.checkbox__comment(for=options.id+i)=comments[i]
+    form(action="" method="POST")
+      div(class=`checkbox__list checkbox__list_${options.state}`)
+        - for (i=0; i<values.length; i++)
+          div.checkbox__inner
+            if statuses[i]=='checked'
+              input(class="checkbox__input" type="checkbox" id=options.id+i checked)
+            else
+              input(class="checkbox__input" type="checkbox" id=options.id+i)
+            label.checkbox__label(for=options.id+i)
+            if comments[i]==undefined || comments[i]=='undefined'
+              label.checkbox__text(for=options.id+i)=values[i]
+            else
+              label.checkbox__subtitle(for=options.id+i)=values[i]
+              label.checkbox__comment(for=options.id+i)=comments[i]

@@ -3,10 +3,11 @@ mixin toggle(options)
     if options.name!='' && options.name!=undefined
       div.toggle__name
         +caption({name: options.name})
-        
-    if options.status == 'checked'
-      input.toggle__input(type=`checkbox` id=`toggle${options.id}` checked)
-    else
-      input.toggle__input(type=`checkbox` id=`toggle${options.id}`)
-    label.toggle__label(for=`toggle${options.id}`)
-    label.toggle__text(for=`toggle${options.id}`)=options.text
+
+    form(action="" method="POST")    
+      if options.status == 'checked'
+        input.toggle__input(type=`checkbox` id=`toggle${options.id}` checked)
+      else
+        input.toggle__input(type=`checkbox` id=`toggle${options.id}`)
+      label.toggle__label(for=`toggle${options.id}`)
+      label.toggle__text(for=`toggle${options.id}`)=options.text

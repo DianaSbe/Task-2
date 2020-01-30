@@ -97,9 +97,7 @@ mixin sheet(options)
                          value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
                          status: ',checked,checked'})
             div.sheet__radiobutton
-              +radiobutton({name: "Radio Buttons", text: "Мужчина", status: 'checked', rdname: 'form-elements-gender', id: 'form-elements_01'})
-              div.sheet__radiobutton_unchecked
-                +radiobutton({text: "Женщина", rdname: 'form-elements-gender', id: 'form-elements_02'})
+              +radiobutton({name: "Radio Buttons", value: "Мужчина,Женщина", status: 'checked,', rdname: 'form-elements-gender', id: 'form-elements_01,form-elements_02'})
             div.sheet__toggle
               +toggle({name: "Toggle", text: "Получать спецпредложения", status: 'checked', id: '01'})
               +toggle({text: "Получать спецпредложения", id: '02'})

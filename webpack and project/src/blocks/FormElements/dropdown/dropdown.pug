@@ -8,28 +8,29 @@ mixin dropdown(options)
     if options.name!='' && options.name!=undefined
       div.dropdown__name
         +caption({name: options.name})
-    
-    div.dropdown__inner
-      input(class=`dropdown__input dropdown__input_${options.state}` type="text" name=options.type value=options.value placeholder=options.hint)
-      div.dropdown__icon
-        +icon({name: 'keyboard_arrow_down'})
-    ul(class=`dropdown__ul dropdown__ul_${options.state} dropdown__ul_type_${options.type}`)
-      - for (i=0; i<items.length; i++)
-        li.dropdown__li
-          button.dropdown__counterbutton.dropdown__addbutton +
-          h3.dropdown__counter=counters[i]
-          if counters[i]!='0'
-            button.dropdown__counterbutton.dropdown__subtractbutton -
-            - clearbtn_counter++;
-          else 
-            button(class=`dropdown__counterbutton dropdown__subtractbutton dropdown__subtractbutton_inactive`) -
-          h3.dropdown__item=items[i]
-      if options.type=='guests'
-        div.dropdown__applybutton
-          +caption({name: "Применить", theme: 'purple'})
-        if (clearbtn_counter > 0)
-          div.dropdown__clearbutton.dropdown__clearbutton_active
-            +caption({name: "Очистить", theme: 'grey'})
-        else
-          div.dropdown__clearbutton
-            +caption({name: "Очистить", theme: 'grey'})
+
+    form(action="" method="POST")
+      div.dropdown__inner
+        input(class=`dropdown__input dropdown__input_${options.state}` type="text" name=options.type value=options.value placeholder=options.hint)
+        div.dropdown__icon
+          +icon({name: 'keyboard_arrow_down'})
+      ul(class=`dropdown__ul dropdown__ul_${options.state} dropdown__ul_type_${options.type}`)
+        - for (i=0; i<items.length; i++)
+          li.dropdown__li
+            button.dropdown__counterbutton.dropdown__addbutton +
+            h3.dropdown__counter=counters[i]
+            if counters[i]!='0'
+              button.dropdown__counterbutton.dropdown__subtractbutton -
+              - clearbtn_counter++;
+            else 
+              button(class=`dropdown__counterbutton dropdown__subtractbutton dropdown__subtractbutton_inactive`) -
+            h3.dropdown__item=items[i]
+        if options.type=='guests'
+          div.dropdown__applybutton
+            +caption({name: "Применить", theme: 'purple'})
+          if (clearbtn_counter > 0)
+            div.dropdown__clearbutton.dropdown__clearbutton_active
+              +caption({name: "Очистить", theme: 'grey'})
+          else
+            div.dropdown__clearbutton
+              +caption({name: "Очистить", theme: 'grey'})

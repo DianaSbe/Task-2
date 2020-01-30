@@ -4,12 +4,13 @@ mixin textfield(options)
     if options.name!='' && options.name!=undefined
       div.textfield__name
         +caption({name: options.name})
-        
-    if options.type=='date' 
-      input.textfield__input.textfield__input_mask_date(maxlength="10" type="text" name="data" value=options.value placeholder=options.hint)
-    else
-      div.textfield__inner
-        input(class=`textfield__input textfield__input_${options.status}` type="text" value=options.value placeholder=options.hint)
-        if options.type=='subscription'
-          div.textfield__icon
-            +icon({name: 'arrow_forward', theme: 'purple'})
+
+    form(action="" method="POST")    
+      if options.type=='date' 
+        input.textfield__input.textfield__input_mask_date(maxlength="10" type="text" name="data" value=options.value placeholder=options.hint)
+      else
+        div.textfield__inner
+          input(class=`textfield__input textfield__input_${options.status}` type="text" value=options.value placeholder=options.hint)
+          if options.type=='subscription'
+            div.textfield__icon
+              +icon({name: 'arrow_forward', theme: 'purple'})

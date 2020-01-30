@@ -1,13 +1,19 @@
 mixin radiobutton(options)
   div.radiobutton
+    - const values = `${options.value}`.split(',')
+    - const statuses = `${options.status}`.split(',')
+    - const ids = `${options.id}`.split(',')
+
     if options.name!='' && options.name!=undefined
       div.radiobutton__name
         +caption({name: options.name})
-        
-    div.radiobutton__inner    
-      if options.status=='checked'
-        input.radiobutton__input(type="radio" name=options.rdname id=`radiobtn${options.id}` checked)
-      else
-        input.radiobutton__input(type="radio" name=options.rdname id=`radiobtn${options.id}`)
-      label.radiobutton__label(for=`radiobtn${options.id}`)
-      label.radiobutton__text(for=`radiobtn${options.id}`)=options.text
+    
+    form(action="" method="POST")  
+      - for (i=0; i<values.length; i++)
+        div.radiobutton__inner
+          if statuses[i]=='checked'
+            input.radiobutton__input(type="radio" name=options.rdname id=`radiobtn${ids[i]}` checked)
+          else
+            input.radiobutton__input(type="radio" name=options.rdname id=`radiobtn${ids[i]}`)
+          label.radiobutton__label(for=`radiobtn${ids[i]}`)
+          label.radiobutton__text(for=`radiobtn${ids[i]}`)=values[i]

@@ -12,22 +12,25 @@ jQuery(document).ready( function($) {
         }
     }
 
+    // запрет на поведение формы по умолчанию
+    $("form").submit(function(e) {e.preventDefault()});
+
     //показать/скрыть дропдаун + измена иконки
     $('.dropdown__icon').click(function() {
-        $(this).parent('.dropdown__inner').parent('.dropdown').children('.dropdown__ul')[0].classList.toggle('dropdown__ul_expanded');
-        $(this).parent('.dropdown__inner').parent('.dropdown').children('.dropdown__inner').children('.dropdown__input')[0].classList.toggle('dropdown__input_expanded');
+        $(this).parent('.dropdown__inner').parent().parent('.dropdown').find('.dropdown__ul')[0].classList.toggle('dropdown__ul_expanded');
+        $(this).parent('.dropdown__inner').parent().parent('.dropdown').find('.dropdown__input')[0].classList.toggle('dropdown__input_expanded');
     })
     //кнопка +
     $('.dropdown__addbutton').click(function() {
-        var counter = $(this).parent('.dropdown__li').children('.dropdown__counter');
+        var counter = $(this).parent('.dropdown__li').find('.dropdown__counter');
         counter[0].innerHTML = parseInt(counter[0].innerHTML) + 1;
         if (counter[0].innerHTML > "0")
-          $(this).parent('.dropdown__li').children('.dropdown__subtractbutton')[0].classList.remove('dropdown__subtractbutton_inactive');
-        $(this).parent('.dropdown__li').parent('.dropdown__ul').children('.dropdown__clearbutton')[0].classList.add('dropdown__clearbutton_active');
+          $(this).parent('.dropdown__li').find('.dropdown__subtractbutton')[0].classList.remove('dropdown__subtractbutton_inactive');
+        $(this).parent('.dropdown__li').parent('.dropdown__ul').find('.dropdown__clearbutton')[0].classList.add('dropdown__clearbutton_active');
     })
     //кнопка -
     $('.dropdown__subtractbutton').click(function() {
-        var counter = $(this).parent('.dropdown__li').children('.dropdown__counter');
+        var counter = $(this).parent('.dropdown__li').find('.dropdown__counter');
         if (counter[0].innerHTML != "0")
         {
           counter[0].innerHTML = parseInt(counter[0].innerHTML) - 1;
@@ -37,9 +40,9 @@ jQuery(document).ready( function($) {
     })
     //кнопка "принять" для дропдауна с гостями
     $('.dropdown__applybutton').click(function() {
-        var counter = $(this).parent('.dropdown__ul').children('.dropdown__li').children('.dropdown__counter');
-        var name = $(this).parent('.dropdown__ul').children('.dropdown__li').children('.dropdown__item');
-        var result = $(this).parent('.dropdown__ul').parent('.dropdown').children('.dropdown__inner').children('.dropdown__input');
+        var counter = $(this).parent('.dropdown__ul').find('.dropdown__counter');
+        var name = $(this).parent('.dropdown__ul').find('.dropdown__item');
+        var result = $(this).parent('.dropdown__ul').parent().parent('.dropdown').find('.dropdown__input');
         var guests = 0;
         var babies = 0;
         for (var i = 0; i < counter.length; i++) {
@@ -58,9 +61,9 @@ jQuery(document).ready( function($) {
     })
     //кнопка "очистить" для дропдауна с гостями
     $('.dropdown__clearbutton').click(function() {
-        var counter = $(this).parent('.dropdown__ul').children('.dropdown__li').children('.dropdown__counter');
-        var button = $(this).parent('.dropdown__ul').children('.dropdown__li').children('.dropdown__subtractbutton');
-        var result = $(this).parent('.dropdown__ul').parent('.dropdown').children('.dropdown__inner').children('.dropdown__input');
+        var counter = $(this).parent('.dropdown__ul').find('.dropdown__counter');
+        var button = $(this).parent('.dropdown__ul').find('.dropdown__subtractbutton');
+        var result = $(this).parent('.dropdown__ul').parent().parent('.dropdown').find('.dropdown__input');
         for (var i = 0; i < counter.length; i++) {
             counter[i].innerHTML = 0;
             button[i].classList.add('dropdown__subtractbutton_inactive');
@@ -71,9 +74,9 @@ jQuery(document).ready( function($) {
     })
     //получение результата для комнат и мебели
     $('.dropdown__ul_type_rooms').click(function() {
-        var counter = $(this).children('.dropdown__li').children('.dropdown__counter');
-        var name = $(this).children('.dropdown__li').children('.dropdown__item');
-        var result = $(this).parent('.dropdown').children('.dropdown__inner').children('.dropdown__input').css("text-transform", "lowercase");
+        var counter = $(this).find('.dropdown__counter');
+        var name = $(this).find('.dropdown__item');
+        var result = $(this).parent().parent('.dropdown').find('.dropdown__input').css("text-transform", "lowercase");
         //избавляемся от нулевых элементов
         let result_counter = new Array();
         let result_name = new Array();

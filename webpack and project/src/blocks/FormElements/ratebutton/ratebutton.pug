@@ -3,10 +3,11 @@ mixin ratebutton(options)
     if options.name!='' && options.name!=undefined
       div.ratebutton__name
         +caption({name: options.name})
-        
-    - for(var i = 5; i > 0; i--)
-      if i==options.amount
-        input.ratebutton__input(id=options.id+`ratebtn${i}` type="radio" name=`rating${options.id}` value=i checked)
-      else
-        input.ratebutton__input(id=options.id+`ratebtn${i}` type="radio" name=`rating${options.id}` value=i)
-      label.ratebutton__label(for=options.id+`ratebtn${i}`)
+
+    form(action="" method="POST")    
+      - for(var i = 5; i > 0; i--)
+        if i==options.amount
+          input.ratebutton__input(id=options.id+`ratebtn${i}` type="radio" name=`rating${options.id}` value=i checked)
+        else
+          input.ratebutton__input(id=options.id+`ratebtn${i}` type="radio" name=`rating${options.id}` value=i)
+        label.ratebutton__label(for=options.id+`ratebtn${i}`)

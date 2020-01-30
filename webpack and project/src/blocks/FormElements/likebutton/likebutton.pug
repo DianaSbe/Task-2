@@ -3,11 +3,12 @@ mixin likebutton(options)
     if options.name!='' && options.name!=undefined
       div.likebutton__name
         +caption({name: options.name})
-        
-    div.likebutton__inner
-      if options.status == 'checked'
-        input.likebutton__input(type="checkbox" id=`likebtn${options.id}` checked)
-      else
-        input.likebutton__input(type="checkbox" id=`likebtn${options.id}`)
-      label.likebutton__label(for=`likebtn${options.id}`)
-      label.likebutton__counter(for=`likebtn${options.id}`)=options.text
+    
+    form(action="" method="POST")
+      div.likebutton__inner
+        if options.status == 'checked'
+          input.likebutton__input(type="checkbox" id=`likebtn${options.id}` checked)
+        else
+          input.likebutton__input(type="checkbox" id=`likebtn${options.id}`)
+        label.likebutton__label(for=`likebtn${options.id}`)
+        label.likebutton__counter(for=`likebtn${options.id}`)=options.text

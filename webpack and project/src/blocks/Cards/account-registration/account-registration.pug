@@ -5,8 +5,7 @@ mixin account-registration(options)
       +textfield({value: "", hint: "Имя"})
       +textfield({value: "", hint: "Фамилия"})
       div.account-registration__radiobutton
-        +radiobutton({text: "Мужчина", status: 'checked', rdname: 'cards-gender', id: 'cards_01'})
-        +radiobutton({text: "Женщина", rdname: 'cards-gender', id: 'cards_02'})
+        +radiobutton({value: "Мужчина,Женщина", status: 'checked,', rdname: 'cards-gender', id: 'cards_01,cards_02'})
       div.account-registration__textfield_type_date
         +textfield({name:"Дата рождения", value: "", hint: "ДД.ММ.ГГГГ", type: 'date'}) 
       +textfield({name: "Данные для входа в сервис", value: "", hint: "Email"})
