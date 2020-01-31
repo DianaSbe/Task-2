@@ -92,12 +92,10 @@ mixin sheet(options)
               +advantage({icon:'location_city', title: "Удобство", description: "Окно в каждой из спален"})
      
           div.sheet__form-elements-column-second
-            div.sheet__checkbox_type_buttons
-              +checkbox({name: "Checkbox Buttons", id: '1checkbtn', 
-                         value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
-                         status: ',checked,checked'})
-            div.sheet__radiobutton
-              +radiobutton({name: "Radio Buttons", value: "Мужчина,Женщина", status: 'checked,', rdname: 'form-elements-gender', id: 'form-elements_01,form-elements_02'})
+            +checkbox({name: "Checkbox Buttons", id: '1checkbtn', 
+                       value: "Можно курить,Можно с питомцами,Можно пригласить гостей (до 10 человек)",
+                       status: ',checked,checked'})
+            +radiobutton({name: "Radio Buttons", value: "Мужчина,Женщина", status: 'checked,', rdname: 'form-elements-gender', id: 'form-elements_01,form-elements_02'})
             div.sheet__toggle
               +toggle({name: "Toggle", text: "Получать спецпредложения", status: 'checked', id: '01'})
               +toggle({text: "Получать спецпредложения", id: '02'})
@@ -142,9 +140,8 @@ mixin sheet(options)
               +dropdown({name:"Dropdown", value: "3 гостя", hint: "", state: 'expanded', type: 'guests',
                          item: "Взрослые,Дети,Младенцы",
                          counter: "2,1,0"})
-            div.sheet__bulletlist
-              +bulletlist({name: "Bullet list",
-                           item: "Нельзя с питомцами;Без вечеринок и мероприятий;Время прибытия – после 13:00, а выезд до 12:00"})
+            +bulletlist({name: "Bullet list",
+                         item: "Нельзя с питомцами;Без вечеринок и мероприятий;Время прибытия – после 13:00, а выезд до 12:00"})
       
     if options.name=="cards"
       div(class=`sheet__${options.name}`)

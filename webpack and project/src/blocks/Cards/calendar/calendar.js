@@ -1,7 +1,8 @@
 $(document).ready( function() {
   $('.datepicker-here').datepicker({
     navTitles : {
-        days: 'MM <i>yyyy</i>'
+        days: 'MM <i>yyyy</i>',
+        //minDate: new Date(),
     },
     nextHtml: '<i class="material-icons" style="color:#BC9CFF;">arrow_forward</i>',
     prevHtml: '<i class="material-icons" style="color:#BC9CFF;">arrow_back</i>',
@@ -22,5 +23,6 @@ $(document).ready( function() {
       }
     });
     $('#calendar').datepicker().data('datepicker').selectDate([new Date(2020, 0, 19), new Date(2020, 0, 23)]);
-    //$('.datepicker-end').val("20012020");
+    //$('.datepicker-here').val("20012020");
+    //$('.datepicker-here')[0].value = "12";
 });

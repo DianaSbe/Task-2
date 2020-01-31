@@ -59,10 +59,11 @@
                 max-width: 320px;
                 display: flex;
                 flex-wrap: wrap;
-                align-content: space-between; 
+                align-content: space-between;
             }
         
             .sheet__form-elements-column-first {
+                margin-right: 53px; //для выравнивания второй колонки
                 .sheet__textfield_type_date {
                     width: 100%;
                     margin-bottom: 20px;
@@ -87,18 +88,7 @@
             
             .sheet__form-elements-column-second {
                 max-height: 1561px;
-                justify-content: space-evenly;
-                .sheet__checkbox_type_buttons {
-                    width: 100%;
-                    max-width: 266px;
-                }
-                .sheet__radiobutton {
-                    width: 100%;
-                    max-width: 266px;
-                }
                 .sheet__toggle {
-                    width: 100%;
-                    max-width: 266px;
                     min-height: 85px;
                     display: flex;
                     flex-wrap: wrap;
@@ -106,7 +96,6 @@
                 }
                 .sheet__likebutton {
                     width: 100%;
-                    max-width: 266px;
                     display: flex;
                     .sheet__likebutton_checked {
                         width: 100%;
@@ -123,8 +112,8 @@
                     justify-content: space-between;
                     .sheet__ratebutton_filled {
                         width: 100%;
-                        min-height: 54px;
                         max-width: 125px;
+                        min-height: 54px;
                         display: flex;
                         align-items: flex-end;
                     }
@@ -133,14 +122,11 @@
                     margin-bottom: 60px;
                 }
                 .sheet__checkbox_type_rich-buttons {
-                    width: 100%;
-                    max-width: 266px;
                     margin-bottom: 192px;
                 }
                 .sheet__review {
                     width: 100%;
                     max-width: 706px;
-                    margin-left: 53px;
                 }
             }
             
@@ -179,10 +165,6 @@
                 }
                 .sheet__dropdown_type_guests_expanded_filled {
                     margin-bottom: 70px;
-                }
-                .sheet__bulletlist {
-                    width: 100%;
-                    max-width: 250px;
                 }
             }
         }
