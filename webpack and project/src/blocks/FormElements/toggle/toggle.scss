@@ -21,12 +21,12 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     content: '';
 
-    background: url('/circlemark-unactive.svg') no-repeat 10% 50%;
+    background: url('../../blocks/FormElements/toggle/circlemark-unactive.svg') no-repeat 10% 50%;
     transition: .2s;
 }
 .toggle__input:checked + .toggle__label:before {
     border: 1px solid #BC9CFF;
-    background: url('/circlemark-active.svg') no-repeat 90% 50%;
+    background: url('../../blocks/FormElements/toggle/circlemark-active.svg') no-repeat 90% 50%;
     transition: .2s;
 }
 .toggle__input ~ .toggle__text { //дефолтный цвет

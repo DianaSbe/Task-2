@@ -7,7 +7,7 @@ mixin textfield(options)
 
     form(action="" method="POST")    
       if options.type=='date' 
-        input.textfield__input.textfield__input_mask_date(maxlength="10" type="text" name="data" value=options.value placeholder=options.hint)
+        input.textfield__input.date-dropdown__input_mask_date(maxlength="10" type="text" name="data" value=options.value placeholder=options.hint)
       else
         div.textfield__inner
           input(class=`textfield__input textfield__input_type_${options.type} textfield__input_${options.status}` type="text" value=options.value placeholder=options.hint)

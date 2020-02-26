@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // Main const
 const PATHS = {
@@ -29,7 +30,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    //publicPath: '/'
   },
   optimization: {
     splitChunks: {
@@ -54,15 +55,25 @@ module.exports = {
       exclude: '/node_modules/'
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      include: [
+        path.resolve(__dirname, '../src/assets/fonts'),
+      ],
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: 'assets/fonts',
+        publicPath: 'assets/fonts'
       }
     }, {
-      test: /\.(png|jpg|gif)$/,
+      test: /\.(png|jpg|jpeg|svg|gif)$/,
+      exclude: [
+        path.resolve(__dirname, '../src/assets/fonts'),
+      ],
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: 'assets/img',
+        publicPath: 'assets/img'
       }
     }, {
       test: /\.scss$/,
@@ -111,10 +122,10 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `[name].[hash].css`,
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      //{ from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
     new webpack.ProvidePlugin({
@@ -122,6 +133,7 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
+    new CleanWebpackPlugin(),
 
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     ...PAGES.map(page => new HtmlWebpackPlugin({
@@ -135,4 +147,3 @@ module.exports = {
     hints: process.env.NODE_ENV === 'production' ? "warning" : false
   },
 }
-

@@ -1,5 +1,6 @@
 .checkbox {
     max-width: 250px;
+    position: relative;
     .checkbox__name {
         width: 100%;
         min-width: 256px;
@@ -13,7 +14,10 @@
             justify-content: flex-end;
         }
     }
-    
+    .checkbox__list_type_list {
+        position: absolute;
+        z-index: 1;
+    }
     .checkbox__list_nonexpanded {
         display: none; //по умолчанию скрыт
     }
@@ -41,7 +45,7 @@
         }
         .checkbox__input:checked + .checkbox__label:before {
             border: 1px solid #BC9CFF;
-            background: url('/boxmark.svg') no-repeat center 40%;
+            background: url('../../blocks/FormElements/checkbox/boxmark.svg') no-repeat center 40%;
         }
         .checkbox__input ~ .checkbox__text { //дефолтный цвет
             color: rgba(31, 32, 65, 0.5);

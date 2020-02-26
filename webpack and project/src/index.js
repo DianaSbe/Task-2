@@ -13,7 +13,6 @@ import 'air-datepicker'
 import '../node_modules/air-datepicker/dist/css/datepicker.min.css'
 
 //скрипты
-import './blocks/FormElements/textfield/textfield__input_mask_date.js'
 import './blocks/FormElements/date-dropdown/date-dropdown__input_mask_date.js'
 import './blocks/FormElements/rangeslider/rangeslider.js'
 import './blocks/FormElements/pagination/pagination.js'
@@ -25,6 +24,11 @@ import './blocks/FormElements/dropdown/dropdown.js'
 
 // SCSS
 import './assets/scss/main.scss'
+
+//svg
+import './blocks/FormElements/checkbox/boxmark.svg'
+import './blocks/FormElements/toggle/circlemark-unactive.svg'
+import './blocks/FormElements/toggle/circlemark-active.svg'
 
 // CSS
 // import './assets/css/main.css'

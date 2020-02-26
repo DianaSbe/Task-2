@@ -15,7 +15,7 @@ mixin checkbox(options)
               +icon({name: 'keyboard_arrow_up'})
 
     form(action="" method="POST")
-      div(class=`checkbox__list checkbox__list_${options.state}`)
+      div(class=`checkbox__list checkbox__list_type_${options.type} checkbox__list_${options.state}`)
         - for (i=0; i<values.length; i++)
           div.checkbox__inner
             if statuses[i]=='checked'

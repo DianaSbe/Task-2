@@ -39,16 +39,16 @@
                 flex-wrap: wrap;
                 align-content: space-between;
                 justify-content: center;
+                .search-room__title {
+                    width: 100%;
+                }
                 .search-room__cards {
                     min-height: 1091px;
                     display: flex;
                     flex-wrap: wrap;
                     align-content: space-between;
                     justify-content: space-between;
-                    margin-bottom: 64px;
-                }
-                .search-room__title {
-                    width: 100%;
+                    margin-bottom: 14px;
                 }
             }
         }

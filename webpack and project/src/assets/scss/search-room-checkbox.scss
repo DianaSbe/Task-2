@@ -18,7 +18,7 @@
             .search-room-checkbox__filter {
                 width: 100%;
                 max-width: 266px;
-                max-height: 973px;
+                max-height: 750px;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: space-between;
@@ -39,16 +39,16 @@
                 flex-wrap: wrap;
                 align-content: space-between;
                 justify-content: center;
+                .search-room-checkbox__title {
+                    width: 100%;
+                }
                 .search-room-checkbox__cards {
                     min-height: 1091px;
                     display: flex;
                     flex-wrap: wrap;
                     align-content: space-between;
                     justify-content: space-between;
-                    margin-bottom: 64px;
-                }
-                .search-room-checkbox__title {
-                    width: 100%;
+                    margin-bottom: 14px;
                 }
             }
         }

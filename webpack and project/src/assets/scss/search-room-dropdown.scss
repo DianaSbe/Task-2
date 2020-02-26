@@ -18,7 +18,7 @@
             .search-room-dropdown__filter {
                 width: 100%;
                 max-width: 266px;
-                max-height: 797px;
+                max-height: 747px;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: space-between;
@@ -39,16 +39,16 @@
                 flex-wrap: wrap;
                 align-content: space-between;
                 justify-content: center;
+                .search-room-dropdown__title {
+                    width: 100%;
+                }
                 .search-room-dropdown__cards {
                     min-height: 1091px;
                     display: flex;
                     flex-wrap: wrap;
                     align-content: space-between;
                     justify-content: space-between;
-                    margin-bottom: 64px;
-                }
-                .search-room-dropdown__title {
-                    width: 100%;
+                    margin-bottom: 14px;
                 }
             }
         }
