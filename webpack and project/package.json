@@ -39,7 +39,7 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "inputmask": "^5.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui-dist": "^1.12.1",
     "popper.js": "^1.16.0"
   }
